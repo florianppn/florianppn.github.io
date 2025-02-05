@@ -1,8 +1,21 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 35% 65%;
+    text-align: center;
+    align-items: center;
 }
 
-menu {
+.logo-container {
+    width: 10%;
+}
+
+.menu-container {
     list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: black;
 }
