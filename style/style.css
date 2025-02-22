@@ -34,13 +34,36 @@
 }
 
 .about {
+    position: relative;
+    justify-content: center;
     text-align: center;
     font-size: 1.5em;
-    margin-top: 8em;
-    margin-bottom: 8em;
+    margin: 6em auto;
+    width: 80%;
+}
+  
+.about::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 25%;
+    width: 50%;
+    height: 1.5px;
+    background-color: #178582;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
 }
 
-.skills-title {
+.about:hover {
+    transform: scale(1.05)
+}
+
+.about:hover::after {
+    transform: scaleX(1);
+}
+
+.title {
     text-align: center;
 }
 
@@ -55,11 +78,30 @@
 }
 
 .skills-card {
+    position: relative;
+    overflow: hidden;
     background: #151515;
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
     border: 1px solid #178582;
+}
+
+.skills-card::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.skills-card:hover::before {
+    opacity: 1;
 }
 
 .skills-logo {
