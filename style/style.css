@@ -131,6 +131,7 @@
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+    
 }
 
 .carousel-prev,
@@ -145,9 +146,19 @@
 }
 
 .carousel-prev {
-    left: 10px;
+    background-color: transparent;
+    left: 150px;
+    width: 1px;
+    height: 1px;
 }
 
 .carousel-next {
-    right: 10px;
+    background-color: transparent;
+    right: 150px;
+}
+
+.carousel-prev img,
+.carousel-next img {
+    width: 35px;
+    height: 35px;
 }
