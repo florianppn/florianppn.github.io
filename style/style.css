@@ -7,7 +7,7 @@
 
 :root {
     font: 'Karla';
-    background-color: #0A1828;
+    background-color: #0A1826;
     color: #BFA181;
 }
 
@@ -40,27 +40,27 @@
     font-size: 1.5em;
     margin: 6em auto;
     width: 80%;
+    transition: transform 0.3s ease-in-out;
 }
-  
+
 .about::after {
     content: "";
     position: absolute;
     bottom: -10px;
-    left: 25%;
-    width: 50%;
+    left: 50%;
+    width: 0;
     height: 1.5px;
     background-color: #178582;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
 }
 
 .about:hover {
-    transform: scale(1.05)
+    transform: scale(1.05);
 }
 
 .about:hover::after {
-    transform: scaleX(1);
+    width: 50%;
 }
 
 .title {
@@ -106,4 +106,14 @@
 
 .skills-logo {
     width: 30%;
+}
+
+.works-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.works-logo {
+    width: 20%;
 }
