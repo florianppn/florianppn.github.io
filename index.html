@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Portfolio</title>
   <link rel="stylesheet" href="./style/style.css">
-  <script src="./script/script.js"></script>
+  <script src="./script/script.js" defer></script>
 </head>
 <body>
 
@@ -31,25 +31,25 @@
   <section id="skills">
     <h2 class="title">MY SKILLS</h2>
     <div class="skills-container">
-      <div class="skills-card">
+      <div class="skill-item">
         <figure>
-          <img class="skills-logo" src="./asset/java.png" alt="logo java">
+          <img class="skill-logo" src="./asset/icones/java.png" alt="logo java">
           <h3>Java</h3>
         </figure>
         <p>Development of robust and efficient Java applications. Use of solutions based on advanced data structures. My mastery of Design Patterns and algorithms allows me to design scalable and maintainable software architectures.</p>
       </div>
-      <div class="skills-card">
-        <img class="skills-logo" src="./asset/python.png" alt="logo python">
+      <div class="skill-item">
+        <img class="skill-logo" src="./asset/icones/python.png" alt="logo python">
         <h3>Python</h3>
         <p>Fast and efficient development of Python applications, from interactive games to data analysis tools. My expertise covers data structures, Design Patterns and the implementation of complex algorithms.</p>
       </div>
-      <div class="skills-card">
-        <img class="skills-logo" src="./asset/php.png" alt="logo php">
+      <div class="skill-item">
+        <img class="skill-logo" src="./asset/icones/php.png" alt="logo php">
         <h3>PHP</h3>
         <p>Development of dynamic web applications with PHP, using the MVCR architecture for clear organization and easy maintenance. My mastery of DOM manipulation and database management (MySQL, PostgreSQL) allows me to create rich and interactive user experiences.</p>
       </div>
-      <div class="skills-card">
-        <img class="skills-logo" src="./asset/postgre.png" alt="logo postgre">
+      <div class="skill-item">
+        <img class="skill-logo" src="./asset/icones/postgre.png" alt="logo postgre">
         <h3>PostgreSQL</h3>
         <p>Management and optimization of PostgreSQL databases, guaranteeing data integrity and performance. My expertise includes designing database schemas, writing complex SQL queries, and optimizing performance for web applications and data management systems.</p>
       </div>
@@ -59,27 +59,25 @@
   <section id="works">
     <h2 class="title">MY WORKS</h2>
     <div class="works-container">
-      <div class="works-card">
-        <figure>
-          <img class="works-logo" src="https://opengraph.githubassets.com/1/florianppn/mahjong" alt="mahjong">
-          <h3>Mahjong</h3>
-        </figure>
-        <p>blablabla</p>
+      <div class="carousel">
+          <div class="work-item">
+              <h3>Mahjong</h3>
+              <img src="./asset/works/mahjong.png" alt="mahjong">
+              <p>Mahjong game (simplified version) implemented in Python using the Tkinter library. For this project I used the MVC architecture as well as the observer pattern. I also used the pattern strategy for the different types of grids (diamond, rectangle, donut, ...,).</p>
+          </div>
+          <div class="work-item">
+              <h3>Taquin</h3>
+              <img src="./asset/works/taquin.png" alt="taquin">
+              <p>Description du projet 2...</p>
+          </div>
+          <div class="work-item">
+              <h3>Gridarena</h3>
+              <img src="./asset/works/gridarena.png" alt="gridarena">
+              <p>Description du projet 3...</p>
+          </div>
       </div>
-      <div class="works-card">
-        <figure>
-          <img class="works-logo" src="https://opengraph.githubassets.com/1/florianppn/taquin" alt="taquin">
-          <h3>Taquin</h3>
-        </figure>
-        <p>blablabla</p>
-      </div>
-      <div class="works-card">
-        <figure>
-          <img class="works-logo" src="https://opengraph.githubassets.com/1/florianppn/gridarena" alt="gridarena">
-          <h3>Gridarena</h3>
-        </figure>
-        <p>blablabla</p>
-      </div>
+      <button class="carousel-prev">←</button>
+      <button class="carousel-next">→</button>
     </div>
   </section>
 
