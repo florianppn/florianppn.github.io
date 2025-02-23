@@ -17,7 +17,7 @@ body {
 
 .menu-container {
     position: sticky;
-    opacity: 0.9;
+    opacity: 0.8;
     top: 0;
     width: 95%;
     max-width: auto;
@@ -159,7 +159,7 @@ h2, h3 {
 }
 
 .works-container {
-    margin: 10em auto;
+    margin-top: 8em;
 }
 
 .carousel-container {
@@ -180,7 +180,6 @@ h2, h3 {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
-    
 }
 
 .work-frame {
@@ -236,6 +235,45 @@ h2, h3 {
     color: #178582;
 }
 
-.about-me {
+.documents-container {
+    text-align: center;
+    margin: 8em auto;
+}
+
+.documents-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: auto;
+    margin: 20px auto;
+}
+
+.document-item {
+    background: #131f2b;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #242a30;
+    transition: border 0.3s ease-in-out;
+    width: 200px;
+    text-align: center;
+}
+
+.document-item:hover {
+    border: 1px solid #178582;
+}
+
+.document-item a {
+    display: block;
+    margin-top: 10px;
+    color: #178582;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.document-item a:hover {
+    color: #BFA181;
+}
+
+footer {
     text-align: center;
 }
