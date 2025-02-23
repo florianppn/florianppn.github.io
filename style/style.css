@@ -14,7 +14,7 @@
 .menu-container {
     position: sticky;
     top: 0;
-    width: 100%;
+    width: 95%;
     max-width: auto;
     margin: 0 auto;
     background-color: #0A1826;
@@ -64,6 +64,17 @@
     text-decoration: none;
     color: #178582;
     line-height: 1;
+}
+
+.copied-message {
+    display: none;
+    position: absolute;
+    background-color: #0A1826;
+    border: 1px solid #178582;
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: 70px;
+    z-index: 101;
 }
 
 .about {

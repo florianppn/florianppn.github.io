@@ -20,3 +20,25 @@ nextButton.addEventListener('click', () => {
     currentIndex = Math.min(currentIndex + 1, workItems.length - 1);
     updateCarousel();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const discordLink = document.getElementById('discordLink');
+    const discordCopiedMessage = document.getElementById('discordCopiedMessage');
+
+    discordLink.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        const discordUrl = "requindelanight";
+
+        navigator.clipboard.writeText(discordUrl)
+            .then(() => {
+                discordCopiedMessage.style.display = 'block';
+                setTimeout(() => {
+                    discordCopiedMessage.style.display = 'none';
+                }, 2000);
+            })
+            .catch(err => {
+                console.error('Impossible de copier le lien Discord : ', err);
+            });
+    });
+});
