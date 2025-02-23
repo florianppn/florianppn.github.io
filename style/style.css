@@ -77,7 +77,7 @@
     z-index: 101;
 }
 
-.about {
+.profil {
     position: relative;
     justify-content: center;
     text-align: center;
@@ -87,7 +87,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.about::after {
+.profil::after {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -99,11 +99,11 @@
     transition: width 0.3s ease-in-out;
 }
 
-.about:hover {
+.profil:hover {
     transform: scale(1.05);
 }
 
-.about:hover::after {
+.profil:hover::after {
     width: 50%;
 }
 
