@@ -114,6 +114,10 @@
 }
 
 .works-container {
+    margin: 10em auto;
+}
+
+.carousel-container {
     position: relative;
     width: 80%;
     margin: 20px auto;
