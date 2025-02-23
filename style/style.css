@@ -133,24 +133,11 @@ body {
     border-radius: 15px;
     text-align: center;
     border: 1px solid #242a30;
-    transition: color  0.3s ease-in-out;    
-}
-
-.skill-item::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: rgba(145, 145, 145, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 1;
+    transition: border  0.3s ease-in-out;    
 }
 
 .skill-item:hover {
-    color: #af6b22;
+    border: 1px solid #178582;
 }
 
 .skill-item:hover::before {
@@ -203,6 +190,11 @@ h2, h3 {
     border-radius: 15px;
     padding: 20px;
     height: 600px;
+    transition: border  0.3s ease-in-out;  
+}
+
+.work-frame:hover {
+    border: 1px solid #178582;
 }
 
 .work-frame p {
