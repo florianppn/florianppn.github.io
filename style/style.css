@@ -131,6 +131,8 @@ body {
 }
 
 .skill-item {
+    display: grid;
+    grid-template-rows: 20% 20% 60%;
     position: relative;
     overflow: hidden;
     background: #131f2b;
@@ -154,6 +156,7 @@ h2, h3 {
 }
 
 .skill-item i {
+    text-align: center;
     font-size: 60px;
     color: #178582;
 }
@@ -237,7 +240,7 @@ h2, h3 {
 
 .documents-container {
     text-align: center;
-    margin: 8em auto;
+    margin-top: 8em;
 }
 
 .documents-grid {
@@ -276,4 +279,5 @@ h2, h3 {
 
 footer {
     text-align: center;
+    margin-top: 8em;
 }
