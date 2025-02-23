@@ -182,6 +182,19 @@
     
 }
 
+.work-frame {
+    width: 60%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #178582;
+    background: #151515;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
 .carousel-prev,
 .carousel-next {
     position: absolute;
@@ -209,4 +222,8 @@
 .carousel-next img {
     width: 35px;
     height: 35px;
+}
+
+.about-me {
+    text-align: center;
 }
