@@ -252,6 +252,8 @@ h2, h3 {
 }
 
 .document-item {
+    display: grid;
+    grid-template-rows: 20% 20% 60%;
     background: #131f2b;
     padding: 20px;
     border-radius: 15px;
@@ -277,7 +279,20 @@ h2, h3 {
     color: #BFA181;
 }
 
+.document-item i {
+    font-size: 40px;
+}
+
+.download-file {
+    border-radius: 15px;
+}
+
+.download-file i {
+    font-size: 30px;
+}
+
 footer {
     text-align: center;
     margin-top: 8em;
+    margin-bottom: 1em;
 }
