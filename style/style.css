@@ -17,6 +17,7 @@ body {
 
 .menu-container {
     position: sticky;
+    opacity: 0.9;
     top: 0;
     width: 95%;
     max-width: auto;
