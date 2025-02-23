@@ -11,6 +11,10 @@
     color: #BFA181;
 }
 
+body {
+    margin: 0;
+}
+
 .menu-container {
     position: sticky;
     top: 0;
@@ -124,11 +128,11 @@
 .skill-item {
     position: relative;
     overflow: hidden;
-    background: #151515;
+    background: #131f2b;
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    border: 1px solid #178582;
+    border: 1px solid #242a30;
     transition: color  0.3s ease-in-out;    
 }
 
@@ -146,11 +150,15 @@
 }
 
 .skill-item:hover {
-    color: #af5b01;
+    color: #af6b22;
 }
 
 .skill-item:hover::before {
     opacity: 1;
+}
+
+h2, h3 {
+    color: #178582;
 }
 
 .skill-logo {
@@ -187,8 +195,8 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    border: 1px solid #178582;
-    background: #151515;
+    border: 1px solid #242a30;
+    background: #131f2b;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
