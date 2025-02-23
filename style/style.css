@@ -39,6 +39,10 @@ body {
     gap: 20px;
 }
 
+.icons-left i {
+    font-size: 25px;
+}
+
 .icons-left img {
     height: 35px;
 }
@@ -149,8 +153,9 @@ h2, h3 {
     color: #178582;
 }
 
-.skill-logo {
-    width: 30%;
+.skill-item i {
+    font-size: 60px;
+    color: #178582;
 }
 
 .works-container {
@@ -225,10 +230,10 @@ h2, h3 {
     right: 150px;
 }
 
-.carousel-prev img,
-.carousel-next img {
-    width: 35px;
-    height: 35px;
+.carousel-prev i,
+.carousel-next i {
+    font-size: 25px;
+    color: #178582;
 }
 
 .about-me {

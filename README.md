@@ -10,4 +10,4 @@ Ce portfolio est sous licence [MIT](./LICENSE.md)
 
 + Le [logo](./asset/logo/kickman.png) de ce site est ma propriété exclusive. Tous droits réservés.
 
-+ Icones conçu par [www.freepik.com](https://fr.freepik.com/).
++ Les icones viennent du site [www.fontawesome.com](https://fontawesome.com/icons/).
