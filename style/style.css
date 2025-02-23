@@ -197,6 +197,10 @@
     height: 600px;
 }
 
+.work-frame p {
+    width:60%;
+}
+
 .carousel-prev,
 .carousel-next {
     position: absolute;
