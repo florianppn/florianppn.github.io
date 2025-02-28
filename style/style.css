@@ -107,7 +107,7 @@ a:hover {
     justify-content: center;
     text-align: center;
     font-size: 1.5em;
-    margin: 6em auto;
+    margin: 0 auto;
     width: 80%;
     transition: transform 0.3s ease-in-out;
 }
@@ -156,11 +156,12 @@ a:hover {
     border-radius: 15px;
     text-align: center;
     border: 1px solid #242a30;
-    transition: border  0.3s ease-in-out;    
+    transition: all  0.3s ease-in-out;
 }
 
 .skill-item:hover {
     border: 1px solid #178582;
+    transform: translateY(-10px);
 }
 
 .skill-item:hover::before {
@@ -169,16 +170,14 @@ a:hover {
 
 h2, h3 {
     color: #178582;
+    margin-top: 3em;
+    margin-bottom: 2em;
 }
 
 .skill-item i {
     text-align: center;
     font-size: 60px;
     color: #178582;
-}
-
-.works-container {
-    margin-top: 8em;
 }
 
 .carousel-container {
@@ -217,18 +216,36 @@ h2, h3 {
     transition: border 0.3s ease-in-out;
 }
 
-.work-frame h3 {
+.work-frame h4 {
     text-transform: uppercase;
 }
 
 .work-frame:hover {
     border: 1px solid #178582;
+    position: relative;
 }
 .works-image {
     display: block;
     margin: auto;
-    width: 35%;
+    max-width: 225px;
     border-radius: 15px;
+    transition: all 0.3s ease;
+}
+  
+.works-image:hover {
+    transform: scale(1.5);
+    position: relative;
+    z-index: 1000;
+}
+
+.work-frame:has(.works-image:hover) > *:not(figure) {
+    visibility: hidden;
+}
+
+.work-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 .carousel-prev,
@@ -257,17 +274,14 @@ h2, h3 {
     color: #178582;
 }
 
-.documents-container {
-    text-align: center;
-    margin-top: 8em;
-}
-
 .documents-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    width: auto;
-    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    width: 34%;
+    padding: 1rem;
+    margin: 0 auto;
 }
 
 .document-item {
@@ -277,13 +291,14 @@ h2, h3 {
     padding: 20px;
     border-radius: 15px;
     border: 1px solid #242a30;
-    transition: border 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 200px;
     text-align: center;
 }
 
 .document-item:hover {
     border: 1px solid #178582;
+    transform: translateY(-10px);
 }
 
 .document-item a {

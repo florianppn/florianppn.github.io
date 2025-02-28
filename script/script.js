@@ -37,10 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     workItem.classList.add('work-item');
                     workItem.innerHTML = `
                         <div class="work-frame">
-                            <h3>${repo.name || 'Aucun nom disponible'}</h3>
+                            <h4>${repo.name || 'Aucun nom disponible'}</h4>
                             <figure><img class="works-image" src="https://raw.githubusercontent.com/florianppn/${repo.name}/refs/heads/main/screenshots/${repo.name}.png" alt="Aucune image disponible"></figure>
                             <p>${repo.description || 'Aucune description disponible'}</p>
-                            <a href="${repo.html_url}" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Code source</a>
+                            <div class="work-links">
+                                <a href="${repo.html_url || '#'}" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Code source</a>
+                                <a href="https://github.com/florianppn/${repo.name}/archive/master.zip"><i class="fa-regular fa-circle-down"></i> Télécharger le dépôt</a>
+                            </div>
                         </div>
                     `;
                     projectsCarousel.appendChild(workItem);
