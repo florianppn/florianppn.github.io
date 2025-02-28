@@ -76,3 +76,41 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Erreur lors de la récupération des projets GitHub:', error));
 });
+
+function encrypt(text, shift) {
+    let res = "";
+    for (let i = 0; i < text.length; i++) {
+      let charCode = text.charCodeAt(i);
+      if (charCode >= 65 && charCode <= 90) {
+        res += String.fromCharCode(((charCode - 65 + shift) % 26) + 65);
+      } else if (charCode >= 97 && charCode <= 122) {
+        res += String.fromCharCode(((charCode - 97 + shift) % 26) + 97);
+      } else {
+        res += text.charAt(i);
+      }
+    }
+    return res;
+  }
+
+  window.onload = function() {
+    const spans = document.querySelectorAll("#profil span");
+    const shift = 3;
+    const animationDuration = 10000;
+    const intervals = 150;
+  
+    spans.forEach(span => {
+      const originalText = span.dataset.originalText;
+      const encryptText = encrypt(originalText, shift);
+      span.textContent = encryptText;
+  
+      let index = 0;
+      const intervalle = setInterval(() => {
+        if (index >= originalText.length) {
+          clearInterval(intervalle);
+          return;
+        }
+        span.textContent = originalText.substring(0, index + 1) + encryptText.substring(index + 1);
+        index++;
+      }, animationDuration / intervals);
+    });
+  };
