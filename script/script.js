@@ -35,11 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (repo.name != "florianppn.github.io" && repo.name != "florianppn") {
                     const workItem = document.createElement('div');
                     workItem.classList.add('work-item');
-                    console.log(repo.name);
                     workItem.innerHTML = `
                         <div class="work-frame">
                             <h3>${repo.name || 'Aucun nom disponible'}</h3>
-                            <img class="works-image" src="https://raw.githubusercontent.com/florianppn/${repo.name}/refs/heads/main/screenshots/${repo.name}.png" alt="Aucune image disponible">
+                            <figure><img class="works-image" src="https://raw.githubusercontent.com/florianppn/${repo.name}/refs/heads/main/screenshots/${repo.name}.png" alt="Aucune image disponible"></figure>
                             <p>${repo.description || 'Aucune description disponible'}</p>
                             <a href="${repo.html_url}" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Code source</a>
                         </div>

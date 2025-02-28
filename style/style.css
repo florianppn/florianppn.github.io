@@ -204,32 +204,29 @@ h2, h3 {
 .work-frame {
     width: 50em;
     height: 35em;
+    display: grid;
+    grid-template-rows: 15% 50% 25% 5%;
     text-align: center;
     align-items: center;
     justify-content: center;
     border: 1px solid #242a30;
     background: #131f2b;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
     border-radius: 15px;
     padding: 20px;
     transition: border 0.3s ease-in-out;
-    overflow-y: auto;
 }
 
 .work-frame h3 {
     text-transform: uppercase;
 }
 
-.work-frame a {
-
-}
-
 .work-frame:hover {
     border: 1px solid #178582;
 }
 .works-image {
+    display: block;
+    margin: auto;
     width: 35%;
     border-radius: 15px;
 }
