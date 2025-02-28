@@ -232,11 +232,12 @@ h2, h3 {
     margin: auto;
     max-width: 225px;
     border-radius: 15px;
-    transition: all 0.3s ease;
+    transition: all 0.8s ease;
 }
   
 .works-image:hover {
     transform: scale(1.5);
+    border-radius: 0px;
     position: relative;
     z-index: 1000;
 }
