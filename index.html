@@ -13,13 +13,14 @@
   <nav class="menu-container">
       <div class="icons-left">
           <a href="#" id="discordLink"><i class="fa-brands fa-discord"></i></a>
+          <a href="https://github.com/florianppn/" target="_blank"><i class="fa-brands fa-github"></i></a>
           <a href="mailto:pepinflorian817@gmail.com"><i class="fa-regular fa-envelope"></i></a>
           <a href="https://www.instagram.com/florian_.ppn/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://fr.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
           <span id="discordCopiedMessage" class="copied-message">Pseudo Discord copié !</span>
       </div>
       <div class="logo-container-sticky">
-          <a href="https://github.com/florianppn" target="_blank"><img src="./asset/logo/kickman.png" alt="logo"></a>
+          <img class="logo" src="./asset/logo/kickman.png" alt="logo">
       </div>
       <ul>
           <li><a href="#profil">PROFIL</a></li>
@@ -68,34 +69,13 @@
 
   <section id="works">
     <div class="works-container">
-      <h2 class="title">MES PROJETS</h2>
-      <div class="carousel-container">
-        <div class="carousel">
-            <div class="work-item">
-              <div class="work-frame">
-                <h3>Mahjong</h3>
-                <img src="./asset/work/mahjong.png" alt="mahjong" style="width:30%;">
-                <p>Jeu du Mahjong (version simplifiée) implémenté en Python avec la bibliothèque graphique Tkinter. Pour ce projet j'ai utilisé l'architecture MVC ainsi que le pattern observateur. J'ai également utilisé le pattern strategy pour les différents types de grilles (losange, rectangle, beignet, ...,).</p>
-              </div>
+        <h2 class="title">MES PROJETS</h2>
+        <div class="carousel-container">
+            <div class="carousel" id="github-projects-carousel">
             </div>
-            <div class="work-item">
-              <div class="work-frame">
-                <h3>Taquin</h3>
-                <img src="./asset/work/taquin.png" alt="taquin" style="width:35%;">
-                <p>Jeu du Taquin implémenté en Java avec la bibliothèque graphique Swing. Pour ce projet j'ai utilisé l'architecture MVC ainsi que le pattern observateur.</p>
-              </div>
-            </div>
-            <div class="work-item">
-              <div class="work-frame">
-                <h3>Gridarena</h3>
-                <img src="./asset/work/gridarena.png" alt="gridarena" style="width:40%;">
-                <p>Ce jeu de combat s'appuie sur des mécanismes stratégiques au tour par tour, dans lesquels les joueurs doivent utiliser des tactiques et de la planification pour survivre et éliminer leurs adversaires. Pour ce projet j'utilise l'architecture MVC ainsi que le pattern Observer. Dans ce projet, j'utilise également le pattern Strategy, le pattern Proxy, le pattern Factory Method et le pattern Adapter.</p>
-              </div>
-            </div>
+            <button class="carousel-prev"><i class="fa-solid fa-circle-arrow-left"></i></button>
+            <button class="carousel-next"><i class="fa-solid fa-circle-arrow-right"></i></button>
         </div>
-        <button class="carousel-prev"><i class="fa-solid fa-circle-arrow-left"></i></button>
-        <button class="carousel-next"><i class="fa-solid fa-circle-arrow-right"></i></button>
-      </div>
     </div>
   </section>
 
