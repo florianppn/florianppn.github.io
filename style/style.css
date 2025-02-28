@@ -168,10 +168,13 @@ a:hover {
     opacity: 1;
 }
 
+section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
 h2, h3 {
     color: #178582;
-    margin-top: 3em;
-    margin-bottom: 2em;
 }
 
 .skill-item i {
