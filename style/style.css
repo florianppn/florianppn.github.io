@@ -183,7 +183,7 @@ h2, h3 {
     color: #178582;
 }
 
-.carousel-container {
+.works-container {
     position: relative;
     width: 80%;
     margin: 20px auto;
@@ -223,10 +223,16 @@ h2, h3 {
     text-transform: uppercase;
 }
 
+.work-frame p {
+    width:400px;
+    height: 100px;
+}
+
 .work-frame:hover {
     border: 1px solid #178582;
     position: relative;
 }
+
 .works-image {
     display: block;
     margin: auto;
