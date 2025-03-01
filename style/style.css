@@ -371,8 +371,8 @@ footer {
         margin: 0;
     }
 
-    .icons-left:hover ul,
-    .categories:hover ul {
+    .icons-left:active ul,
+    .categories:active ul {
         background-color: #131f2b;
         border: 1px solid #242a30;
         border-radius: 5px;
@@ -385,8 +385,8 @@ footer {
         padding-bottom: 10px;
     }
 
-    .icons-left a i:hover,
-    .categories ul li a:hover {
+    .icons-left a i:active,
+    .categories ul li a:active {
         color: #BFA181;
     }
 
@@ -396,8 +396,8 @@ footer {
         color: #178582;
     }
 
-    .fa-solid.fa-address-card:hover,
-    .fa-solid.fa-bars:hover {
+    .fa-solid.fa-address-card:active,
+    .fa-solid.fa-bars:active {
         color: #BFA181;
     }
 
