@@ -229,9 +229,12 @@ h2, h3 {
     text-transform: uppercase;
 }
 
-.work-frame p {
+.work-description {
     width:400px;
     height: 100px;
+    overflow: auto;
+    overflow: scroll;
+    text-overflow: ellipsis;
 }
 
 .work-frame:hover {
@@ -404,6 +407,21 @@ footer {
         row-gap: 30px;
         padding: 0;
         width: 90%;
+      }
+
+      .work-frame {
+        width: 15em;
+        height: 20em;
+        grid-template-rows: 5% 0% 75% 20%;
+      }
+
+      .work-description {
+        max-width: 200px;
+        margin: 0 auto;
+      }
+
+      .works-image {
+        display: none;
       }
 
       .documents-grid {

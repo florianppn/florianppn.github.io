@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <figure>
                               <img class="works-image" src="https://raw.githubusercontent.com/florianppn/${repo.name}/refs/heads/main/screenshots/${repo.name}.png" alt="Aucune image disponible">
                             </figure>
-                            <p>${repo.description || 'Aucune description disponible pour le moment.'}</p>
+                            <p class="work-description">${repo.description || 'Aucune description disponible pour le moment.'}</p>
                             <div class="work-links">
                               <a href="${repo.html_url || '#'}" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Code source</a>
                               <a href="https://github.com/florianppn/${repo.name}/archive/master.zip"><i class="fa-regular fa-circle-down"></i> Télécharger le dépôt</a>
