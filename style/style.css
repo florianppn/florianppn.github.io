@@ -294,6 +294,13 @@ h2, h3 {
     margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+    .documents-grid {
+        grid-template-rows: 50% 50%;
+        width: 50%;
+    }
+}
+
 .document-item {
     display: grid;
     grid-template-rows: 20% 20% 60%;
