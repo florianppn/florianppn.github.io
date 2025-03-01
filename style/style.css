@@ -11,9 +11,7 @@
     color: #BFA181;
 }
 
-body {
-    margin: 0;
-}
+body {margin: 0;}
 
 a {
     text-decoration: none;
@@ -25,36 +23,24 @@ a:hover {
     color: #BFA181;
 }
 
+ul {list-style-type: none;}
+
 .menu-container {
     position: sticky;
     opacity: 0.8;
     top: 0;
     width: 95%;
-    max-width: auto;
     margin: 0 auto;
     background-color: #0A1826;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    z-index: 1000;
     align-items: center;
     padding: 15px 20px;
 }
 
-.icons-left {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    display: flex;
-    gap: 20px;
-}
-
-.icons-left i {
+.menu-container i {
     font-size: 25px;
-}
-
-.icons-left img {
-    height: 35px;
 }
 
 .logo-container-sticky {
@@ -74,15 +60,72 @@ a:hover {
     transform: rotate(360deg);
 }
 
-.menu-container ul {
+.icons-left ul,
+.categories ul {
     text-align: center;
     align-items: center;
     justify-content: center;
-    list-style-type: none;
     width: 100%;
     display: flex;
-    gap: 60px;
     padding: 0;
+}
+
+.icons-left ul {gap: 30px;}
+.categories ul {gap: 60px;}
+
+.icons-left,
+.categories {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-solid.fa-address-card,
+.fa-solid.fa-bars {
+    display:none;
+}
+
+@media (max-width: 768px) {
+    .icons-left,
+    .categories {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .icons-left ul,
+    .categories ul {
+        background-color: #131f2b;
+        border: 1px solid #242a30;
+        border-radius: 5px;
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+    }
+
+    .icons-left:hover ul,
+    .categories:hover ul {
+        display: block;
+    }
+
+    .icons-left a i:hover,
+    .categories ul li a:hover {
+        color: #BFA181;
+    }
+
+    .fa-solid.fa-address-card,
+    .fa-solid.fa-bars {
+        display: block;
+        color: #178582;
+    }
+
+    .fa-solid.fa-address-card:hover,
+    .fa-solid.fa-bars:hover {
+        color: #BFA181;
+    }
+
 }
 
 .menu-container a {
@@ -98,8 +141,11 @@ a:hover {
     border: 1px solid #178582;
     padding: 5px 10px;
     border-radius: 5px;
-    top: 70px;
+    top: 60px;
     z-index: 101;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
 }
 
 .profil {
@@ -144,6 +190,16 @@ a:hover {
     width: 50%;
     padding: 1rem;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      row-gap: 30px;
+      padding: 0;
+      width: 95%;
+    }
 }
 
 .skill-item {
@@ -286,7 +342,7 @@ h2, h3 {
 
 .documents-grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
     width: 34%;
@@ -296,9 +352,10 @@ h2, h3 {
 
 @media (max-width: 768px) {
     .documents-grid {
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-        width: 50%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 30px;
+      width: 95%;
     }
 }
 
