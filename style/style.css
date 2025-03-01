@@ -85,49 +85,6 @@ ul {list-style-type: none;}
     display:none;
 }
 
-@media (max-width: 768px) {
-    .icons-left,
-    .categories {
-        display: inline-block;
-        vertical-align: top;
-        position: relative;
-    }
-
-    .icons-left ul,
-    .categories ul {
-        background-color: #131f2b;
-        border: 1px solid #242a30;
-        border-radius: 5px;
-        display: none;
-        position: absolute;
-        z-index: 1000;
-        padding: 0;
-        margin: 0;
-    }
-
-    .icons-left:hover ul,
-    .categories:hover ul {
-        display: block;
-    }
-
-    .icons-left a i:hover,
-    .categories ul li a:hover {
-        color: #BFA181;
-    }
-
-    .fa-solid.fa-address-card,
-    .fa-solid.fa-bars {
-        display: block;
-        color: #178582;
-    }
-
-    .fa-solid.fa-address-card:hover,
-    .fa-solid.fa-bars:hover {
-        color: #BFA181;
-    }
-
-}
-
 .menu-container a {
     text-decoration: none;
     color: #178582;
@@ -190,16 +147,6 @@ ul {list-style-type: none;}
     width: 50%;
     padding: 1rem;
     margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .skills-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      row-gap: 30px;
-      padding: 0;
-      width: 95%;
-    }
 }
 
 .skill-item {
@@ -350,15 +297,6 @@ h2, h3 {
     margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-    .documents-grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      row-gap: 30px;
-      width: 95%;
-    }
-}
-
 .document-item {
     display: grid;
     grid-template-rows: 20% 20% 60%;
@@ -404,4 +342,62 @@ footer {
     text-align: center;
     margin-top: 8em;
     margin-bottom: 1em;
+}
+
+@media (max-width: 768px) {
+    .icons-left,
+    .categories {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .icons-left ul,
+    .categories ul {
+        background-color: #131f2b;
+        border: 1px solid #242a30;
+        border-radius: 5px;
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+    }
+
+    .icons-left:active ul,
+    .categories:active ul {
+        display: block;
+    }
+
+    .icons-left a i:active,
+    .categories ul li a:active {
+        color: #BFA181;
+    }
+
+    .fa-solid.fa-address-card,
+    .fa-solid.fa-bars {
+        display: block;
+        color: #178582;
+    }
+
+    .fa-solid.fa-address-card:active,
+    .fa-solid.fa-bars:active {
+        color: #BFA181;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 30px;
+        padding: 0;
+        width: 95%;
+      }
+
+      .documents-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 30px;
+        width: 95%;
+      }
+
 }
