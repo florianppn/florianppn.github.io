@@ -296,6 +296,7 @@ h2, h3 {
 
 @media (max-width: 768px) {
     .documents-grid {
+        grid-template-columns: 100%;
         grid-template-rows: 50% 50%;
         width: 50%;
     }
