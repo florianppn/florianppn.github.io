@@ -372,8 +372,8 @@ footer {
         margin: 0;
     }
 
-    .icons-left:active ul,
-    .categories:active ul {
+    .icons-left:checked ul,
+    .categories:checked ul {
         background-color: #131f2b;
         border: 1px solid #242a30;
         border-radius: 5px;
