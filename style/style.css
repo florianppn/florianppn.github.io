@@ -98,11 +98,14 @@ ul {list-style-type: none;}
     border: 1px solid #178582;
     padding: 5px 10px;
     border-radius: 5px;
-    top: 60px;
-    z-index: 101;
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
+    z-index: 101;
+}
+
+.alert-copy {
+    position:relative;
 }
 
 .profil {
@@ -362,7 +365,7 @@ footer {
         position: absolute;
         z-index: 1000;
         padding: 0;
-        margin-top: 20px;
+        margin: 0;
     }
 
     .icons-left:hover ul,
@@ -375,7 +378,8 @@ footer {
 
     .icons-left ul li,
     .categories ul li {
-        margin-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .icons-left a i:hover,
