@@ -372,8 +372,8 @@ footer {
         margin: 0;
     }
 
-    .icons-left:checked ul,
-    .categories:checked ul {
+    .icons-left:hover ul,
+    .categories:hover ul {
         background-color: #131f2b;
         border: 1px solid #242a30;
         border-radius: 5px;
@@ -386,8 +386,8 @@ footer {
         padding-bottom: 10px;
     }
 
-    .icons-left a i:active,
-    .categories ul li a:active {
+    .icons-left a i:hover,
+    .categories ul li a:hover {
         color: #BFA181;
     }
 
@@ -397,8 +397,8 @@ footer {
         color: #178582;
     }
 
-    .fa-solid.fa-address-card:active,
-    .fa-solid.fa-bars:active {
+    .fa-solid.fa-address-card:hover,
+    .fa-solid.fa-bars:hover {
         color: #BFA181;
     }
 
