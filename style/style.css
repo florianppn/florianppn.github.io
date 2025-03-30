@@ -154,7 +154,7 @@ ul {list-style-type: none;}
 
 .skill-item {
     display: grid;
-    grid-template-rows: 20% 20% 60%;
+    grid-template-rows: 1fr 1fr 1fr;
     position: relative;
     overflow: hidden;
     background: #131f2b;
