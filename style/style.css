@@ -56,10 +56,6 @@ ul {list-style-type: none;}
     transition: transform  0.5s ease-in-out;  
 }
 
-.logo:hover {
-    transform: rotate(360deg);
-}
-
 .icons-left ul,
 .categories ul {
     text-align: center;
