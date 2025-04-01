@@ -414,7 +414,15 @@ footer {
       .works-image {
         display: none;
       }
-
+  
+      .carousel-prev {
+          left: 15px;
+      }
+  
+      .carousel-next {
+          right: -2px;
+      }
+  
       .documents-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
