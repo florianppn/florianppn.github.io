@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const discordLink = document.getElementById('discordLink');
     const discordCopiedMessage = document.getElementById('discordCopiedMessage');
+    const alertCopy = document.querySelector('.alert-copy a');
 
     discordLink.addEventListener('click', function(event) {
         event.preventDefault();
@@ -11,10 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         navigator.clipboard.writeText(discordUrl)
             .then(() => {
-                discordCopiedMessage.style.display = 'block';
-                setTimeout(() => {
-                    discordCopiedMessage.style.display = 'none';
-                }, 2000);
+                if (window.innerWidth >= 768) {
+                    discordCopiedMessage.style.display = 'block';
+                    setTimeout(() => {
+                        discordCopiedMessage.style.display = 'none';
+                    }, 1000);
+                }
             })
             .catch(err => {
                 console.error('Impossible de copier le lien Discord : ', err);

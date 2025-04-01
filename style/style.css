@@ -369,13 +369,13 @@ footer {
         z-index: 1000;
         padding: 0;
         margin: 0;
+        background-color: #131f2b;
+        border: 1px solid #242a30;
+        border-radius: 5px;
     }
 
     .icons-left:hover ul,
     .categories:hover ul {
-        background-color: #131f2b;
-        border: 1px solid #242a30;
-        border-radius: 5px;
         display: block;
     }
 
@@ -385,20 +385,10 @@ footer {
         padding-bottom: 10px;
     }
 
-    .icons-left a i:hover,
-    .categories ul li a:hover {
-        color: #BFA181;
-    }
-
     .fa-solid.fa-address-card,
     .fa-solid.fa-bars {
         display: block;
         color: #178582;
-    }
-
-    .fa-solid.fa-address-card:hover,
-    .fa-solid.fa-bars:hover {
-        color: #BFA181;
     }
 
     .skills-container {
