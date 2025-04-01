@@ -56,6 +56,8 @@ ul {list-style-type: none;}
     transition: transform  0.5s ease-in-out;  
 }
 
+@media (hover: hover){.logo:hover {transform:rotate(360deg);}}
+
 .icons-left ul,
 .categories ul {
     text-align: center;
@@ -100,9 +102,7 @@ ul {list-style-type: none;}
     z-index: 101;
 }
 
-.alert-copy {
-    position:relative;
-}
+.alert-copy {position:relative;}
 
 .profil {
     position: relative;
@@ -126,17 +126,17 @@ ul {list-style-type: none;}
     transition: width 0.3s ease-in-out;
 }
 
-.profil:hover {
-    transform: scale(1.05);
+@media (hover: hover){
+    .profil:hover {
+        transform: scale(1.05);
+    }
+
+    .profil:hover::after {
+        width: 50%;
+    }
 }
 
-.profil:hover::after {
-    width: 50%;
-}
-
-.title {
-    text-align: center;
-}
+.title {text-align: center;}
 
 .skills-container {
     display: grid;
@@ -161,13 +161,15 @@ ul {list-style-type: none;}
     transition: all  0.3s ease-in-out;
 }
 
-.skill-item:hover {
-    border: 1px solid #178582;
-    transform: translateY(-10px);
-}
+@media (hover: hover){
+    .skill-item:hover {
+        border: 1px solid #178582;
+        transform: translateY(-10px);
+    }
 
-.skill-item:hover::before {
-    opacity: 1;
+    .skill-item:hover::before {
+        opacity: 1;
+    }
 }
 
 section {
@@ -175,9 +177,7 @@ section {
     margin-bottom: 5em;
 }
 
-h2, h3 {
-    color: #178582;
-}
+h2, h3 {color: #178582;}
 
 .skill-item i {
     text-align: center;
@@ -221,9 +221,7 @@ h2, h3 {
     transition: border 0.3s ease-in-out;
 }
 
-.work-frame h4 {
-    text-transform: uppercase;
-}
+.work-frame h4 {text-transform: uppercase;}
 
 .work-description {
     width:400px;
@@ -245,12 +243,14 @@ h2, h3 {
     border-radius: 15px;
     transition: all 0.8s ease;
 }
-  
-.works-image:hover {
-    transform: scale(1.5);
-    border-radius: 0px;
-    position: relative;
-    z-index: 1000;
+
+@media (hover: hover){
+    .works-image:hover {
+        transform: scale(1.5);
+        border-radius: 0px;
+        position: relative;
+        z-index: 1000;
+    }
 }
 
 .work-frame:has(.works-image:hover) > *:not(figure) {
@@ -311,9 +311,17 @@ h2, h3 {
     text-align: center;
 }
 
-.document-item:hover {
-    border: 1px solid #178582;
-    transform: translateY(-10px);
+@media (hover: hover){
+
+    .document-item:hover {
+        border: 1px solid #178582;
+        transform: translateY(-10px);
+    }
+
+    .document-item a:hover {
+        color: #BFA181;
+    }
+
 }
 
 .document-item a {
@@ -322,10 +330,6 @@ h2, h3 {
     color: #178582;
     font-size: 24px;
     transition: color 0.3s ease-in-out;
-}
-
-.document-item a:hover {
-    color: #BFA181;
 }
 
 .document-item i {
