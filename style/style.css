@@ -186,129 +186,56 @@ h2, h3 {color: #178582;}
 }
 
 .works-container {
-    position: relative;
-    width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    justify-content: left;
-}
-
-.work-item {
-    min-width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.work-frame {
-    width: 50em;
-    height: 35em;
     display: grid;
-    grid-template-rows: 15% 50% 25% 5%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #242a30;
-    background: #131f2b;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5rem;
+    width: 50%;
+    padding: 1rem;
     margin: 0 auto;
-    border-radius: 15px;
-    padding: 20px;
-    transition: border 0.3s ease-in-out;
 }
 
-.work-frame h4 {text-transform: uppercase;}
-
-.work-description {
-    width:400px;
-    height: 100px;
-    overflow: auto;
-    overflow: scroll;
-    text-overflow: ellipsis;
-}
-
-.work-frame:hover {
-    border: 1px solid #178582;
+.works-item {
     position: relative;
-}
-
-.works-image {
-    display: block;
-    margin: auto;
-    max-width: 225px;
+    overflow: hidden;
+    background: #131f2b;
+    padding: 2rem;
     border-radius: 15px;
-    transition: all 0.8s ease;
+    text-align: center;
+    border: 1px solid #242a30;
+    transition: all  0.3s ease-in-out;
 }
 
 @media (hover: hover){
-    .works-image:hover {
-        transform: scale(1.5);
-        border-radius: 0px;
-        position: relative;
-        z-index: 1000;
+    .works-item:hover {
+        border: 1px solid #178582;
+        transform: translateY(-10px);
+    }
+
+    .works-item:hover::before {
+        opacity: 1;
     }
 }
 
-.work-frame:has(.works-image:hover) > *:not(figure) {
-    visibility: hidden;
-}
-
-.work-links {
+.documents-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.carousel-prev,
-.carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.carousel-prev {
-    left: 10px;
-    padding : 10px;
-}
-
-.carousel-next {
-    right: 10px;
-}
-
-.carousel-prev i,
-.carousel-next i {
-    font-size: 25px;
-    color: #178582;
-}
-
-.documents-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
     align-items: center;
+    gap: 5rem;
     width: 34%;
     padding: 1rem;
     margin: 0 auto;
 }
 
 .document-item {
-    display: grid;
-    grid-template-rows: 20% 20% 60%;
+    position: relative;
+    overflow: hidden;
     background: #131f2b;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 15px;
-    border: 1px solid #242a30;
-    transition: all 0.3s ease-in-out;
-    width: 200px;
     text-align: center;
+    border: 1px solid #242a30;
+    transition: all  0.3s ease-in-out;
 }
 
 @media (hover: hover){
@@ -337,6 +264,9 @@ h2, h3 {color: #178582;}
 }
 
 .download-file {
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
     border-radius: 15px;
 }
 
@@ -391,6 +321,7 @@ footer {
         color: #178582;
     }
 
+    .works-container,
     .skills-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -398,35 +329,12 @@ footer {
         padding: 0;
         width: 90%;
       }
-
-      .work-frame {
-        width: 15em;
-        height: 20em;
-        grid-template-rows: 5% 0% 75% 20%;
-      }
-
-      .work-description {
-        max-width: 200px;
-        height: auto;
-        margin: 0 auto;
-      }
-
-      .works-image {
-        display: none;
-      }
   
-      .carousel-prev {
-          left: 15px;
-      }
-  
-      .carousel-next {
-          right: -2px;
-      }
-  
-      .documents-grid {
+      .documents-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         row-gap: 30px;
+        padding: 0;
         width: 95%;
       }
 
