@@ -231,16 +231,17 @@ h2, h3 {color: #178582;}
     border: 1px solid #242a30;
     transition: all  0.3s ease-in-out;
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 0.1fr 1.5fr 0.1fr;
     justify-items: center;
     justify-self: center;
+    align-items: center; 
+    justify-content: center;
     gap: 1rem;
 }
 
 .works-item img {
     width: 100%;
     height: auto;
-    border-radius: 15px;
     border-radius: 15px;
 }
 
