@@ -210,11 +210,14 @@ h2, h3 {color: #178582;}
 }
 
 .works-container {
+    width: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 5rem;
-    width: 50%;
+    row-gap: 5rem;
+    column-gap: 30rem;
+    text-align: center;
+    justify-items: center;
     padding: 1rem;
     margin: 0 auto;
 }
@@ -225,9 +228,30 @@ h2, h3 {color: #178582;}
     background: #131f2b;
     padding: 2rem;
     border-radius: 15px;
-    text-align: center;
     border: 1px solid #242a30;
     transition: all  0.3s ease-in-out;
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    justify-self: center;
+    gap: 1rem;
+}
+
+.works-item img {
+    width: 384px;
+    height: 384px;
+    border-radius: 15px;
+}
+
+.works-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    justify-items: center;
+}
+
+.works-links i {
+    font-size: 30px;
 }
 
 @media (hover: hover){
@@ -244,7 +268,8 @@ h2, h3 {color: #178582;}
 .documents-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    text-align: center;
+    justify-items: center;
     gap: 5rem;
     width: 34%;
     padding: 1rem;
@@ -252,12 +277,14 @@ h2, h3 {color: #178582;}
 }
 
 .document-item {
+    width: 70%;
     position: relative;
     overflow: hidden;
     background: #131f2b;
     padding: 2rem;
     border-radius: 15px;
-    text-align: center;
+    justify-items: center;
+    justify-self: center;
     border: 1px solid #242a30;
     transition: all  0.3s ease-in-out;
 }
@@ -304,7 +331,7 @@ footer {
     margin-bottom: 1em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
     .menu-container {
         opacity: 1;
     }
@@ -346,7 +373,6 @@ footer {
     }
 
     .skills-container {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
         padding: 0;
@@ -362,15 +388,14 @@ footer {
         grid-template-rows: 1fr 1fr 1fr 1fr;
         row-gap: 30px;
         padding: 0;
-        width: 90%;
-      }
+    }
   
-      .documents-container {
+    .documents-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         row-gap: 30px;
         padding: 0;
         width: 95%;
-      }
+    }
 
 }
