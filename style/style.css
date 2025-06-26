@@ -210,12 +210,12 @@ h2, h3 {color: #178582;}
 }
 
 .works-container {
-    width: 50%;
+    width: 65%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 5rem;
-    column-gap: 30rem;
+    column-gap: 5rem;
     text-align: center;
     justify-items: center;
     padding: 1rem;
@@ -238,8 +238,9 @@ h2, h3 {color: #178582;}
 }
 
 .works-item img {
-    width: 384px;
-    height: 384px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
     border-radius: 15px;
 }
 
@@ -266,12 +267,12 @@ h2, h3 {color: #178582;}
 }
 
 .documents-container {
+    width: 34%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     justify-items: center;
     gap: 5rem;
-    width: 34%;
     padding: 1rem;
     margin: 0 auto;
 }
