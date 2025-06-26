@@ -22,4 +22,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error('Impossible de copier le lien Discord : ', err);
             });
     });
+
+    const contactToggle = document.getElementById('contact-toggle');
+    const categoriesToggle = document.getElementById('categories-toggle');
+
+    const contactMenu = contactToggle.nextElementSibling;
+    const categoriesMenu = categoriesToggle.nextElementSibling;
+    
+    function toggleMenu(menu) {
+        menu.classList.toggle('active');
+    }
+
+    contactToggle.addEventListener('click', function() {
+        toggleMenu(contactMenu);
+        if (categoriesMenu.classList.contains('active')) {
+            toggleMenu(categoriesMenu);
+        }
+    });
+
+    categoriesToggle.addEventListener('click', function() {
+        toggleMenu(categoriesMenu);
+        if (contactMenu.classList.contains('active')) {
+            toggleMenu(contactMenu);
+        }
+    });
+
 });

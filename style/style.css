@@ -356,9 +356,18 @@ footer {
         border-radius: 5px;
     }
 
-    .icons-left:hover ul,
-    .categories:hover ul {
-        display: block;
+    @media (pointer: coarse) {
+        .icons-left ul.active,
+        .categories ul.active {
+            display: block;
+        }
+    }
+
+    @media (pointer: fine) {
+        .icons-left:hover ul,
+        .categories:hover ul {
+            display: block;
+        }
     }
 
     .icons-left ul li,
