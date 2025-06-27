@@ -26,17 +26,18 @@ a:hover {
 ul {list-style-type: none;}
 
 .menu-container {
+    z-index: 1000;
     position: sticky;
     opacity: 0.8;
     top: 0;
-    width: 95%;
     margin: 0 auto;
     background-color: #0A1826;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    z-index: 1000;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    text-align: center;
+    justify-items: center;
     align-items: center;
-    padding: 15px 20px;
+    padding: 1em;
 }
 
 .menu-container i {
@@ -336,6 +337,7 @@ footer {
 @media (max-width: 990px) {
     .menu-container {
         opacity: 1;
+        justify-items: normal;
     }
 
     .icons-left,
