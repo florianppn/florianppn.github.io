@@ -334,20 +334,17 @@ footer {
     margin-bottom: 1em;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1202px) {
     .menu-container {
-        opacity: 1;
         justify-items: normal;
     }
 
-    .icons-left,
     .categories {
         display: inline-block;
         vertical-align: top;
         position: relative;
     }
 
-    .icons-left ul,
     .categories ul {
         display: none;
         position: absolute;
@@ -360,27 +357,70 @@ footer {
     }
 
     @media (pointer: coarse) {
-        .icons-left ul.active,
         .categories ul.active {
             display: block;
         }
     }
 
     @media (pointer: fine) {
-        .icons-left:hover ul,
         .categories:hover ul {
             display: block;
         }
     }
 
-    .icons-left ul li,
     .categories ul li {
         padding-top: 10px;
         padding-bottom: 10px;
     }
 
-    .fa-solid.fa-address-card,
     .fa-solid.fa-bars {
+        display: block;
+        color: #178582;
+    }
+
+}
+
+@media (max-width: 990px) {
+    .menu-container {
+        opacity: 1;
+        justify-items: normal;
+    }
+
+    .icons-left {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .icons-left ul {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+        background-color: #131f2b;
+        border: 1px solid #242a30;
+        border-radius: 5px;
+    }
+
+    @media (pointer: coarse) {
+        .icons-left ul.active {
+            display: block;
+        }
+    }
+
+    @media (pointer: fine) {
+        .icons-left:hover ul {
+            display: block;
+        }
+    }
+
+    .icons-left ul li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .fa-solid.fa-address-card {
         display: block;
         color: #178582;
     }
