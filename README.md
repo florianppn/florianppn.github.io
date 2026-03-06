@@ -24,7 +24,7 @@ Portfolio personnel présentant mon parcours et mes projets en développement lo
 ├── asset/
 │   ├── logo/          # Logo du site
 │   ├── work/          # Captures d'écran des projets
-│   └── document/      # CV et lettre de motivation
+│   └── document/      # CV
 ├── font/              # Polices
 ├── script/            # JavaScript
 ├── style/             # CSS

@@ -1,24 +1,19 @@
-/* ===== Section Documents ===== */
+/* ===== Section CV ===== */
 .documents-container {
-    width: 34%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    justify-items: center;
-    gap: 5rem;
+    display: flex;
+    justify-content: center;
     padding: 1rem;
     margin: 0 auto;
 }
 
 .document-item {
-    width: 70%;
+    width: 280px;
     position: relative;
     overflow: hidden;
     background: #131f2b;
     padding: 2rem;
     border-radius: 15px;
-    justify-items: center;
-    justify-self: center;
+    text-align: center;
     border: 1px solid #242a30;
     transition: all 0.3s ease-in-out;
 }
@@ -29,30 +24,40 @@
         transform: translateY(-10px);
     }
 
-    .document-item a:hover {
+    .document-download-btn:hover {
         color: #BFA181;
     }
 }
 
-.document-item a {
-    display: block;
-    margin-top: 10px;
+.document-item i.fa-file-pdf {
+    font-size: 48px;
     color: #178582;
-    font-size: 24px;
-    transition: color 0.3s ease-in-out;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-.document-item i {
-    font-size: 40px;
+.document-item h3 {
+    margin: 0 0 1rem 0;
 }
 
 .download-file {
-    display: grid;
-    grid-template-rows: auto auto;
-    align-items: center;
-    border-radius: 15px;
+    display: flex;
+    justify-content: center;
 }
 
-.download-file i {
-    font-size: 30px;
+.document-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(23, 133, 130, 0.2);
+    border: 1px solid rgba(23, 133, 130, 0.4);
+    border-radius: 10px;
+    color: #178582;
+    font-size: 1rem;
+    transition: all 0.25s ease;
+}
+
+.document-download-btn i {
+    font-size: 1.1rem;
 }

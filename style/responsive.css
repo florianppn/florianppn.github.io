@@ -126,11 +126,16 @@
         padding: 0 1rem;
     }
 
+    .contact-form {
+        padding: 0 1.5rem;
+    }
+
     .documents-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 30px;
-        padding: 0;
-        width: 95%;
+        padding: 0 1rem;
+    }
+
+    .document-item {
+        width: 100%;
+        max-width: 320px;
     }
 }
