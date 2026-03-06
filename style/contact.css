@@ -57,19 +57,13 @@
     min-height: 120px;
 }
 
-.form-submit-wrap {
-    display: flex;
-    justify-content: center;
-    margin-top: 0.5rem;
-}
-
 .contact-submit {
     display: inline-flex;
+    margin-top: 0.5rem;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-width: 200px;
-    padding: 0.9rem 2rem;
+    padding: 0.9rem 1.5rem;
     border: 2px solid #178582;
     border-radius: 10px;
     background: rgba(23, 133, 130, 0.2);
