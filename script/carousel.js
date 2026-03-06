@@ -2,6 +2,7 @@
 
 /**
  * Carousel des projets
+ * Scroll réparti sur les 7 positions pour atteindre tous les projets
  */
 export function initCarousel() {
     const carousel = document.querySelector('.works-carousel');
@@ -13,24 +14,24 @@ export function initCarousel() {
     const nextBtn = carousel.querySelector('.works-carousel-next');
     const dotsContainer = carousel.querySelector('.works-carousel-dots');
 
-    if (!track || !dotsContainer) return;
+    if (!track || !dotsContainer || cards.length === 0) return;
 
-    function getScrollAmount() {
-        const card = cards[0];
-        if (!card) return 350;
-        const style = getComputedStyle(track);
-        const gap = parseFloat(style.gap) || 32;
-        return card.offsetWidth + gap;
+    function getScrollStep() {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        if (maxScroll <= 0) return 0;
+        return maxScroll / (cards.length - 1);
     }
 
-    // Créer les dots
+    // Créer les dots (1 par projet)
     cards.forEach((_, i) => {
         const dot = document.createElement('button');
         dot.type = 'button';
         dot.className = 'works-carousel-dot' + (i === 0 ? ' active' : '');
         dot.setAttribute('aria-label', 'Projet ' + (i + 1));
         dot.addEventListener('click', () => {
-            track.scrollTo({ left: i * getScrollAmount(), behavior: 'smooth' });
+            const step = getScrollStep();
+            const targetScroll = i * step;
+            track.scrollTo({ left: targetScroll, behavior: 'smooth' });
         });
         dotsContainer.appendChild(dot);
     });
@@ -38,20 +39,27 @@ export function initCarousel() {
     const dots = dotsContainer.querySelectorAll('.works-carousel-dot');
 
     function updateDots() {
-        const amount = getScrollAmount();
+        const step = getScrollStep();
+        if (step <= 0) return;
         const scrollLeft = track.scrollLeft;
-        const index = Math.round(scrollLeft / amount);
+        const index = Math.round(scrollLeft / step);
+        const activeIndex = Math.min(Math.max(index, 0), cards.length - 1);
         dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === Math.min(index, cards.length - 1));
+            dot.classList.toggle('active', i === activeIndex);
         });
     }
 
     prevBtn?.addEventListener('click', () => {
-        track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        const step = getScrollStep();
+        const targetScroll = Math.max(0, track.scrollLeft - step);
+        track.scrollTo({ left: targetScroll, behavior: 'smooth' });
     });
 
     nextBtn?.addEventListener('click', () => {
-        track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        const step = getScrollStep();
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const targetScroll = Math.min(maxScroll, track.scrollLeft + step);
+        track.scrollTo({ left: targetScroll, behavior: 'smooth' });
     });
 
     track.addEventListener('scroll', updateDots);
