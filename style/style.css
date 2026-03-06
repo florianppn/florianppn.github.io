@@ -210,62 +210,247 @@ h2, h3 {color: #178582;}
     color: #178582;
 }
 
-.works-container {
-    width: 65%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 5rem;
-    column-gap: 5rem;
+.skill-item-featured {
+    border-color: rgba(23, 133, 130, 0.5);
+}
+
+.skill-item-featured .skill-icon i {
+    font-size: 70px;
+}
+
+/* ===== SECTION PROJETS - Design moderne ===== */
+#works .title {
+    margin-bottom: 0.5rem;
+}
+
+.works-subtitle {
     text-align: center;
-    justify-items: center;
-    padding: 1rem;
+    color: #BFA181;
+    opacity: 0.85;
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+}
+
+.works-container {
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
 }
 
-.works-item {
+.works-card {
     position: relative;
+    border-radius: 16px;
     overflow: hidden;
-    background: #131f2b;
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid #242a30;
-    transition: all  0.3s ease-in-out;
-    display: grid;
-    grid-template-rows: 0.1fr 1.5fr 0.1fr;
-    justify-items: center;
-    justify-self: center;
-    align-items: center; 
-    justify-content: center;
-    gap: 1rem;
+    background: linear-gradient(145deg, #131f2b 0%, #0f1922 100%);
+    border: 1px solid rgba(23, 133, 130, 0.15);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: works-card-fade-in 0.6s ease-out backwards;
 }
 
-.works-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
+.works-card:nth-child(1) { animation-delay: 0.05s; }
+.works-card:nth-child(2) { animation-delay: 0.1s; }
+.works-card:nth-child(3) { animation-delay: 0.15s; }
+.works-card:nth-child(4) { animation-delay: 0.2s; }
+.works-card:nth-child(5) { animation-delay: 0.25s; }
+.works-card:nth-child(6) { animation-delay: 0.3s; }
+.works-card:nth-child(7) { animation-delay: 0.35s; }
 
-.works-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    justify-items: center;
-}
-
-.works-links i {
-    font-size: 30px;
-}
-
-@media (hover: hover){
-    .works-item:hover {
-        border: 1px solid #178582;
-        transform: translateY(-10px);
+@keyframes works-card-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-
-    .works-item:hover::before {
+    to {
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+.works-card:hover,
+.works-card:focus-within {
+    transform: translateY(-8px);
+    border-color: rgba(23, 133, 130, 0.4);
+    box-shadow: 0 12px 40px rgba(23, 133, 130, 0.15);
+}
+
+
+.works-card-featured {
+    border-color: rgba(23, 133, 130, 0.3);
+}
+
+.works-card-featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #178582, #BFA181);
+    z-index: 1;
+}
+
+.works-card-image-link {
+    display: block;
+    position: absolute;
+    inset: 0;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+.works-card-image-link:focus-visible {
+    outline: 2px solid #178582;
+    outline-offset: 2px;
+}
+
+.works-card-image {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a2835 0%, #0f1922 100%);
+}
+
+.works-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.works-card:hover .works-card-image img {
+    transform: scale(1.08);
+}
+
+.works-card-image-placeholder {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.works-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 24, 38, 0.95) 0%, transparent 50%);
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.works-card-overlay .fa-arrow-up-right-from-square {
+    margin-left: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.works-card:hover .works-card-overlay {
+    opacity: 1;
+}
+
+.works-card-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #178582;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.works-card-cta i {
+    font-size: 0.8rem;
+}
+
+.works-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(23, 133, 130, 0.3);
+    border-radius: 20px;
+    color: #BFA181;
+    font-size: 0.8rem;
+}
+
+.works-card-content {
+    padding: 1.5rem;
+}
+
+.works-card-content h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.25rem;
+    color: #178582;
+    font-weight: 600;
+}
+
+.works-card-desc {
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    color: #BFA181;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.works-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.works-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.65rem;
+    background: rgba(23, 133, 130, 0.15);
+    color: #178582;
+    border-radius: 6px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.works-card-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.works-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(23, 133, 130, 0.2);
+    color: #178582;
+    border: 1px solid rgba(23, 133, 130, 0.3);
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.works-btn:hover {
+    background: #178582;
+    color: #0A1826;
+    transform: translateY(-2px);
+}
+
+.works-card-locked {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #BFA181;
+    opacity: 0.7;
+}
+
+.works-card-locked i {
+    font-size: 0.9rem;
+    color: #178582;
 }
 
 .documents-container {
@@ -438,9 +623,15 @@ footer {
 
     .works-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        row-gap: 30px;
-        padding: 0;
+        width: 95%;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .works-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
     }
   
     .documents-container {

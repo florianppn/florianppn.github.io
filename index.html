@@ -39,53 +39,54 @@
   <section id="profil">
     <div class="profil">
       <h2 class="title">Hello World !</h2>
-      <span>Je m'appelle Florian Pépin et je suis étudiant en informatique.</span>
+      <span>Je m'appelle Florian Pépin et je suis étudiant en <strong>Master Informatique (GIL) — Génie Informatique Logiciel</strong>.</span>
       <br>
-      <span>Je suis passionné par le développement logiciel et la cybersécurité.</span>
+      <span>Passionné par le développement full stack, je me spécialise notamment sur <strong>Symfony</strong>.</span>
       <br>
-      <span>J'aimerais poursuivre mes études dans l'un de ces domaines.</span>
+      <span>J'aime concevoir des applications web complètes, de la base de données à l'interface utilisateur.</span>
     </div>
   </section>
 
   <section id="skills">
     <h2 class="title">MES COMPÉTENCES</h2>
     <div class="skills-container">
-      <div class="skill-item">
-        <div class="skill-icon"><i class="fa-solid fa-people-group"></i></div>
-        <div class="skill-title"><h3>Développement et conception logiciel</h3></div>
+      <div class="skill-item skill-item-featured">
+        <div class="skill-icon"><i class="fa-brands fa-symfony"></i></div>
+        <div class="skill-title"><h3>Full Stack Symfony</h3></div>
         <div class="skill-list">
-          <span>✑ Java</span>
-          <span>✑ Python</span>
+          <span>✑ Symfony</span>
+          <span>✑ Twig</span>
+          <span>✑ Doctrine</span>
+          <span>✑ PHP</span>
         </div>
       </div>
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-solid fa-laptop"></i></div>
         <div class="skill-title"><h3>Développement web et mobile</h3></div>
         <div class="skill-list">
-          <span>✑ React Native</span>
           <span>✑ HTML/CSS</span>
           <span>✑ JavaScript</span>
-          <span>✑ PHP</span>
+          <span>✑ React Native</span>
         </div>
       </div>
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
-        <div class="skill-title"><h3>Gestion d'une base de données</h3></div>
+        <div class="skill-title"><h3>Bases de données</h3></div>
         <div class="skill-list">
-          <span>✑ PgSQL</span>
-          <span>✑ MariaDB/MySQL</span>
+          <span>✑ MySQL / MariaDB</span>
+          <span>✑ PostgreSQL</span>
           <span>✑ Neo4j</span>
           <span>✑ MongoDB</span>
         </div>
       </div>
       <div class="skill-item">
-        <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
-        <div class="skill-title"><h3>Outils de développement et Technologies</h3></div>
+        <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+        <div class="skill-title"><h3>Conception et outils</h3></div>
         <div class="skill-list">
+          <span>✑ Java</span>
+          <span>✑ Python</span>
           <span>✑ GraphQL</span>
           <span>✑ Git</span>
-          <span>✑ Raspberrypi</span>
-          <span>✑ LATEX</span>
         </div>
       </div>
     </div>
@@ -93,40 +94,171 @@
 
   <section id="works">
     <h2 class="title">MES PROJETS</h2>
-      <div class="works-container">
-        <div class="works-item">
+    <p class="works-subtitle">Une sélection de mes réalisations en développement logiciel et web</p>
+    <div class="works-container">
+      <article class="works-card">
+        <div class="works-card-image">
+          <a href="https://github.com/florianppn/Analyseur-LDVEH-Java" target="_blank" class="works-card-image-link">
+            <img src="./asset/work/analyseur-ldveh.png" alt="Analyseur LDVEH">
+            <div class="works-card-overlay">
+              <span class="works-card-cta">Voir le projet</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        </div>
+        <div class="works-card-content">
+          <h3>Analyseur LDVEH</h3>
+          <p class="works-card-desc">Visualisation de livres dont vous êtes le héros en graphe</p>
+          <div class="works-tags">
+            <span class="works-tag">Java</span>
+            <span class="works-tag">MVC</span>
+            <span class="works-tag">Graphe</span>
+          </div>
+          <div class="works-card-actions">
+            <a href="https://github.com/florianppn/Analyseur-LDVEH-Java" target="_blank" class="works-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/florianppn/Analyseur-LDVEH-Java/archive/refs/heads/main.zip" class="works-btn" aria-label="Télécharger"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </article>
+      <article class="works-card">
+        <div class="works-card-image">
+          <a href="https://github.com/florianppn/TodoApp-ReactNative-Neo4j-GraphQL" target="_blank" class="works-card-image-link">
+            <img src="./asset/work/todo-app.png" alt="Todo App">
+            <div class="works-card-overlay">
+              <span class="works-card-cta">Voir le projet</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        </div>
+        <div class="works-card-content">
           <h3>Todo App</h3>
-          <img src="./asset/work/todo-app.png" alt="todo-app">
-          <div class="works-links">
-            <a href="https://github.com/florianppn/TodoApp-ReactNative-Neo4j-GraphQL" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-            <a href="https://github.com/florianppn/TodoApp-ReactNative-Neo4j-GraphQL/archive/refs/heads/main.zip"><i class="fa-solid fa-file-arrow-down"></i></a>
+          <p class="works-card-desc">Application mobile de listes de tâches</p>
+          <div class="works-tags">
+            <span class="works-tag">React Native</span>
+            <span class="works-tag">Neo4j</span>
+            <span class="works-tag">GraphQL</span>
+          </div>
+          <div class="works-card-actions">
+            <a href="https://github.com/florianppn/TodoApp-ReactNative-Neo4j-GraphQL" target="_blank" class="works-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/florianppn/TodoApp-ReactNative-Neo4j-GraphQL/archive/refs/heads/main.zip" class="works-btn" aria-label="Télécharger"><i class="fa-solid fa-download"></i></a>
           </div>
         </div>
-        <div class="works-item">
-          <h3>Site Web avec architecture MVCR</h3>
-          <img src="./asset/work/site-web-mvcr.png" alt="todo-app">
-          <div class="works-links">
-            <a href="https://github.com/florianppn/Site-Web-MVCR-PHP" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-            <a href="https://github.com/florianppn/Site-Web-MVCR-PHP/archive/refs/heads/main.zip"><i class="fa-solid fa-file-arrow-down"></i></a>
+      </article>
+      <article class="works-card">
+        <div class="works-card-image">
+          <a href="https://github.com/florianppn/Visualization-Sorting-Algorithms-Java" target="_blank" class="works-card-image-link">
+            <img src="./asset/work/sorting-algorithms-java.png" alt="Visualisation algorithmes de tri">
+            <div class="works-card-overlay">
+              <span class="works-card-cta">Voir le projet</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        </div>
+        <div class="works-card-content">
+          <h3>Algorithmes de tri</h3>
+          <p class="works-card-desc">Visualisation interactive de 18 algorithmes</p>
+          <div class="works-tags">
+            <span class="works-tag">Java</span>
+            <span class="works-tag">Swing</span>
+          </div>
+          <div class="works-card-actions">
+            <a href="https://github.com/florianppn/Visualization-Sorting-Algorithms-Java" target="_blank" class="works-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/florianppn/Visualization-Sorting-Algorithms-Java/archive/refs/heads/main.zip" class="works-btn" aria-label="Télécharger"><i class="fa-solid fa-download"></i></a>
           </div>
         </div>
-        <div class="works-item">
-          <h3>Gridarena : jeu avec architecture MVC</h3>
-          <img src="./asset/work/gridarena-mvc-java.png" alt="gridarena-mvc-java">
-          <div class="works-links">
-            <a href="https://github.com/florianppn/Gridarena-Java-MVC" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-            <a href="https://github.com/florianppn/Gridarena-Java-MVC/archive/refs/heads/main.zip"><i class="fa-solid fa-file-arrow-down"></i></a>
+      </article>
+      <article class="works-card">
+        <div class="works-card-image">
+          <a href="https://github.com/florianppn/Gridarena-Java-MVC" target="_blank" class="works-card-image-link">
+            <img src="./asset/work/gridarena-mvc-java.png" alt="Gridarena">
+            <div class="works-card-overlay">
+              <span class="works-card-cta">Voir le projet</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        </div>
+        <div class="works-card-content">
+          <h3>Gridarena</h3>
+          <p class="works-card-desc">Jeu de combat au tour par tour</p>
+          <div class="works-tags">
+            <span class="works-tag">Java</span>
+            <span class="works-tag">MVC</span>
+          </div>
+          <div class="works-card-actions">
+            <a href="https://github.com/florianppn/Gridarena-Java-MVC" target="_blank" class="works-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/florianppn/Gridarena-Java-MVC/archive/refs/heads/main.zip" class="works-btn" aria-label="Télécharger"><i class="fa-solid fa-download"></i></a>
           </div>
         </div>
-        <div class="works-item">
-          <h3>Visualisation d'algorithmes de tri</h3>
-          <img src="./asset/work/sorting-algorithms-java.png" alt="sorting-algorithms-java">
-          <div class="works-links">
-            <a href="https://github.com/florianppn/Visualization-Sorting-Algorithms-Java" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-            <a href="https://github.com/florianppn/Visualization-Sorting-Algorithms-Java/archive/refs/heads/main.zip"><i class="fa-solid fa-file-arrow-down"></i></a>
+      </article>
+      <article class="works-card">
+        <div class="works-card-image">
+          <a href="https://github.com/florianppn/e-bazar" target="_blank" class="works-card-image-link">
+            <img src="./asset/work/e-bazar.png" alt="E-bazar">
+            <div class="works-card-overlay">
+              <span class="works-card-cta">Voir le projet</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        </div>
+        <div class="works-card-content">
+          <h3>E-bazar</h3>
+          <p class="works-card-desc">Plateforme de petites annonces entre particuliers</p>
+          <div class="works-tags">
+            <span class="works-tag">PHP</span>
+            <span class="works-tag">MVC</span>
+            <span class="works-tag">MariaDB</span>
+          </div>
+          <div class="works-card-actions">
+            <a href="https://github.com/florianppn/e-bazar" target="_blank" class="works-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/florianppn/e-bazar/archive/refs/heads/main.zip" class="works-btn" aria-label="Télécharger"><i class="fa-solid fa-download"></i></a>
           </div>
         </div>
-      </div>
+      </article>
+      <article class="works-card">
+        <div class="works-card-image">
+          <a href="https://github.com/florianppn/corridor" target="_blank" class="works-card-image-link">
+            <img src="./asset/work/corridor.png" alt="Corridor Quoridor">
+            <div class="works-card-overlay">
+              <span class="works-card-cta">Voir le projet</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        </div>
+        <div class="works-card-content">
+          <h3>Corridor</h3>
+          <p class="works-card-desc">Quoridor avec IA (Négamax, αβ)</p>
+          <div class="works-tags">
+            <span class="works-tag">Java</span>
+            <span class="works-tag">Swing</span>
+            <span class="works-tag">IA</span>
+          </div>
+          <div class="works-card-actions">
+            <a href="https://github.com/florianppn/corridor" target="_blank" class="works-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://github.com/florianppn/corridor/archive/refs/heads/main.zip" class="works-btn" aria-label="Télécharger"><i class="fa-solid fa-download"></i></a>
+          </div>
+        </div>
+      </article>
+      <article class="works-card works-card-featured">
+        <div class="works-card-image">
+          <div class="works-card-image-placeholder">
+            <img src="./asset/work/agora.png" alt="AGORA">
+            <div class="works-card-overlay">
+              <span class="works-card-badge"><i class="fa-solid fa-star"></i> Projet annuel</span>
+            </div>
+          </div>
+        </div>
+        <div class="works-card-content">
+          <h3>AGORA</h3>
+          <p class="works-card-desc">Plateforme de jeux de plateau en temps réel</p>
+          <div class="works-tags">
+            <span class="works-tag">Symfony</span>
+            <span class="works-tag">Twig</span>
+            <span class="works-tag">Mercure</span>
+          </div>
+          <span class="works-card-locked"><i class="fa-solid fa-lock"></i> Non disponible</span>
+        </div>
+      </article>
+    </div>
   </section>
 
   <section id="documents">
