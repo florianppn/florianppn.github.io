@@ -1,0 +1,58 @@
+/* ===== Section Documents ===== */
+.documents-container {
+    width: 34%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    justify-items: center;
+    gap: 5rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.document-item {
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+    background: #131f2b;
+    padding: 2rem;
+    border-radius: 15px;
+    justify-items: center;
+    justify-self: center;
+    border: 1px solid #242a30;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (hover: hover) {
+    .document-item:hover {
+        border: 1px solid #178582;
+        transform: translateY(-10px);
+    }
+
+    .document-item a:hover {
+        color: #BFA181;
+    }
+}
+
+.document-item a {
+    display: block;
+    margin-top: 10px;
+    color: #178582;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.document-item i {
+    font-size: 40px;
+}
+
+.download-file {
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.download-file i {
+    font-size: 30px;
+}

@@ -1,0 +1,321 @@
+/* ===== Section Projets ===== */
+#works .title {
+    margin-bottom: 0.5rem;
+}
+
+.works-subtitle {
+    text-align: center;
+    color: #BFA181;
+    opacity: 0.85;
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+}
+
+/* Carousel */
+.works-carousel {
+    position: relative;
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.works-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(23, 133, 130, 0.5);
+    background: rgba(10, 24, 38, 0.9);
+    color: #178582;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.works-carousel-btn:hover {
+    background: #178582;
+    color: #0A1826;
+    border-color: #178582;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.works-carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.works-carousel-prev {
+    left: 0;
+}
+
+.works-carousel-next {
+    right: 0;
+}
+
+.works-carousel-viewport {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.works-carousel-viewport::before,
+.works-carousel-viewport::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.works-carousel-viewport::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(10, 24, 38, 0.9), transparent);
+}
+
+.works-carousel-viewport::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(10, 24, 38, 0.9), transparent);
+}
+
+.works-container {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.works-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cards */
+.works-card {
+    position: relative;
+    flex: 0 0 320px;
+    min-width: 320px;
+    max-width: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #131f2b 0%, #0f1922 100%);
+    border: 1px solid rgba(23, 133, 130, 0.15);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.works-card:hover,
+.works-card:focus-within {
+    transform: translateY(-8px);
+    border-color: rgba(23, 133, 130, 0.4);
+    box-shadow: 0 12px 40px rgba(23, 133, 130, 0.15);
+}
+
+.works-card-featured {
+    border-color: rgba(23, 133, 130, 0.3);
+}
+
+.works-card-featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #178582, #BFA181);
+    z-index: 1;
+}
+
+.works-card-image-link {
+    display: block;
+    position: absolute;
+    inset: 0;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+.works-card-image-link:focus-visible {
+    outline: 2px solid #178582;
+    outline-offset: 2px;
+}
+
+.works-card-image {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a2835 0%, #0f1922 100%);
+}
+
+.works-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.works-card:hover .works-card-image img {
+    transform: scale(1.08);
+}
+
+.works-card-image-placeholder {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.works-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 24, 38, 0.95) 0%, transparent 50%);
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.works-card-overlay .fa-arrow-up-right-from-square {
+    margin-left: 0.4rem;
+    font-size: 0.85rem;
+}
+
+.works-card:hover .works-card-overlay {
+    opacity: 1;
+}
+
+.works-card-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #178582;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.works-card-cta i {
+    font-size: 0.8rem;
+}
+
+.works-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(23, 133, 130, 0.3);
+    border-radius: 20px;
+    color: #BFA181;
+    font-size: 0.8rem;
+}
+
+.works-card-content {
+    padding: 1.5rem;
+}
+
+.works-card-content h3 {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.25rem;
+    color: #178582;
+    font-weight: 600;
+}
+
+.works-card-desc {
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    color: #BFA181;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.works-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.works-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.65rem;
+    background: rgba(23, 133, 130, 0.15);
+    color: #178582;
+    border-radius: 6px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.works-card-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.works-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(23, 133, 130, 0.2);
+    color: #178582;
+    border: 1px solid rgba(23, 133, 130, 0.3);
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.works-btn:hover {
+    background: #178582;
+    color: #0A1826;
+    transform: translateY(-2px);
+}
+
+.works-card-locked {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #BFA181;
+    opacity: 0.7;
+}
+
+.works-card-locked i {
+    font-size: 0.9rem;
+    color: #178582;
+}
+
+.works-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.works-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid rgba(23, 133, 130, 0.5);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.works-carousel-dot:hover {
+    background: rgba(23, 133, 130, 0.3);
+}
+
+.works-carousel-dot.active {
+    background: #178582;
+    border-color: #178582;
+}

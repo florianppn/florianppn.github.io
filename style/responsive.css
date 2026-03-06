@@ -1,0 +1,136 @@
+/* ===== Responsive ===== */
+@media (max-width: 1202px) {
+    .menu-container {
+        justify-items: normal;
+    }
+
+    .categories {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .categories ul {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+        background-color: #131f2b;
+        border: 1px solid #242a30;
+        border-radius: 5px;
+    }
+
+    @media (pointer: coarse) {
+        .categories ul.active {
+            display: block;
+        }
+    }
+
+    @media (pointer: fine) {
+        .categories:hover ul {
+            display: block;
+        }
+    }
+
+    .categories ul li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .fa-solid.fa-bars {
+        display: block;
+        color: #178582;
+    }
+}
+
+@media (max-width: 990px) {
+    .menu-container {
+        opacity: 1;
+        justify-items: normal;
+    }
+
+    .icons-left {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .icons-left ul {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+        background-color: #131f2b;
+        border: 1px solid #242a30;
+        border-radius: 5px;
+    }
+
+    @media (pointer: coarse) {
+        .icons-left ul.active {
+            display: block;
+        }
+    }
+
+    @media (pointer: fine) {
+        .icons-left:hover ul {
+            display: block;
+        }
+    }
+
+    .icons-left ul li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .fa-solid.fa-address-card {
+        display: block;
+        color: #178582;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .skill-item {
+        width: 70%;
+        padding: 1rem;
+    }
+
+    .works-carousel {
+        padding: 0 2.5rem;
+    }
+
+    .works-carousel-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .works-card {
+        flex: 0 0 280px;
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    .works-container {
+        gap: 1.5rem;
+    }
+
+    .works-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .documents-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 30px;
+        padding: 0;
+        width: 95%;
+    }
+}

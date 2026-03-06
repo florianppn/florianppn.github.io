@@ -7,7 +7,7 @@
   <link rel="icon" type="image/x-icon" href="./asset/logo/kickman.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="./style/style.css">
-  <script src="./script/script.js" defer></script>
+  <script type="module" src="./script/script.js"></script>
 </head>
 <body>
   
@@ -56,36 +56,33 @@
         <div class="skill-list">
           <span>✑ Symfony</span>
           <span>✑ Twig</span>
-          <span>✑ Doctrine</span>
+          <span>✑ Mercure</span>
           <span>✑ PHP</span>
         </div>
       </div>
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-solid fa-laptop"></i></div>
-        <div class="skill-title"><h3>Développement web et mobile</h3></div>
+        <div class="skill-title"><h3>Web & mobile</h3></div>
         <div class="skill-list">
-          <span>✑ HTML/CSS</span>
-          <span>✑ JavaScript</span>
+          <span>✑ HTML / CSS</span>
           <span>✑ React Native</span>
         </div>
       </div>
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
-        <div class="skill-title"><h3>Bases de données</h3></div>
+        <div class="skill-title"><h3>Données & API</h3></div>
         <div class="skill-list">
-          <span>✑ MySQL / MariaDB</span>
           <span>✑ PostgreSQL</span>
           <span>✑ Neo4j</span>
-          <span>✑ MongoDB</span>
+          <span>✑ GraphQL</span>
         </div>
       </div>
       <div class="skill-item">
-        <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-        <div class="skill-title"><h3>Conception et outils</h3></div>
+        <div class="skill-icon"><i class="fa-solid fa-terminal"></i></div>
+        <div class="skill-title"><h3>Backend & outils</h3></div>
         <div class="skill-list">
           <span>✑ Java</span>
-          <span>✑ Python</span>
-          <span>✑ GraphQL</span>
+          <span>✑ Linux</span>
           <span>✑ Git</span>
         </div>
       </div>
@@ -95,7 +92,12 @@
   <section id="works">
     <h2 class="title">MES PROJETS</h2>
     <p class="works-subtitle">Une sélection de mes réalisations en développement logiciel et web</p>
-    <div class="works-container">
+    <div class="works-carousel">
+      <button type="button" class="works-carousel-btn works-carousel-prev" aria-label="Projets précédents">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="works-carousel-viewport">
+        <div class="works-container">
       <article class="works-card">
         <div class="works-card-image">
           <a href="https://github.com/florianppn/Analyseur-LDVEH-Java" target="_blank" class="works-card-image-link">
@@ -258,6 +260,12 @@
           <span class="works-card-locked"><i class="fa-solid fa-lock"></i> Non disponible</span>
         </div>
       </article>
+        </div>
+      </div>
+      <button type="button" class="works-carousel-btn works-carousel-next" aria-label="Projets suivants">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      <div class="works-carousel-dots" role="tablist" aria-label="Navigation des projets"></div>
     </div>
   </section>
 
