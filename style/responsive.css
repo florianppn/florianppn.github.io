@@ -41,12 +41,17 @@
     .categories ul {
         display: none;
         position: absolute;
-        z-index: 1000;
-        padding: 0;
+        top: 100%;
+        right: 0;
+        margin-top: 0.35rem;
+        z-index: 1001;
+        min-width: 160px;
+        padding: 0.5rem 0;
         margin: 0;
         background-color: #131f2b;
-        border: 1px solid #242a30;
-        border-radius: 5px;
+        border: 1px solid rgba(23, 133, 130, 0.4);
+        border-radius: 8px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
 
     @media (pointer: coarse) {
@@ -62,13 +67,23 @@
     }
 
     .categories ul li {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .categories ul li a {
+        display: block;
+        padding: 0.65rem 1rem;
+        min-height: 44px;
+        line-height: 1.3;
+        box-sizing: border-box;
     }
 
     .categories .menu-toggle-icon {
         display: block;
         color: #178582;
+        min-width: 44px;
+        min-height: 44px;
     }
 }
 
@@ -87,12 +102,17 @@
     .icons-left ul {
         display: none;
         position: absolute;
-        z-index: 1000;
-        padding: 0;
+        top: 100%;
+        left: 0;
+        margin-top: 0.35rem;
+        z-index: 1001;
+        min-width: 180px;
+        padding: 0.5rem 0;
         margin: 0;
         background-color: #131f2b;
-        border: 1px solid #242a30;
-        border-radius: 5px;
+        border: 1px solid rgba(23, 133, 130, 0.4);
+        border-radius: 8px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     }
 
     @media (pointer: coarse) {
@@ -108,13 +128,24 @@
     }
 
     .icons-left ul li {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .icons-left ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.5rem 1rem;
+        box-sizing: border-box;
     }
 
     .icons-left .menu-toggle-icon {
         display: block;
         color: #178582;
+        min-width: 44px;
+        min-height: 44px;
     }
 
     .skills-container {

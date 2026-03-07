@@ -166,3 +166,45 @@ body.a11y-contrast .document-item {
 body.a11y-contrast *:focus-visible {
     outline-color: #3dd4cf !important;
 }
+
+/* Widget visible sur tablette et mobile */
+@media (max-width: 1024px) {
+    .a11y-widget {
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        right: max(1rem, env(safe-area-inset-right));
+        display: block;
+        visibility: visible;
+    }
+
+    .a11y-widget-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+
+    .a11y-widget-panel {
+        width: 200px;
+        right: 0;
+        left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .a11y-widget {
+        bottom: max(0.75rem, env(safe-area-inset-bottom));
+        right: max(0.75rem, env(safe-area-inset-right));
+    }
+
+    .a11y-widget-btn {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+    }
+
+    .a11y-widget-panel {
+        width: min(260px, calc(100vw - 2rem));
+        max-width: 100vw;
+        padding: 0.85rem;
+    }
+}

@@ -67,5 +67,24 @@ export function initNav() {
                 categoriesToggle.click();
             }
         });
+
+        document.addEventListener('click', function(e) {
+            if (!contactToggle.contains(e.target) && !categoriesToggle.contains(e.target) &&
+                !contactMenu.contains(e.target) && !categoriesMenu.contains(e.target)) {
+                contactMenu.classList.remove('active');
+                categoriesMenu.classList.remove('active');
+                contactToggle.setAttribute('aria-expanded', 'false');
+                categoriesToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        categoriesMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                contactMenu.classList.remove('active');
+                categoriesMenu.classList.remove('active');
+                contactToggle.setAttribute('aria-expanded', 'false');
+                categoriesToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
     }
 }
