@@ -68,11 +68,16 @@ export function initAccessibilityWidget() {
 
     /**
      * Active ou désactive le mode contraste renforcé (classe sur body + localStorage).
+     * À l'activation, force aussi le thème sombre pour rester cohérent avec la palette contraste.
      * @param {boolean} on
      */
     function setContrast(on) {
-        if (on) document.body.classList.add("a11y-contrast");
-        else document.body.classList.remove("a11y-contrast");
+        if (on) {
+            document.body.classList.add("a11y-contrast");
+            setTheme(false);
+        } else {
+            document.body.classList.remove("a11y-contrast");
+        }
         if (contrastBtn) {
             contrastBtn.setAttribute("aria-pressed", on);
             contrastBtn.textContent = on ? "Désactiver" : "Activer";
@@ -121,6 +126,6 @@ export function initAccessibilityWidget() {
         const savedContrast = localStorage.getItem(A11Y_STORAGE.contrast);
         if (savedContrast === "1") setContrast(true);
         const savedTheme = localStorage.getItem(A11Y_STORAGE.theme);
-        if (savedTheme === "1") setTheme(true);
+        if (savedTheme === "1" && !document.body.classList.contains("a11y-contrast")) setTheme(true);
     } catch (_) {}
 }
