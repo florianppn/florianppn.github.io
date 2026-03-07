@@ -83,6 +83,10 @@ export function initAccessibilityWidget() {
             contrastBtn.setAttribute("aria-pressed", on ? "true" : "false");
             contrastBtn.textContent = on ? "Désactiver" : "Activer";
         }
+        if (themeBtn) {
+            themeBtn.disabled = on;
+            themeBtn.setAttribute("aria-disabled", on ? "true" : "false");
+        }
         try {
             localStorage.setItem(A11Y_STORAGE.contrast, on ? "1" : "0");
         } catch (_) {}
@@ -118,6 +122,7 @@ export function initAccessibilityWidget() {
         setContrast(!document.body.classList.contains("a11y-contrast"));
     });
     themeBtn?.addEventListener("click", () => {
+        if (themeBtn.disabled) return;
         setTheme(!document.body.classList.contains("theme-light"));
     });
 

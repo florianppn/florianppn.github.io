@@ -122,6 +122,13 @@
     outline-offset: 2px;
 }
 
+.a11y-theme-btn:disabled,
+.a11y-theme-btn[aria-disabled="true"] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 .a11y-size-btn[aria-pressed="true"],
 .a11y-contrast-btn[aria-pressed="true"] {
     background: var(--theme-accent);
