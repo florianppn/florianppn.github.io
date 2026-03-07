@@ -1,0 +1,37 @@
+/* Light theme */
+body.theme-light {
+    --theme-bg: #f0ebe3;
+    --theme-text: #2c2419;
+    --theme-accent: #0d6b69;
+    --theme-card-bg: #ffffff;
+    --theme-border: #d4cfc4;
+    --theme-text-on-accent: #ffffff;
+}
+
+body.theme-light .works-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8f6f2 100%);
+}
+
+body.theme-light .works-card-image {
+    background: linear-gradient(135deg, #e8e4dc 0%, #f0ebe3 100%);
+}
+
+body.theme-light .works-carousel-viewport::before {
+    background: linear-gradient(to right, rgba(240, 235, 227, 0.95), transparent);
+}
+
+body.theme-light .works-carousel-viewport::after {
+    background: linear-gradient(to left, rgba(240, 235, 227, 0.95), transparent);
+}
+
+body.theme-light .works-carousel-btn {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+body.theme-light .lightbox-backdrop {
+    background: rgba(44, 36, 25, 0.88);
+}
+
+body.theme-light .lightbox-close {
+    background: rgba(255, 255, 255, 0.95);
+}

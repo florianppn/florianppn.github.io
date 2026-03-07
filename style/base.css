@@ -1,4 +1,4 @@
-/* ===== Base & variables ===== */
+/* Base & variables */
 @font-face {
     font-family: 'Karla';
     src: url('fonts/Karla-VariableFont_wght.ttf') format('truetype');
@@ -8,8 +8,14 @@
 
 :root {
     font: 'Karla';
-    background-color: #0A1826;
-    color: #BFA181;
+    --theme-bg: #0A1826;
+    --theme-text: #BFA181;
+    --theme-accent: #178582;
+    --theme-card-bg: #131f2b;
+    --theme-border: #242a30;
+    --theme-text-on-accent: #0A1826;
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
 }
 
 body {
@@ -18,12 +24,12 @@ body {
 
 a {
     text-decoration: none;
-    color: #178582;
+    color: var(--theme-accent);
 }
 
 a:hover {
     text-decoration: underline;
-    color: #BFA181;
+    color: var(--theme-text);
 }
 
 ul {
@@ -36,7 +42,7 @@ section {
 }
 
 h2, h3 {
-    color: #178582;
+    color: var(--theme-accent);
 }
 
 .title {

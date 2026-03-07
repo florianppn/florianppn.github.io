@@ -1,8 +1,9 @@
 "use strict";
 
 /**
- * Lightbox : zoom sur les images des projets
- * Accessibilité : piège au focus, retour du focus, fermeture Échap
+ * Initialise la lightbox pour les images des projets.
+ * Gère l'ouverture/fermeture, le piège au focus (clavier), le retour du focus et la fermeture à Échap.
+ * @returns {void}
  */
 export function initLightbox() {
     const lightbox = document.getElementById('image-lightbox');
@@ -20,6 +21,10 @@ export function initLightbox() {
         return Array.from(lightbox.querySelectorAll(focusableSelector));
     }
 
+    /**
+     * Piège le focus au clavier (Tab / Shift+Tab) dans la lightbox.
+     * @param {KeyboardEvent} e
+     */
     function trapFocus(e) {
         if (e.key !== 'Tab') return;
         const focusables = getFocusables();
@@ -52,6 +57,7 @@ export function initLightbox() {
         });
     }
 
+    /** Ferme la lightbox et restitue le focus à l'élément actif précédent. */
     function closeLightbox() {
         lightbox.classList.remove('is-open');
         lightbox.setAttribute('hidden', '');

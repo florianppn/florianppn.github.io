@@ -1,11 +1,11 @@
-/* ===== Section Projets ===== */
+/* Works */
 #works .title {
     margin-bottom: 0.5rem;
 }
 
 .works-subtitle {
     text-align: center;
-    color: #BFA181;
+    color: var(--theme-text);
     opacity: 0.85;
     font-size: 1.05rem;
     margin-bottom: 3rem;
@@ -30,7 +30,7 @@
     border-radius: 50%;
     border: 2px solid rgba(23, 133, 130, 0.5);
     background: rgba(10, 24, 38, 0.9);
-    color: #178582;
+    color: var(--theme-accent);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -40,9 +40,9 @@
 }
 
 .works-carousel-btn:hover {
-    background: #178582;
-    color: #0A1826;
-    border-color: #178582;
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    border-color: var(--theme-accent);
     transform: translateY(-50%) scale(1.08);
 }
 
@@ -107,7 +107,7 @@
     max-width: 320px;
     border-radius: 16px;
     overflow: hidden;
-    background: linear-gradient(145deg, #131f2b 0%, #0f1922 100%);
+    background: linear-gradient(145deg, var(--theme-card-bg) 0%, #0f1922 100%);
     border: 1px solid rgba(23, 133, 130, 0.15);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -131,7 +131,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #178582, #BFA181);
+    background: linear-gradient(90deg, var(--theme-accent), var(--theme-text));
     z-index: 1;
 }
 
@@ -149,7 +149,7 @@
 }
 
 .works-card-image-zoom:focus-visible {
-    outline: 2px solid #178582;
+    outline: 2px solid var(--theme-accent);
     outline-offset: 2px;
 }
 
@@ -178,14 +178,14 @@
 .works-card-content h3 {
     margin: 0 0 0.4rem 0;
     font-size: 1.25rem;
-    color: #178582;
+    color: var(--theme-accent);
     font-weight: 600;
 }
 
 .works-card-desc {
     margin: 0 0 1rem 0;
     font-size: 0.9rem;
-    color: #BFA181;
+    color: var(--theme-text);
     opacity: 0.9;
     line-height: 1.4;
 }
@@ -201,7 +201,7 @@
     font-size: 0.7rem;
     padding: 0.3rem 0.65rem;
     background: rgba(23, 133, 130, 0.15);
-    color: #178582;
+    color: var(--theme-accent);
     border-radius: 6px;
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -220,15 +220,15 @@
     height: 40px;
     border-radius: 10px;
     background: rgba(23, 133, 130, 0.2);
-    color: #178582;
+    color: var(--theme-accent);
     border: 1px solid rgba(23, 133, 130, 0.3);
     transition: all 0.25s ease;
     text-decoration: none;
 }
 
 .works-btn:hover {
-    background: #178582;
-    color: #0A1826;
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
     transform: translateY(-2px);
 }
 
@@ -237,13 +237,13 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.85rem;
-    color: #BFA181;
+    color: var(--theme-text);
     opacity: 0.7;
 }
 
 .works-card-locked i {
     font-size: 0.9rem;
-    color: #178582;
+    color: var(--theme-accent);
 }
 
 .works-carousel-dots {
@@ -268,11 +268,11 @@
 }
 
 .works-carousel-dot.active {
-    background: #178582;
-    border-color: #178582;
+    background: var(--theme-accent);
+    border-color: var(--theme-accent);
 }
 
-/* ===== Lightbox zoom ===== */
+/* Lightbox */
 .lightbox {
     position: fixed;
     inset: 0;
@@ -294,7 +294,7 @@
 .lightbox-backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(10, 24, 38, 0.95);
+    background: rgba(10, 24, 38, 0.92);
     cursor: zoom-out;
 }
 
@@ -325,7 +325,7 @@
     border-radius: 50%;
     border: 2px solid rgba(23, 133, 130, 0.5);
     background: rgba(10, 24, 38, 0.9);
-    color: #178582;
+    color: var(--theme-accent);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -335,6 +335,6 @@
 }
 
 .lightbox-close:hover {
-    background: #178582;
-    color: #0A1826;
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
 }

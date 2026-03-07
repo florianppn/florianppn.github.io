@@ -1,11 +1,11 @@
-/* ===== Navigation ===== */
+/* Nav */
 .menu-container {
     z-index: 1000;
     position: sticky;
     opacity: 0.8;
     top: 0;
     margin: 0 auto;
-    background-color: #0A1826;
+    background-color: var(--theme-bg);
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     text-align: center;
@@ -78,15 +78,15 @@
 
 .menu-container a {
     text-decoration: none;
-    color: #178582;
+    color: var(--theme-accent);
     line-height: 1;
 }
 
 .copied-message {
     display: none;
     position: absolute;
-    background-color: #0A1826;
-    border: 1px solid #178582;
+    background-color: var(--theme-bg);
+    border: 1px solid var(--theme-accent);
     padding: 5px 10px;
     border-radius: 5px;
     top: 40px;

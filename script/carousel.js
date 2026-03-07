@@ -1,8 +1,9 @@
 "use strict";
 
 /**
- * Carousel des projets
- * Scroll réparti sur les 7 positions pour atteindre tous les projets
+ * Initialise le carousel des projets : défilement horizontal, boutons prev/next, indicateurs dots.
+ * Le scroll est réparti uniformément pour atteindre chaque projet.
+ * @returns {void}
  */
 export function initCarousel() {
     const carousel = document.querySelector('.works-carousel');
@@ -22,7 +23,6 @@ export function initCarousel() {
         return maxScroll / (cards.length - 1);
     }
 
-    // Créer les dots (1 par projet)
     cards.forEach((_, i) => {
         const dot = document.createElement('button');
         dot.type = 'button';
@@ -38,6 +38,7 @@ export function initCarousel() {
 
     const dots = dotsContainer.querySelectorAll('.works-carousel-dot');
 
+    /** Met à jour la classe .active du dot correspondant à la position du scroll. */
     function updateDots() {
         const step = getScrollStep();
         if (step <= 0) return;

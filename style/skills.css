@@ -1,4 +1,4 @@
-/* ===== Section Compétences ===== */
+/* Skills */
 .skills-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -12,10 +12,10 @@
     width: 50%;
     position: relative;
     overflow: hidden;
-    background: #131f2b;
+    background: var(--theme-card-bg);
     padding: 2rem;
     border-radius: 15px;
-    border: 1px solid #242a30;
+    border: 1px solid var(--theme-border);
     transition: all 0.3s ease-in-out;
     justify-self: center;
     display: grid;
@@ -64,7 +64,7 @@
 
 @media (hover: hover) {
     .skill-item:hover {
-        border: 1px solid #178582;
+        border: 1px solid var(--theme-accent);
         transform: translateY(-10px);
     }
 

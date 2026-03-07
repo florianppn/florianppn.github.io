@@ -1,5 +1,10 @@
 "use strict";
 
+/**
+ * Point d'entrée du portfolio.
+ * Initialise les modules (nav, carousel, lightbox, accessibilité) au chargement du DOM.
+ * Met à jour l'année du copyright dans le footer.
+ */
 import { initNav } from './nav.js';
 import { initCarousel } from './carousel.js';
 import { initLightbox } from './lightbox.js';

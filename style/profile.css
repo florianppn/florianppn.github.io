@@ -1,4 +1,4 @@
-/* ===== Section Profil ===== */
+/* Profile */
 .profil {
     position: relative;
     justify-content: center;
@@ -16,7 +16,7 @@
     left: 50%;
     width: 0;
     height: 1.5px;
-    background-color: #178582;
+    background-color: var(--theme-accent);
     transform: translateX(-50%);
     transition: width 0.3s ease-in-out;
 }

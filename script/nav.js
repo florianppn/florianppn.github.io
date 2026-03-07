@@ -1,7 +1,9 @@
 "use strict";
 
 /**
- * Navigation : copie Discord, menus déroulants
+ * Initialise la barre de navigation : copie du pseudo Discord, menus déroulants (contact, catégories).
+ * Fermeture des menus au clic extérieur et à la navigation clavier (Enter/Espace).
+ * @returns {void}
  */
 export function initNav() {
     const discordLink = document.getElementById('discordLink');
@@ -34,6 +36,11 @@ export function initNav() {
         const contactMenu = contactToggle.nextElementSibling;
         const categoriesMenu = categoriesToggle.nextElementSibling;
 
+        /**
+         * Bascule l'affichage d'un menu et met à jour aria-expanded.
+         * @param {HTMLElement} menu - Élément ul du menu
+         * @param {HTMLElement} [toggleBtn] - Bouton associé
+         */
         function toggleMenu(menu, toggleBtn) {
             const isOpen = menu.classList.toggle('active');
             if (toggleBtn) {

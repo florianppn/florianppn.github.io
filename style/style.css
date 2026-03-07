@@ -1,12 +1,12 @@
-/* ===== Portfolio - Feuilles de style modulaires ===== */
 @import url('base.css');
 @import url('accessibility.css');
 @import url('accessibility-widget.css');
 @import url('nav.css');
-@import url('profil.css');
+@import url('profile.css');
 @import url('skills.css');
 @import url('works.css');
 @import url('contact.css');
 @import url('documents.css');
 @import url('footer.css');
+@import url('theme.css');
 @import url('responsive.css');

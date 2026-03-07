@@ -1,9 +1,12 @@
 "use strict";
 
-const A11Y_STORAGE = { size: "a11y-text-size", contrast: "a11y-contrast" };
+/** Clés localStorage pour les préférences du widget accessibilité. */
+const A11Y_STORAGE = { size: "a11y-text-size", contrast: "a11y-contrast", theme: "a11y-theme" };
 
 /**
- * Widget accessibilité : taille du texte + contraste renforcé
+ * Initialise le widget accessibilité : panneau (taille du texte, thème clair/sombre, contraste),
+ * ouverture/fermeture au clic et Échap, persistance des préférences en localStorage.
+ * @returns {void}
  */
 export function initAccessibilityWidget() {
     const widget = document.getElementById("a11y-widget");
@@ -11,9 +14,11 @@ export function initAccessibilityWidget() {
     const panel = document.querySelector(".a11y-widget-panel");
     const sizeBtns = document.querySelectorAll(".a11y-size-btn");
     const contrastBtn = document.querySelector(".a11y-contrast-btn");
+    const themeBtn = document.getElementById("a11y-theme-btn");
 
     if (!widget || !btn || !panel) return;
 
+    /** Affiche le panneau et met à jour aria-expanded. */
     function openPanel() {
         panel.removeAttribute("hidden");
         panel.classList.add("a11y-panel-open");
@@ -26,6 +31,10 @@ export function initAccessibilityWidget() {
         btn.setAttribute("aria-expanded", "false");
     }
 
+    /**
+     * Bascule l'affichage du panneau (ouvrir/fermer).
+     * @param {MouseEvent} e
+     */
     function togglePanel(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -57,6 +66,10 @@ export function initAccessibilityWidget() {
         } catch (_) {}
     }
 
+    /**
+     * Active ou désactive le mode contraste renforcé (classe sur body + localStorage).
+     * @param {boolean} on
+     */
     function setContrast(on) {
         if (on) document.body.classList.add("a11y-contrast");
         else document.body.classList.remove("a11y-contrast");
@@ -69,11 +82,37 @@ export function initAccessibilityWidget() {
         } catch (_) {}
     }
 
+    /**
+     * Applique le thème clair ou sombre (classe theme-light sur body + localStorage).
+     * @param {boolean} light - true = thème clair, false = thème sombre
+     */
+    function setTheme(light) {
+        if (light) document.body.classList.add("theme-light");
+        else document.body.classList.remove("theme-light");
+        if (themeBtn) {
+            themeBtn.setAttribute("aria-pressed", light);
+            themeBtn.setAttribute("aria-label", light ? "Passer au thème sombre" : "Passer au thème clair");
+            const icon = themeBtn.querySelector("i");
+            const label = themeBtn.querySelector(".a11y-theme-label");
+            if (icon) {
+                icon.className = light ? "fa-solid fa-moon" : "fa-solid fa-sun";
+                icon.setAttribute("aria-hidden", "true");
+            }
+            if (label) label.textContent = light ? "Thème sombre" : "Thème clair";
+        }
+        try {
+            localStorage.setItem(A11Y_STORAGE.theme, light ? "1" : "0");
+        } catch (_) {}
+    }
+
     sizeBtns.forEach((b) => {
         b.addEventListener("click", () => setSize(b.dataset.size));
     });
     contrastBtn?.addEventListener("click", () => {
         setContrast(!document.body.classList.contains("a11y-contrast"));
+    });
+    themeBtn?.addEventListener("click", () => {
+        setTheme(!document.body.classList.contains("theme-light"));
     });
 
     try {
@@ -81,5 +120,7 @@ export function initAccessibilityWidget() {
         if (savedSize) setSize(savedSize);
         const savedContrast = localStorage.getItem(A11Y_STORAGE.contrast);
         if (savedContrast === "1") setContrast(true);
+        const savedTheme = localStorage.getItem(A11Y_STORAGE.theme);
+        if (savedTheme === "1") setTheme(true);
     } catch (_) {}
 }
