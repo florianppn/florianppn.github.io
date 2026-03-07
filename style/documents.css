@@ -10,20 +10,23 @@
     width: 280px;
     position: relative;
     overflow: hidden;
-    background: var(--theme-card-bg);
+    background: linear-gradient(145deg, var(--theme-card-bg) 0%, #0f1922 100%);
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: 16px;
     text-align: center;
-    border: 1px solid var(--theme-border);
-    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(23, 133, 130, 0.15);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.document-item:hover,
+.document-item:focus-within {
+    transform: translateY(-8px);
+    border-color: rgba(23, 133, 130, 0.4);
+    box-shadow: 0 12px 40px rgba(23, 133, 130, 0.15);
 }
 
 @media (hover: hover) {
-    .document-item:hover {
-        border: 1px solid var(--theme-accent);
-        transform: translateY(-10px);
-    }
-
     .document-download-btn:hover {
         color: var(--theme-text);
     }
