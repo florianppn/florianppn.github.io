@@ -8,4 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNav();
     initCarousel();
     initLightbox();
+
+    const yearEl = document.getElementById('copyright-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 });

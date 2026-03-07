@@ -1,4 +1,32 @@
 /* ===== Responsive ===== */
+
+/* Tablette */
+@media (max-width: 1024px) {
+    section {
+        margin-top: 3.5em;
+        margin-bottom: 3.5em;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .skill-item {
+        width: 85%;
+    }
+
+    .works-carousel {
+        padding: 0 2.75rem;
+    }
+
+    .works-card {
+        flex: 0 0 300px;
+        min-width: 300px;
+        max-width: 300px;
+    }
+}
+
 @media (max-width: 1202px) {
     .menu-container {
         justify-items: normal;
@@ -137,5 +165,168 @@
     .document-item {
         width: 100%;
         max-width: 320px;
+    }
+}
+
+/* Téléphone */
+@media (max-width: 576px) {
+    section {
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+    }
+
+    .menu-container {
+        padding: 0.75em 0.5em;
+    }
+
+    .menu-container i {
+        font-size: 22px;
+    }
+
+    .logo {
+        height: 28px;
+    }
+
+    .profil {
+        width: 92%;
+        font-size: 1.15rem;
+    }
+
+    .profil span {
+        display: block;
+    }
+
+    .profil br {
+        display: none;
+    }
+
+    .skills-container {
+        gap: 1.25rem;
+    }
+
+    .skill-item {
+        width: 92%;
+        padding: 1.25rem;
+    }
+
+    .skill-item i {
+        font-size: 48px;
+    }
+
+    .skill-item-featured .skill-icon i {
+        font-size: 56px;
+    }
+
+    .works-carousel {
+        width: 100%;
+        padding: 0 2.25rem;
+    }
+
+    .works-carousel-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 0.95rem;
+    }
+
+    .works-card {
+        flex: 0 0 260px;
+        min-width: 260px;
+        max-width: 260px;
+    }
+
+    .works-container {
+        gap: 1.25rem;
+        padding: 0.75rem 0;
+    }
+
+    .works-card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .works-card-desc {
+        font-size: 0.85rem;
+    }
+
+    .works-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .works-carousel-dots {
+        margin-top: 1rem;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .contact-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.7rem 0.9rem;
+    }
+
+    .contact-submit {
+        padding: 0.85rem 1.25rem;
+        width: 100%;
+    }
+
+    .documents-container {
+        padding: 0 1rem;
+    }
+
+    .document-item {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    footer {
+        margin-top: 4em;
+        padding: 0 1rem;
+        font-size: 0.9rem;
+    }
+
+    .lightbox {
+        padding: 1rem;
+    }
+
+    .lightbox-close {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+}
+
+/* Très petit écran */
+@media (max-width: 400px) {
+    .profil {
+        font-size: 1rem;
+    }
+
+    .works-carousel {
+        padding: 0 1.75rem;
+    }
+
+    .works-carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .works-card {
+        flex: 0 0 240px;
+        min-width: 240px;
+        max-width: 240px;
+    }
+
+    .works-card-content {
+        padding: 1rem;
     }
 }
