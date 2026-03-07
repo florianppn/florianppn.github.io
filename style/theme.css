@@ -1,37 +1,113 @@
-/* Light theme */
+/* Light theme – palette chaude, accent teal aligné au thème sombre */
 body.theme-light {
-    --theme-bg: #f0ebe3;
-    --theme-text: #2c2419;
-    --theme-accent: #0d6b69;
+    --theme-bg: #f8f6f3;
+    --theme-text: #2d2820;
+    --theme-accent: #0e7371;
     --theme-card-bg: #ffffff;
-    --theme-border: #d4cfc4;
+    --theme-border: #e0dbd2;
     --theme-text-on-accent: #ffffff;
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+}
+
+html:has(body.theme-light) {
+    background-color: #f8f6f3;
+}
+
+body.theme-light .menu-container {
+    background-color: var(--theme-bg);
+    border-bottom: 1px solid var(--theme-border);
 }
 
 body.theme-light .works-card {
-    background: linear-gradient(145deg, #ffffff 0%, #f8f6f2 100%);
+    background: linear-gradient(160deg, #ffffff 0%, #faf9f7 100%);
+    border-color: var(--theme-border);
+    box-shadow: 0 2px 12px rgba(45, 40, 32, 0.06);
+}
+
+body.theme-light .works-card:hover,
+body.theme-light .works-card:focus-within {
+    border-color: rgba(14, 115, 113, 0.35);
+    box-shadow: 0 8px 24px rgba(14, 115, 113, 0.08);
 }
 
 body.theme-light .works-card-image {
-    background: linear-gradient(135deg, #e8e4dc 0%, #f0ebe3 100%);
+    background: linear-gradient(135deg, #f0ede8 0%, #f8f6f3 100%);
 }
 
 body.theme-light .works-carousel-viewport::before {
-    background: linear-gradient(to right, rgba(240, 235, 227, 0.95), transparent);
+    background: linear-gradient(to right, rgba(248, 246, 243, 0.98), transparent);
 }
 
 body.theme-light .works-carousel-viewport::after {
-    background: linear-gradient(to left, rgba(240, 235, 227, 0.95), transparent);
+    background: linear-gradient(to left, rgba(248, 246, 243, 0.98), transparent);
 }
 
 body.theme-light .works-carousel-btn {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(14, 115, 113, 0.35);
+    color: var(--theme-accent);
+}
+
+body.theme-light .works-carousel-btn:hover {
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    border-color: var(--theme-accent);
 }
 
 body.theme-light .lightbox-backdrop {
-    background: rgba(44, 36, 25, 0.88);
+    background: rgba(45, 40, 32, 0.88);
 }
 
 body.theme-light .lightbox-close {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
+    border-color: rgba(14, 115, 113, 0.4);
+    color: var(--theme-accent);
+}
+
+body.theme-light .lightbox-close:hover {
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+}
+
+body.theme-light .skill-item,
+body.theme-light .document-item {
+    background: var(--theme-card-bg);
+    border-color: var(--theme-border);
+    box-shadow: 0 2px 12px rgba(45, 40, 32, 0.05);
+}
+
+body.theme-light .skill-item:hover,
+body.theme-light .document-item:hover {
+    border-color: rgba(14, 115, 113, 0.4);
+    box-shadow: 0 6px 20px rgba(14, 115, 113, 0.06);
+}
+
+body.theme-light .form-group input,
+body.theme-light .form-group textarea {
+    background: var(--theme-card-bg);
+    border-color: var(--theme-border);
+    color: var(--theme-text);
+}
+
+body.theme-light .form-group input:focus,
+body.theme-light .form-group textarea:focus {
+    border-color: var(--theme-accent);
+}
+
+body.theme-light .a11y-widget-btn,
+body.theme-light .a11y-widget-panel {
+    background: var(--theme-card-bg);
+    border-color: rgba(14, 115, 113, 0.3);
+    box-shadow: 0 4px 16px rgba(45, 40, 32, 0.08);
+}
+
+body.theme-light .a11y-widget-btn:hover {
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+}
+
+body.theme-light .copied-message {
+    background-color: var(--theme-card-bg);
+    border-color: var(--theme-accent);
 }

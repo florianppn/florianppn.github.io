@@ -14,12 +14,12 @@
     --theme-card-bg: #131f2b;
     --theme-border: #242a30;
     --theme-text-on-accent: #0A1826;
-    background-color: var(--theme-bg);
-    color: var(--theme-text);
 }
 
 body {
     margin: 0;
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
 }
 
 a {
