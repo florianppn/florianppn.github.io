@@ -25,6 +25,7 @@ export function initAccessibilityWidget() {
         btn.setAttribute("aria-expanded", "true");
     }
 
+    /** Masque le panneau et met à jour aria-expanded. */
     function closePanel() {
         panel.setAttribute("hidden", "");
         panel.classList.remove("a11y-panel-open");
@@ -60,7 +61,7 @@ export function initAccessibilityWidget() {
         document.body.classList.remove("a11y-text-large", "a11y-text-xlarge");
         if (size === "large") document.body.classList.add("a11y-text-large");
         if (size === "xlarge") document.body.classList.add("a11y-text-xlarge");
-        sizeBtns.forEach((b) => b.setAttribute("aria-pressed", b.dataset.size === size));
+        sizeBtns.forEach((b) => b.setAttribute("aria-pressed", b.dataset.size === size ? "true" : "false"));
         try {
             localStorage.setItem(A11Y_STORAGE.size, size);
         } catch (_) {}
@@ -79,7 +80,7 @@ export function initAccessibilityWidget() {
             document.body.classList.remove("a11y-contrast");
         }
         if (contrastBtn) {
-            contrastBtn.setAttribute("aria-pressed", on);
+            contrastBtn.setAttribute("aria-pressed", on ? "true" : "false");
             contrastBtn.textContent = on ? "Désactiver" : "Activer";
         }
         try {

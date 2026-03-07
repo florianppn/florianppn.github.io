@@ -1,5 +1,9 @@
 "use strict";
 
+const DISCORD_USERNAME = "requindelanight";
+const BREAKPOINT_COPY_MESSAGE = 768;
+const COPY_MESSAGE_DURATION_MS = 1000;
+
 /**
  * Initialise la barre de navigation : copie du pseudo Discord, menus déroulants (contact, catégories).
  * Fermeture des menus au clic extérieur et à la navigation clavier (Enter/Espace).
@@ -12,15 +16,13 @@ export function initNav() {
     if (discordLink && discordCopiedMessage) {
         discordLink.addEventListener('click', function(event) {
             event.preventDefault();
-            const discordUrl = "requindelanight";
-
-            navigator.clipboard.writeText(discordUrl)
+            navigator.clipboard.writeText(DISCORD_USERNAME)
                 .then(() => {
-                    if (window.innerWidth >= 768) {
+                    if (window.innerWidth >= BREAKPOINT_COPY_MESSAGE) {
                         discordCopiedMessage.style.display = 'block';
                         setTimeout(() => {
                             discordCopiedMessage.style.display = 'none';
-                        }, 1000);
+                        }, COPY_MESSAGE_DURATION_MS);
                     }
                 })
                 .catch(err => {
@@ -85,8 +87,8 @@ export function initNav() {
             }
         });
 
-        categoriesMenu.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
+        categoriesMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
                 contactMenu.classList.remove('active');
                 categoriesMenu.classList.remove('active');
                 contactToggle.setAttribute('aria-expanded', 'false');

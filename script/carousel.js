@@ -27,7 +27,7 @@ export function initCarousel() {
         const dot = document.createElement('button');
         dot.type = 'button';
         dot.className = 'works-carousel-dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', 'Projet ' + (i + 1));
+        dot.setAttribute('aria-label', `Projet ${i + 1}`);
         dot.addEventListener('click', () => {
             const step = getScrollStep();
             const targetScroll = i * step;
