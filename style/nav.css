@@ -62,9 +62,18 @@
     justify-content: center;
 }
 
-.fa-solid.fa-address-card,
-.fa-solid.fa-bars {
+.menu-toggle-icon {
     display: none;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+    line-height: 1;
+}
+
+.menu-toggle-icon i {
+    font-size: 25px;
 }
 
 .menu-container a {

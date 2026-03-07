@@ -10,10 +10,10 @@
   <script type="module" src="./script/script.js"></script>
 </head>
 <body>
-  
+  <a href="#profil" class="skip-link">Aller au contenu principal</a>
   <nav class="menu-container">
       <div class="icons-left">
-        <i class="fa-solid fa-address-card menu-toggle" id="contact-toggle"></i>
+        <button type="button" class="menu-toggle-icon" id="contact-toggle" aria-label="Ouvrir le menu contact" aria-expanded="false"><i class="fa-solid fa-address-card" aria-hidden="true"></i></button>
         <ul>
           <li class="alert-copy"><a href="#" id="discordLink"><i class="fa-brands fa-discord"></i></a><span id="discordCopiedMessage" class="copied-message">Pseudo copié !</span></li>
           <li><a href="https://github.com/florianppn/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
@@ -23,10 +23,10 @@
         </ul>
       </div>
       <div class="logo-container-sticky">
-        <img class="logo" src="./asset/logo/kickman.png" alt="logo">
+        <img class="logo" src="./asset/logo/kickman.png" alt="Logo du portfolio - Florian Pépin">
       </div>          
       <div class="categories">
-        <i class="fa-solid fa-bars menu-toggle" id="categories-toggle"></i>
+        <button type="button" class="menu-toggle-icon" id="categories-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
         <ul>
           <li><a href="#profil">PROFIL</a></li>
           <li><a href="#skills">COMPÉTENCES</a></li>
@@ -102,7 +102,7 @@
       <article class="works-card">
         <div class="works-card-image">
           <button type="button" class="works-card-image-zoom" aria-label="Agrandir l'image">
-            <img src="./asset/work/analyseur-ldveh.png" alt="Analyseur LDVEH">
+            <img src="./asset/work/analyseur-ldveh.png" alt="Capture du projet Analyseur LDVEH : graphe de visualisation d’un livre dont vous êtes le héros">
           </button>
         </div>
         <div class="works-card-content">
@@ -122,7 +122,7 @@
       <article class="works-card">
         <div class="works-card-image">
           <button type="button" class="works-card-image-zoom" aria-label="Agrandir l'image">
-            <img src="./asset/work/todo-app.png" alt="Todo App">
+            <img src="./asset/work/todo-app.png" alt="Capture de l’application Todo App : listes de tâches sur mobile">
           </button>
         </div>
         <div class="works-card-content">
@@ -142,7 +142,7 @@
       <article class="works-card">
         <div class="works-card-image">
           <button type="button" class="works-card-image-zoom" aria-label="Agrandir l'image">
-            <img src="./asset/work/sorting-algorithms-java.png" alt="Visualisation algorithmes de tri">
+            <img src="./asset/work/sorting-algorithms-java.png" alt="Capture du projet de visualisation des algorithmes de tri en Java">
           </button>
         </div>
         <div class="works-card-content">
@@ -161,7 +161,7 @@
       <article class="works-card">
         <div class="works-card-image">
           <button type="button" class="works-card-image-zoom" aria-label="Agrandir l'image">
-            <img src="./asset/work/gridarena-mvc-java.png" alt="Gridarena">
+            <img src="./asset/work/gridarena-mvc-java.png" alt="Capture du jeu Gridarena : combat au tour par tour en Java">
           </button>
         </div>
         <div class="works-card-content">
@@ -180,7 +180,7 @@
       <article class="works-card">
         <div class="works-card-image">
           <button type="button" class="works-card-image-zoom" aria-label="Agrandir l'image">
-            <img src="./asset/work/e-bazar.png" alt="E-bazar">
+            <img src="./asset/work/e-bazar.png" alt="Capture de la plateforme E-bazar : petites annonces entre particuliers">
           </button>
         </div>
         <div class="works-card-content">
@@ -200,7 +200,7 @@
       <article class="works-card">
         <div class="works-card-image">
           <button type="button" class="works-card-image-zoom" aria-label="Agrandir l'image">
-            <img src="./asset/work/corridor.png" alt="Corridor Quoridor">
+            <img src="./asset/work/corridor.png" alt="Capture du jeu Corridor (Quoridor) avec interface et intelligence artificielle">
           </button>
         </div>
         <div class="works-card-content">
@@ -220,7 +220,7 @@
       <article class="works-card works-card-featured">
         <div class="works-card-image">
           <button type="button" class="works-card-image-zoom" aria-label="Agrandir l'image">
-            <img src="./asset/work/agora.png" alt="AGORA">
+            <img src="./asset/work/agora.png" alt="Capture de la plateforme AGORA : jeux de plateau en temps réel (Symfony, Mercure)">
           </button>
         </div>
         <div class="works-card-content">
@@ -298,7 +298,28 @@
     </button>
     <div class="lightbox-backdrop"></div>
     <div class="lightbox-content">
-      <img src="" alt="" class="lightbox-image">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="lightbox-image">
+    </div>
+  </div>
+
+  <div class="a11y-widget" id="a11y-widget">
+    <button type="button" class="a11y-widget-btn" id="a11y-widget-btn" aria-label="Options d'accessibilité" aria-expanded="false">
+      <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+    </button>
+    <div class="a11y-widget-panel" hidden>
+      <h3 class="a11y-widget-title">Accessibilité</h3>
+      <div class="a11y-widget-group">
+        <span class="a11y-widget-label">Taille du texte</span>
+        <div class="a11y-widget-btns">
+          <button type="button" class="a11y-size-btn" data-size="normal" aria-pressed="true">A</button>
+          <button type="button" class="a11y-size-btn" data-size="large" aria-pressed="false">A+</button>
+          <button type="button" class="a11y-size-btn" data-size="xlarge" aria-pressed="false">A++</button>
+        </div>
+      </div>
+      <div class="a11y-widget-group">
+        <span class="a11y-widget-label">Contraste renforcé</span>
+        <button type="button" class="a11y-contrast-btn" aria-pressed="false">Activer</button>
+      </div>
     </div>
   </div>
 

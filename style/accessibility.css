@@ -1,0 +1,78 @@
+/* ===== Accessibilité : contraste et focus (WCAG AA) ===== */
+
+/* Lien d’évitement pour la navigation au clavier */
+.skip-link {
+    position: absolute;
+    top: -3rem;
+    left: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #178582;
+    color: #0A1826;
+    font-weight: 600;
+    z-index: 10000;
+    border-radius: 0 0 6px 0;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+/* Focus visible : contour net et contrasté pour la navigation au clavier */
+*:focus {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+/* Contraste renforcé sur les zones interactives au focus */
+.works-btn:focus-visible,
+.contact-submit:focus-visible,
+.document-download-btn:focus-visible {
+    outline-color: #5eb8b5;
+    outline-offset: 2px;
+}
+
+.works-carousel-btn:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+.works-carousel-dot:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+.works-card-image-zoom:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+.lightbox-close:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+/* Réduction des mouvements pour préférence utilisateur */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

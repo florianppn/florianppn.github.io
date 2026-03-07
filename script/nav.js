@@ -34,21 +34,37 @@ export function initNav() {
         const contactMenu = contactToggle.nextElementSibling;
         const categoriesMenu = categoriesToggle.nextElementSibling;
 
-        function toggleMenu(menu) {
-            menu.classList.toggle('active');
+        function toggleMenu(menu, toggleBtn) {
+            const isOpen = menu.classList.toggle('active');
+            if (toggleBtn) {
+                toggleBtn.setAttribute('aria-expanded', isOpen);
+            }
         }
 
         contactToggle.addEventListener('click', function() {
-            toggleMenu(contactMenu);
+            toggleMenu(contactMenu, contactToggle);
             if (categoriesMenu.classList.contains('active')) {
-                toggleMenu(categoriesMenu);
+                toggleMenu(categoriesMenu, categoriesToggle);
             }
         });
 
         categoriesToggle.addEventListener('click', function() {
-            toggleMenu(categoriesMenu);
+            toggleMenu(categoriesMenu, categoriesToggle);
             if (contactMenu.classList.contains('active')) {
-                toggleMenu(contactMenu);
+                toggleMenu(contactMenu, contactToggle);
+            }
+        });
+
+        contactToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                contactToggle.click();
+            }
+        });
+        categoriesToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                categoriesToggle.click();
             }
         });
     }
