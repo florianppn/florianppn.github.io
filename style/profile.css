@@ -6,27 +6,4 @@
     font-size: 1.5em;
     margin: 0 auto;
     width: 80%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.profil::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 0;
-    height: 1.5px;
-    background-color: var(--theme-accent);
-    transform: translateX(-50%);
-    transition: width 0.3s ease-in-out;
-}
-
-@media (hover: hover) {
-    .profil:hover {
-        transform: scale(1.05);
-    }
-
-    .profil:hover::after {
-        width: 50%;
-    }
 }
