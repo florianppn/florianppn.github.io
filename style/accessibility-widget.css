@@ -150,12 +150,165 @@ body.a11y-text-large .profil {
     font-size: 1.65em;
 }
 
+/* Zoom RGAA : faire suivre les textes en rem (cards, sous-titres, etc.) */
+body.a11y-text-large .works-subtitle {
+    font-size: 1.155rem;
+}
+
+body.a11y-text-large .works-card-content h3 {
+    font-size: 1.375rem;
+}
+
+body.a11y-text-large .works-card-desc {
+    font-size: 0.99rem;
+}
+
+body.a11y-text-large .works-tag {
+    font-size: 0.77rem;
+}
+
+body.a11y-text-large .works-card-locked,
+body.a11y-text-large .works-card-locked i {
+    font-size: 0.935rem;
+}
+
 body.a11y-text-xlarge {
     font-size: 125%;
 }
 
 body.a11y-text-xlarge .profil {
     font-size: 1.85em;
+}
+
+body.a11y-text-xlarge .works-subtitle {
+    font-size: 1.3125rem;
+}
+
+body.a11y-text-xlarge .works-card-content h3 {
+    font-size: 1.5625rem;
+}
+
+body.a11y-text-xlarge .works-card-desc {
+    font-size: 1.125rem;
+}
+
+body.a11y-text-xlarge .works-tag {
+    font-size: 0.875rem;
+}
+
+body.a11y-text-xlarge .works-card-locked,
+body.a11y-text-xlarge .works-card-locked i {
+    font-size: 1.0625rem;
+}
+
+/* Zoom RGAA – Contact */
+body.a11y-text-large .contact-subtitle {
+    font-size: 1.155rem;
+}
+
+body.a11y-text-large .form-group input,
+body.a11y-text-large .form-group textarea,
+body.a11y-text-large .contact-submit {
+    font-size: 1.1rem;
+}
+
+body.a11y-text-xlarge .contact-subtitle {
+    font-size: 1.3125rem;
+}
+
+body.a11y-text-xlarge .form-group input,
+body.a11y-text-xlarge .form-group textarea,
+body.a11y-text-xlarge .contact-submit {
+    font-size: 1.25rem;
+}
+
+/* Zoom RGAA – Documents */
+body.a11y-text-large .document-item i.fa-file-pdf {
+    font-size: 3.3rem;
+}
+
+body.a11y-text-large .document-download-btn {
+    font-size: 1.1rem;
+}
+
+body.a11y-text-large .document-download-btn i {
+    font-size: 1.21rem;
+}
+
+body.a11y-text-xlarge .document-item i.fa-file-pdf {
+    font-size: 3.75rem;
+}
+
+body.a11y-text-xlarge .document-download-btn {
+    font-size: 1.25rem;
+}
+
+body.a11y-text-xlarge .document-download-btn i {
+    font-size: 1.375rem;
+}
+
+/* Zoom RGAA – Skills (icônes et titres) */
+body.a11y-text-large .skill-item i {
+    font-size: 4.125rem;
+}
+
+body.a11y-text-large .skill-item-featured .skill-icon i {
+    font-size: 4.8125rem;
+}
+
+body.a11y-text-large .skill-item h3 {
+    font-size: 1.1rem;
+}
+
+body.a11y-text-xlarge .skill-item i {
+    font-size: 4.6875rem;
+}
+
+body.a11y-text-xlarge .skill-item-featured .skill-icon i {
+    font-size: 5.46875rem;
+}
+
+body.a11y-text-xlarge .skill-item h3 {
+    font-size: 1.25rem;
+}
+
+/* Zoom RGAA – Titres de section (h2, .title) et navigation */
+body.a11y-text-large h2,
+body.a11y-text-large .title {
+    font-size: 1.1em;
+}
+
+body.a11y-text-large .menu-container i,
+body.a11y-text-large .menu-toggle-icon i {
+    font-size: 1.72rem;
+}
+
+body.a11y-text-xlarge h2,
+body.a11y-text-xlarge .title {
+    font-size: 1.25em;
+}
+
+body.a11y-text-xlarge .menu-container i,
+body.a11y-text-xlarge .menu-toggle-icon i {
+    font-size: 1.95rem;
+}
+
+/* Zoom RGAA – Boutons carousel works (texte) */
+body.a11y-text-large .works-carousel-btn {
+    font-size: 1.32rem;
+}
+
+body.a11y-text-xlarge .works-carousel-btn {
+    font-size: 1.5rem;
+}
+
+/* Zoom RGAA – Lightbox (fermeture) */
+body.a11y-text-large .lightbox-close {
+    font-size: 1.65rem;
+}
+
+body.a11y-text-xlarge .lightbox-close {
+    font-size: 1.875rem;
 }
 
 /* High contrast */
@@ -193,6 +346,40 @@ body.a11y-contrast .works-card,
 body.a11y-contrast .skill-item,
 body.a11y-contrast .document-item {
     border-color: rgba(61, 212, 207, 0.5) !important;
+}
+
+/* Contraste forcé – formulaire contact */
+body.a11y-contrast .form-group input,
+body.a11y-contrast .form-group textarea {
+    background: #0a0f14 !important;
+    color: #e8e0d5 !important;
+    border: 2px solid rgba(61, 212, 207, 0.6) !important;
+}
+
+body.a11y-contrast .form-group input::placeholder,
+body.a11y-contrast .form-group textarea::placeholder {
+    color: #e8e0d5 !important;
+    opacity: 0.7;
+}
+
+body.a11y-contrast .form-group input:focus,
+body.a11y-contrast .form-group textarea:focus {
+    border-color: #3dd4cf !important;
+}
+
+body.a11y-contrast .form-group label {
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .contact-submit {
+    background: rgba(61, 212, 207, 0.2) !important;
+    color: #3dd4cf !important;
+    border: 2px solid #3dd4cf !important;
+}
+
+body.a11y-contrast .contact-submit:hover {
+    background: #3dd4cf !important;
+    color: #0a0f14 !important;
 }
 
 body.a11y-contrast *:focus-visible {
