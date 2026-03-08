@@ -6,6 +6,7 @@
   <title>Portfolio - Florian</title>
   <link rel="icon" type="image/x-icon" href="./asset/logo/kickman.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@5.0.0/400.css" crossorigin="">
   <link rel="stylesheet" href="./style/style.css">
   <script type="module" src="./script/script.js"></script>
 </head>
@@ -308,7 +309,8 @@
   </div>
 
   <div class="a11y-widget" id="a11y-widget">
-    <button type="button" class="a11y-widget-btn" id="a11y-widget-btn" aria-label="Options d'accessibilité" aria-expanded="false">
+    <span class="a11y-widget-label-btn" aria-hidden="true">Accessibilité</span>
+    <button type="button" class="a11y-widget-btn" id="a11y-widget-btn" aria-label="Ouvrir les options d'accessibilité" aria-expanded="false">
       <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
     </button>
     <div class="a11y-widget-panel" hidden>
@@ -331,6 +333,10 @@
       <div class="a11y-widget-group">
         <span class="a11y-widget-label">Contraste renforcé</span>
         <button type="button" class="a11y-contrast-btn" aria-pressed="false">Activer</button>
+      </div>
+      <div class="a11y-widget-group">
+        <span class="a11y-widget-label">Mode dyslexie</span>
+        <button type="button" class="a11y-dyslexia-btn" id="a11y-dyslexia-btn" aria-pressed="false">Activer</button>
       </div>
     </div>
   </div>

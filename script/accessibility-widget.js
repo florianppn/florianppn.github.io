@@ -1,7 +1,7 @@
 "use strict";
 
 /** Clés localStorage pour les préférences du widget accessibilité. */
-const A11Y_STORAGE = { size: "a11y-text-size", contrast: "a11y-contrast", theme: "a11y-theme" };
+const A11Y_STORAGE = { size: "a11y-text-size", contrast: "a11y-contrast", theme: "a11y-theme", dyslexia: "a11y-dyslexia" };
 
 /**
  * Initialise le widget accessibilité : panneau (taille du texte, thème clair/sombre, contraste),
@@ -15,6 +15,7 @@ export function initAccessibilityWidget() {
     const sizeBtns = document.querySelectorAll(".a11y-size-btn");
     const contrastBtn = document.querySelector(".a11y-contrast-btn");
     const themeBtn = document.getElementById("a11y-theme-btn");
+    const dyslexiaBtn = document.getElementById("a11y-dyslexia-btn");
 
     if (!widget || !btn || !panel) return;
 
@@ -115,6 +116,22 @@ export function initAccessibilityWidget() {
         } catch (_) {}
     }
 
+    /**
+     * Active ou désactive le mode dyslexie (police et espacements adaptés).
+     * @param {boolean} on
+     */
+    function setDyslexia(on) {
+        if (on) document.body.classList.add("a11y-dyslexia");
+        else document.body.classList.remove("a11y-dyslexia");
+        if (dyslexiaBtn) {
+            dyslexiaBtn.setAttribute("aria-pressed", on ? "true" : "false");
+            dyslexiaBtn.textContent = on ? "Désactiver" : "Activer";
+        }
+        try {
+            localStorage.setItem(A11Y_STORAGE.dyslexia, on ? "1" : "0");
+        } catch (_) {}
+    }
+
     sizeBtns.forEach((b) => {
         b.addEventListener("click", () => setSize(b.dataset.size));
     });
@@ -125,6 +142,9 @@ export function initAccessibilityWidget() {
         if (themeBtn.disabled) return;
         setTheme(!document.body.classList.contains("theme-light"));
     });
+    dyslexiaBtn?.addEventListener("click", () => {
+        setDyslexia(!document.body.classList.contains("a11y-dyslexia"));
+    });
 
     try {
         const savedSize = localStorage.getItem(A11Y_STORAGE.size);
@@ -133,5 +153,7 @@ export function initAccessibilityWidget() {
         if (savedContrast === "1") setContrast(true);
         const savedTheme = localStorage.getItem(A11Y_STORAGE.theme);
         if (savedTheme === "1" && !document.body.classList.contains("a11y-contrast")) setTheme(true);
+        const savedDyslexia = localStorage.getItem(A11Y_STORAGE.dyslexia);
+        if (savedDyslexia === "1") setDyslexia(true);
     } catch (_) {}
 }
