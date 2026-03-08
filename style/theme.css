@@ -95,15 +95,22 @@ body.theme-light .form-group textarea:focus {
     border-color: var(--theme-accent);
 }
 
-body.theme-light .a11y-widget-btn,
 body.theme-light .a11y-widget-panel {
     background: var(--theme-card-bg);
     border-color: rgba(14, 115, 113, 0.3);
     box-shadow: 0 4px 16px rgba(45, 40, 32, 0.08);
 }
 
-body.theme-light .a11y-widget-btn:hover {
+body.theme-light .a11y-widget-btn {
     background: var(--theme-accent);
+    border-color: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    box-shadow: 0 4px 20px rgba(14, 115, 113, 0.35);
+}
+
+body.theme-light .a11y-widget-btn:hover {
+    background: #0a5a58;
+    border-color: #0a5a58;
     color: var(--theme-text-on-accent);
 }
 
