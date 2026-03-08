@@ -448,6 +448,64 @@ body.a11y-contrast *:focus-visible {
     outline-color: #3dd4cf !important;
 }
 
+/* Contraste renforcé – menu accessibilité (panneau + bouton principal) */
+body.a11y-contrast .a11y-widget-label-btn {
+    background: #0a0f14 !important;
+    border-color: #3dd4cf !important;
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .a11y-widget-btn {
+    background: #3dd4cf !important;
+    border-color: #3dd4cf !important;
+    color: #0a0f14 !important;
+}
+
+body.a11y-contrast .a11y-widget-btn:hover {
+    background: #4dddd8 !important;
+    border-color: #4dddd8 !important;
+    color: #0a0f14 !important;
+}
+
+body.a11y-contrast .a11y-widget-panel {
+    background: #0a0f14 !important;
+    border-color: rgba(61, 212, 207, 0.6) !important;
+}
+
+body.a11y-contrast .a11y-widget-title {
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .a11y-widget-label {
+    color: #e8e0d5 !important;
+}
+
+body.a11y-contrast .a11y-size-btn,
+body.a11y-contrast .a11y-contrast-btn,
+body.a11y-contrast .a11y-dyslexia-btn,
+body.a11y-contrast .a11y-theme-btn {
+    background: rgba(61, 212, 207, 0.15) !important;
+    border-color: rgba(61, 212, 207, 0.6) !important;
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .a11y-size-btn:hover,
+body.a11y-contrast .a11y-contrast-btn:hover,
+body.a11y-contrast .a11y-dyslexia-btn:hover,
+body.a11y-contrast .a11y-theme-btn:hover {
+    background: rgba(61, 212, 207, 0.3) !important;
+    color: #e8e0d5 !important;
+}
+
+body.a11y-contrast .a11y-size-btn[aria-pressed="true"],
+body.a11y-contrast .a11y-contrast-btn[aria-pressed="true"],
+body.a11y-contrast .a11y-dyslexia-btn[aria-pressed="true"],
+body.a11y-contrast .a11y-theme-btn[aria-pressed="true"] {
+    background: #3dd4cf !important;
+    color: #0a0f14 !important;
+    border-color: #3dd4cf !important;
+}
+
 @media (max-width: 1024px) {
     .a11y-widget {
         bottom: max(1rem, env(safe-area-inset-bottom));
