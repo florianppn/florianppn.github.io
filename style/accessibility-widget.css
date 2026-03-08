@@ -142,173 +142,186 @@
     outline-offset: 2px;
 }
 
+/* A+ = zoom modéré (~115 %) – bien distinct du texte normal */
 body.a11y-text-large {
-    font-size: 110%;
+    font-size: 115%;
 }
 
 body.a11y-text-large .profil {
-    font-size: 1.65em;
+    font-size: 1.73em;
 }
 
-/* Zoom RGAA : faire suivre les textes en rem (cards, sous-titres, etc.) */
 body.a11y-text-large .works-subtitle {
-    font-size: 1.155rem;
+    font-size: 1.21rem;
 }
 
 body.a11y-text-large .works-card-content h3 {
-    font-size: 1.375rem;
+    font-size: 1.44rem;
 }
 
 body.a11y-text-large .works-card-desc {
-    font-size: 0.99rem;
+    font-size: 1.04rem;
 }
 
 body.a11y-text-large .works-tag {
-    font-size: 0.77rem;
+    font-size: 0.81rem;
 }
 
-body.a11y-text-large .works-card-locked,
+body.a11y-text-large .works-card-locked {
+    font-size: 0.98rem;
+}
+
 body.a11y-text-large .works-card-locked i {
-    font-size: 0.935rem;
+    font-size: 1.04rem;
 }
 
+/* A++ = zoom fort (~150 %) – très lisible, cards encore renforcées */
 body.a11y-text-xlarge {
-    font-size: 125%;
+    font-size: 150%;
 }
 
 body.a11y-text-xlarge .profil {
-    font-size: 1.85em;
+    font-size: 2.25em;
 }
 
 body.a11y-text-xlarge .works-subtitle {
-    font-size: 1.3125rem;
+    font-size: 1.58rem;
+}
+
+/* Cards : taille renforcée en A++ pour une lecture confortable */
+body.a11y-text-xlarge .works-card-content {
+    padding: 1.75rem 1.5rem;
 }
 
 body.a11y-text-xlarge .works-card-content h3 {
-    font-size: 1.5625rem;
+    font-size: 1.95rem;
 }
 
 body.a11y-text-xlarge .works-card-desc {
-    font-size: 1.125rem;
+    font-size: 1.44rem;
+    line-height: 1.5;
 }
 
 body.a11y-text-xlarge .works-tag {
-    font-size: 0.875rem;
+    font-size: 1.05rem;
 }
 
-body.a11y-text-xlarge .works-card-locked,
+body.a11y-text-xlarge .works-card-locked {
+    font-size: 1.28rem;
+}
+
 body.a11y-text-xlarge .works-card-locked i {
-    font-size: 1.0625rem;
+    font-size: 1.35rem;
 }
 
 /* Zoom RGAA – Contact */
 body.a11y-text-large .contact-subtitle {
-    font-size: 1.155rem;
+    font-size: 1.21rem;
 }
 
 body.a11y-text-large .form-group input,
 body.a11y-text-large .form-group textarea,
 body.a11y-text-large .contact-submit {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 body.a11y-text-xlarge .contact-subtitle {
-    font-size: 1.3125rem;
+    font-size: 1.58rem;
 }
 
 body.a11y-text-xlarge .form-group input,
 body.a11y-text-xlarge .form-group textarea,
 body.a11y-text-xlarge .contact-submit {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 /* Zoom RGAA – Documents */
 body.a11y-text-large .document-item i.fa-file-pdf {
-    font-size: 3.3rem;
+    font-size: 3.45rem;
 }
 
 body.a11y-text-large .document-download-btn {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 body.a11y-text-large .document-download-btn i {
-    font-size: 1.21rem;
+    font-size: 1.27rem;
 }
 
 body.a11y-text-xlarge .document-item i.fa-file-pdf {
-    font-size: 3.75rem;
+    font-size: 4.5rem;
 }
 
 body.a11y-text-xlarge .document-download-btn {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 body.a11y-text-xlarge .document-download-btn i {
-    font-size: 1.375rem;
+    font-size: 1.65rem;
 }
 
 /* Zoom RGAA – Skills (icônes et titres) */
 body.a11y-text-large .skill-item i {
-    font-size: 4.125rem;
+    font-size: 4.31rem;
 }
 
 body.a11y-text-large .skill-item-featured .skill-icon i {
-    font-size: 4.8125rem;
+    font-size: 5.03rem;
 }
 
 body.a11y-text-large .skill-item h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 body.a11y-text-xlarge .skill-item i {
-    font-size: 4.6875rem;
+    font-size: 5.63rem;
 }
 
 body.a11y-text-xlarge .skill-item-featured .skill-icon i {
-    font-size: 5.46875rem;
+    font-size: 6.56rem;
 }
 
 body.a11y-text-xlarge .skill-item h3 {
-    font-size: 1.25rem;
+    font-size: 1.88rem;
 }
 
 /* Zoom RGAA – Titres de section (h2, .title) et navigation */
 body.a11y-text-large h2,
 body.a11y-text-large .title {
-    font-size: 1.1em;
+    font-size: 1.15em;
 }
 
 body.a11y-text-large .menu-container i,
 body.a11y-text-large .menu-toggle-icon i {
-    font-size: 1.72rem;
+    font-size: 1.8rem;
 }
 
 body.a11y-text-xlarge h2,
 body.a11y-text-xlarge .title {
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
 body.a11y-text-xlarge .menu-container i,
 body.a11y-text-xlarge .menu-toggle-icon i {
-    font-size: 1.95rem;
+    font-size: 2.34rem;
 }
 
 /* Zoom RGAA – Boutons carousel works (texte) */
 body.a11y-text-large .works-carousel-btn {
-    font-size: 1.32rem;
+    font-size: 1.38rem;
 }
 
 body.a11y-text-xlarge .works-carousel-btn {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 /* Zoom RGAA – Lightbox (fermeture) */
 body.a11y-text-large .lightbox-close {
-    font-size: 1.65rem;
+    font-size: 1.73rem;
 }
 
 body.a11y-text-xlarge .lightbox-close {
-    font-size: 1.875rem;
+    font-size: 2.25rem;
 }
 
 /* High contrast */
