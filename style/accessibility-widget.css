@@ -180,6 +180,17 @@ body.a11y-dyslexia .skill-list {
     line-height: 1.7;
 }
 
+/* Boutons et champs de formulaire : forcer la police (ils n’héritent pas toujours) */
+body.a11y-dyslexia .contact-submit,
+body.a11y-dyslexia .form-group input,
+body.a11y-dyslexia .form-group textarea,
+body.a11y-dyslexia .form-group label,
+body.a11y-dyslexia .document-download-btn {
+    font-family: "OpenDyslexic", sans-serif !important;
+    letter-spacing: 0.08em;
+    word-spacing: 0.2em;
+}
+
 /* A+ = zoom modéré (~115 %) – bien distinct du texte normal */
 body.a11y-text-large {
     font-size: 115%;
