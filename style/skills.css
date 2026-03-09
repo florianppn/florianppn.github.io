@@ -55,10 +55,6 @@
     color: #178582;
 }
 
-.skill-item-featured {
-    border-color: rgba(23, 133, 130, 0.5);
-}
-
 .skill-item-featured .skill-icon i {
     font-size: 70px;
 }

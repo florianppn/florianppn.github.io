@@ -25,11 +25,24 @@ Portfolio personnel présentant mon parcours et mes projets en développement lo
 │   ├── logo/          # Logo du site
 │   ├── work/          # Captures d'écran des projets
 │   └── document/      # CV
-├── font/              # Polices
+├── font/
+│   └── Karla/         # Polices locales (Karla)
 ├── script/            # JavaScript
 ├── style/             # CSS
+├── LICENSE.md
+├── README.md
 └── index.html
 ```
+
+## Accessibilité
+
+Le portfolio intègre des options d'accessibilité rapides via un widget dédié :
+
+- Ajustement de la taille du texte (normal, A+, A++)
+- Bascule thème clair/sombre
+- Mode contraste renforcé
+- Mode dyslexie (police OpenDyslexic et espacements adaptés)
+- Focus clavier visible et persistance des préférences (localStorage)
 
 ## Licence
 

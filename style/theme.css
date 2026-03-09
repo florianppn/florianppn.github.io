@@ -90,9 +90,29 @@ body.theme-light .form-group textarea {
     color: var(--theme-text);
 }
 
+body.theme-light .contact-form {
+    background: linear-gradient(160deg, #ffffff 0%, #faf9f7 100%);
+    border-color: var(--theme-border);
+    box-shadow: 0 8px 24px rgba(45, 40, 32, 0.08);
+}
+
 body.theme-light .form-group input:focus,
 body.theme-light .form-group textarea:focus {
     border-color: var(--theme-accent);
+    box-shadow: 0 0 0 3px rgba(14, 115, 113, 0.2);
+}
+
+body.theme-light .form-group input:focus-visible,
+body.theme-light .form-group textarea:focus-visible {
+    box-shadow: 0 0 0 3px rgba(14, 115, 113, 0.2);
+}
+
+body.theme-light .contact-submit {
+    box-shadow: 0 6px 16px rgba(14, 115, 113, 0.25);
+}
+
+body.theme-light .contact-submit:hover {
+    box-shadow: 0 10px 22px rgba(14, 115, 113, 0.3);
 }
 
 body.theme-light .a11y-widget-panel {

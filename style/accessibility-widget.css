@@ -383,7 +383,8 @@ body.a11y-contrast {
 body.a11y-contrast,
 body.a11y-contrast .skill-item,
 body.a11y-contrast .works-card,
-body.a11y-contrast .document-item {
+body.a11y-contrast .document-item,
+body.a11y-contrast .contact-form {
     background: #0a0f14 !important;
 }
 
@@ -406,8 +407,13 @@ body.a11y-contrast .works-card-content h3 {
 
 body.a11y-contrast .works-card,
 body.a11y-contrast .skill-item,
-body.a11y-contrast .document-item {
+body.a11y-contrast .document-item,
+body.a11y-contrast .contact-form {
     border-color: rgba(61, 212, 207, 0.5) !important;
+}
+
+body.a11y-contrast .contact-form {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45) !important;
 }
 
 /* Contraste forcé – formulaire contact */
