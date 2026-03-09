@@ -191,6 +191,20 @@ body.a11y-dyslexia .document-download-btn {
     word-spacing: 0.2em;
 }
 
+/* Panneau accessibilité : appliquer aussi le mode dyslexie */
+body.a11y-dyslexia .a11y-widget-label-btn,
+body.a11y-dyslexia .a11y-widget-title,
+body.a11y-dyslexia .a11y-widget-label,
+body.a11y-dyslexia .a11y-size-btn,
+body.a11y-dyslexia .a11y-contrast-btn,
+body.a11y-dyslexia .a11y-dyslexia-btn,
+body.a11y-dyslexia .a11y-theme-btn,
+body.a11y-dyslexia .a11y-theme-label {
+    font-family: "OpenDyslexic", sans-serif !important;
+    letter-spacing: 0.08em;
+    word-spacing: 0.2em;
+}
+
 /* A+ = zoom modéré (~115 %) – bien distinct du texte normal */
 body.a11y-text-large {
     font-size: 115%;
