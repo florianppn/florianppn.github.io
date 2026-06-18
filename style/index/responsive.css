@@ -11,7 +11,7 @@
     .profil {
         grid-template-columns: 1fr;
         gap: 3rem;
-        padding: 2rem 2rem;
+        padding: 2rem;
         text-align: center;
     }
 

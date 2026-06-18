@@ -13,7 +13,7 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 2rem;
+    padding: 2rem;
     width: 100%;
     box-sizing: border-box;
 }
@@ -158,7 +158,7 @@
     border-radius: 14px;
     box-shadow: var(--card-shadow), 0 0 60px rgba(23, 133, 130, 0.07);
     overflow: hidden;
-    font-family: 'Consolas', 'Monaco', 'Fira Code', monospace;
+    font-family: Consolas, Monaco, 'Fira Code', monospace;
     font-size: 0.88rem;
 }
 

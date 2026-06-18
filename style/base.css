@@ -8,8 +8,8 @@
 }
 
 :root {
-    --font-heading: Outfit, sans-serif;
-    --font-body: Inter, sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
 
     font-family: var(--font-body);
 
