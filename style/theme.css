@@ -143,6 +143,11 @@ body.theme-light .profil-btn-secondary:hover {
     background: var(--theme-accent-glow);
 }
 
+body.theme-light .back-to-top {
+    background-color: rgba(244, 246, 248, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 1202px) {
     body.theme-light .categories ul {
         background-color: rgba(255, 255, 255, 0.97);
