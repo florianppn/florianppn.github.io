@@ -520,6 +520,37 @@ body.a11y-contrast .back-to-top:hover {
     color: #0a0f14 !important;
 }
 
+body.a11y-contrast .menu-container {
+    background: #0a0f14 !important;
+    border-bottom: 2px solid #3dd4cf !important;
+}
+
+body.a11y-contrast .categories ul,
+body.a11y-contrast .icons-left ul {
+    background: #0a0f14 !important;
+    border: 2px solid #3dd4cf !important;
+}
+
+body.a11y-contrast .menu-toggle-icon,
+body.a11y-contrast .menu-toggle-icon i {
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .works-carousel-btn,
+body.a11y-contrast .works-carousel-dot,
+body.a11y-contrast .lightbox-close {
+    border: 2px solid #3dd4cf !important;
+    background: #0a0f14 !important;
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .works-carousel-btn:hover,
+body.a11y-contrast .works-carousel-dot:hover,
+body.a11y-contrast .lightbox-close:hover {
+    background: #3dd4cf !important;
+    color: #0a0f14 !important;
+}
+
 
 
 body.a11y-contrast *:focus-visible {

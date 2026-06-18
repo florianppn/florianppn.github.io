@@ -223,3 +223,90 @@
         font-size: 0.9rem;
     }
 }
+
+/* Light theme overrides for Borne Arcade */
+body.theme-light.arcade-body {
+    background-color: var(--theme-bg);
+    background-image: radial-gradient(circle at center, #fff 0%, var(--theme-bg) 100%);
+    color: var(--theme-text);
+}
+
+body.theme-light .arcade-exit-btn {
+    color: var(--theme-accent);
+    border-color: var(--theme-accent);
+    background: rgb(14, 115, 113, 0.05);
+    box-shadow: 0 0 10px rgb(14, 115, 113, 0.05);
+}
+
+body.theme-light .arcade-exit-btn:hover {
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    box-shadow: 0 0 20px rgb(14, 115, 113, 0.25);
+}
+
+body.theme-light .arcade-cabinet {
+    background: var(--theme-card-bg);
+    border-color: var(--theme-border);
+    box-shadow: 0 20px 60px rgb(45, 40, 32, 0.08), 0 0 40px rgb(14, 115, 113, 0.05);
+}
+
+body.theme-light .arcade-header {
+    background: #fdfdfc;
+    border-bottom: 4px solid var(--theme-border);
+    box-shadow: none;
+}
+
+body.theme-light .arcade-title {
+    color: var(--theme-accent);
+    text-shadow: none;
+}
+
+body.theme-light .arcade-marquee-light {
+    background: var(--theme-accent);
+    box-shadow: 0 0 15px var(--theme-accent);
+}
+
+body.theme-light .arcade-screen-bezel {
+    border-bottom: 4px solid var(--theme-border);
+}
+
+body.theme-light .arcade-control-panel {
+    background: #fdfdfc;
+}
+
+body.theme-light .arcade-score-box {
+    background: var(--theme-bg);
+    border-color: var(--theme-border);
+    box-shadow: none;
+}
+
+body.theme-light .score-label {
+    color: var(--theme-accent);
+}
+
+body.theme-light .score-value {
+    color: var(--theme-text);
+    text-shadow: none;
+}
+
+body.theme-light .arcade-btn {
+    background: var(--theme-accent);
+    border-color: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    box-shadow: 0 4px 15px rgb(14, 115, 113, 0.2);
+}
+
+body.theme-light .arcade-btn:hover {
+    background: #0a5a58;
+    border-color: #0a5a58;
+    box-shadow: 0 6px 20px rgb(14, 115, 113, 0.3);
+}
+
+body.theme-light .arcade-instructions {
+    color: #5c5549;
+    border-top: 1px dashed var(--theme-border);
+}
+
+body.theme-light .arcade-instructions strong {
+    color: var(--theme-text);
+}
