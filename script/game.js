@@ -101,6 +101,7 @@ export function runSpaceGame() {
     canvas.addEventListener("mousemove", handleMouseMove);
     canvas.addEventListener("touchmove", handleTouchMove, { passive: false });
 
+
     function handleMouseMove(e) {
         const rect = canvas.getBoundingClientRect();
         mouseY = e.clientY - rect.top;
@@ -278,11 +279,12 @@ export function runSpaceGame() {
         }
 
         // 6. Génération et mise à jour des astéroïdes
-        const spawnInterval = Math.max(35, 80 - Math.floor(score / 50) * 4);
+        const speedMultiplier = Math.floor(score / 250);
+        const spawnInterval = Math.max(40, 100 - speedMultiplier * 15);
         if (frame % spawnInterval === 0) {
             const radius = 24 + Math.floor(Math.random() * 14); // Rayon entre 24 et 37
             const asteroidY = radius + Math.random() * (canvas.height - radius * 2);
-            const speed = 1.6 + Math.random() * 1.2 + Math.min(1.5, score * 0.004);
+            const speed = 1.0 + Math.random() * 0.6 + speedMultiplier * 0.4;
             const tech = TECHS_TO_DODGE[Math.floor(Math.random() * TECHS_TO_DODGE.length)];
             
             // Génération de points irréguliers pour le rendu rocailleux
