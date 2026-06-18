@@ -36,7 +36,7 @@
 }
 
 .document-item h3 {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
     color: var(--theme-text);
 }
 

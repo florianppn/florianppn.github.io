@@ -1,0 +1,106 @@
+/* Flappy Kickman Game Styles */
+.game-modal-content {
+    background: linear-gradient(160deg, var(--theme-card-bg) 0%, rgb(19, 31, 43, 0.98) 100%);
+    border: 1px solid rgb(23, 133, 130, 0.25);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 40px rgb(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-title {
+    margin: 0 0 0.5rem;
+    color: var(--theme-accent);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.game-instructions {
+    margin: 0 0 1.5rem;
+    font-size: 0.9rem;
+    color: var(--theme-text);
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+#game-canvas {
+    border: 2px solid rgb(23, 133, 130, 0.4);
+    border-radius: 12px;
+    background-color: #0a1826;
+    box-shadow: 0 0 20px rgb(23, 133, 130, 0.15);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.game-ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.game-score-container {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+    color: var(--theme-text);
+    font-weight: 600;
+}
+
+.game-score-container strong {
+    color: var(--theme-accent);
+}
+
+.game-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    border: 2px solid var(--theme-accent);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgb(23, 133, 130, 0.25);
+}
+
+.game-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgb(23, 133, 130, 0.35);
+}
+
+.game-btn:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .game-modal-content {
+        padding: 1.25rem;
+    }
+    
+    .game-title {
+        font-size: 1.35rem;
+    }
+    
+    .game-instructions {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+}

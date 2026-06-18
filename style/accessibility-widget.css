@@ -407,7 +407,8 @@ body.a11y-contrast .skill-item,
 body.a11y-contrast .exploration-item,
 body.a11y-contrast .works-card,
 body.a11y-contrast .document-item,
-body.a11y-contrast .back-to-top {
+body.a11y-contrast .back-to-top,
+body.a11y-contrast .game-modal-content {
     background: #0a0f14 !important;
 }
 
@@ -431,11 +432,18 @@ body.a11y-contrast .back-to-top {
     color: #3dd4cf !important;
 }
 
+body.a11y-contrast .back-to-top,
+body.a11y-contrast .game-modal-content h2,
+body.a11y-contrast .game-modal-content p {
+    color: #3dd4cf !important;
+}
+
 body.a11y-contrast .works-card,
 body.a11y-contrast .skill-item,
 body.a11y-contrast .exploration-item,
 body.a11y-contrast .document-item,
-body.a11y-contrast .back-to-top {
+body.a11y-contrast .back-to-top,
+body.a11y-contrast .game-modal-content {
     border-color: rgb(61, 212, 207, 0.5) !important;
 }
 
@@ -550,4 +558,22 @@ body.a11y-contrast .a11y-theme-btn[aria-pressed="true"] {
         max-width: 100vw;
         padding: 0.85rem;
     }
+}
+
+/* High Contrast overrides for Game */
+body.a11y-contrast .game-btn {
+    background: rgb(61, 212, 207, 0.2) !important;
+    color: #3dd4cf !important;
+    border: 2px solid #3dd4cf !important;
+    box-shadow: none !important;
+}
+
+body.a11y-contrast .game-btn:hover {
+    background: #3dd4cf !important;
+    color: #0a0f14 !important;
+}
+
+body.a11y-contrast #game-canvas {
+    border-color: #3dd4cf !important;
+    box-shadow: none !important;
 }

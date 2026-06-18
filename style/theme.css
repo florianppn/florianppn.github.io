@@ -118,3 +118,9 @@ body.theme-light .copied-message {
     background-color: var(--theme-card-bg);
     border-color: var(--theme-accent);
 }
+
+body.theme-light .game-modal-content {
+    background: linear-gradient(160deg, #fff 0%, #faf9f7 100%);
+    border-color: var(--theme-border);
+    box-shadow: 0 10px 40px rgb(45, 40, 32, 0.15);
+}
