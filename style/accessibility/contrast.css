@@ -76,11 +76,20 @@ body.a11y-contrast .menu-container {
     border-bottom: 2px solid #3dd4cf !important;
 }
 
-body.a11y-contrast .categories ul,
-body.a11y-contrast .icons-left ul {
-    background: #0a0f14 !important;
-    border: 2px solid #3dd4cf !important;
+@media (max-width: 1202px) {
+    body.a11y-contrast .categories ul {
+        background: #0a0f14 !important;
+        border: 2px solid #3dd4cf !important;
+    }
 }
+
+@media (max-width: 990px) {
+    body.a11y-contrast .icons-left ul {
+        background: #0a0f14 !important;
+        border: 2px solid #3dd4cf !important;
+    }
+}
+
 
 body.a11y-contrast .menu-toggle-icon,
 body.a11y-contrast .menu-toggle-icon i {
