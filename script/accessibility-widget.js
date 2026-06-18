@@ -60,8 +60,15 @@ export function initAccessibilityWidget() {
 
     function setSize(size) {
         document.body.classList.remove("a11y-text-large", "a11y-text-xlarge");
-        if (size === "large") document.body.classList.add("a11y-text-large");
-        if (size === "xlarge") document.body.classList.add("a11y-text-xlarge");
+        document.documentElement.classList.remove("a11y-text-large", "a11y-text-xlarge");
+        if (size === "large") {
+            document.body.classList.add("a11y-text-large");
+            document.documentElement.classList.add("a11y-text-large");
+        }
+        if (size === "xlarge") {
+            document.body.classList.add("a11y-text-xlarge");
+            document.documentElement.classList.add("a11y-text-xlarge");
+        }
         sizeBtns.forEach((b) => b.setAttribute("aria-pressed", b.dataset.size === size ? "true" : "false"));
         try {
             localStorage.setItem(A11Y_STORAGE.size, size);

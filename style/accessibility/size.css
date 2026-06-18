@@ -1,6 +1,10 @@
 /* A+ = zoom modéré (~115 %) – bien distinct du texte normal */
-body.a11y-text-large {
+html.a11y-text-large {
     font-size: 115%;
+}
+
+body.a11y-text-large {
+    font-size: 100%;
 }
 
 body.a11y-text-large .profil {
@@ -32,8 +36,12 @@ body.a11y-text-large .works-card-locked i {
 }
 
 /* A++ = zoom fort (~150 %) – très lisible, cards encore renforcées */
-body.a11y-text-xlarge {
+html.a11y-text-xlarge {
     font-size: 150%;
+}
+
+body.a11y-text-xlarge {
+    font-size: 100%;
 }
 
 body.a11y-text-xlarge .profil {
