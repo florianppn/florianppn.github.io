@@ -3,8 +3,8 @@
 .arcade-body {
     background-color: #050b14;
     background-image: radial-gradient(circle at center, #0e1e33 0%, #03080f 100%);
-    color: #ffffff;
-    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-family: Orbitron, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -35,9 +35,9 @@
     border: 2px solid #178582;
     padding: 0.5rem 1.25rem;
     border-radius: 8px;
-    background: rgba(23, 133, 130, 0.05);
+    background: rgb(23, 133, 130, 0.05);
     transition: all 0.2s ease;
-    box-shadow: 0 0 10px rgba(23, 133, 130, 0.15);
+    box-shadow: 0 0 10px rgb(23, 133, 130, 0.15);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -46,7 +46,7 @@
 .arcade-exit-btn:hover {
     background: #178582;
     color: #050b14;
-    box-shadow: 0 0 20px rgba(23, 133, 130, 0.4);
+    box-shadow: 0 0 20px rgb(23, 133, 130, 0.4);
     transform: translateY(-2px);
 }
 
@@ -56,7 +56,7 @@
     background: #0d1a29;
     border: 4px solid #1f3b5c;
     border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(23, 133, 130, 0.2);
+    box-shadow: 0 20px 60px rgb(0, 0, 0, 0.7), 0 0 40px rgb(23, 133, 130, 0.2);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -69,16 +69,16 @@
     border-bottom: 4px solid #1f3b5c;
     text-align: center;
     position: relative;
-    box-shadow: inset 0 0 20px rgba(255, 94, 58, 0.1);
+    box-shadow: inset 0 0 20px rgb(255, 94, 58, 0.1);
 }
 
 .arcade-title {
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: Orbitron, sans-serif;
     font-weight: 900;
     font-size: 1.6rem;
     color: #ff5e3a;
-    text-shadow: 0 0 10px rgba(255, 94, 58, 0.6), 0 0 20px rgba(255, 94, 58, 0.2);
+    text-shadow: 0 0 10px rgb(255, 94, 58, 0.6), 0 0 20px rgb(255, 94, 58, 0.2);
     letter-spacing: 2px;
 }
 
@@ -90,14 +90,14 @@
     justify-content: center;
     align-items: center;
     border-bottom: 4px solid #1f3b5c;
-    box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.95);
+    box-shadow: inset 0 0 35px rgb(0, 0, 0, 0.95);
 }
 
 .arcade-screen {
     background: #02060c;
     border: 4px solid #1c3144;
     border-radius: 12px;
-    box-shadow: 0 0 25px rgba(23, 133, 130, 0.2);
+    box-shadow: 0 0 25px rgb(23, 133, 130, 0.2);
     overflow: hidden;
     max-width: 100%;
 }
@@ -136,7 +136,7 @@
     padding: 0.5rem 1.25rem;
     border-radius: 8px;
     min-width: 110px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5px rgb(0, 0, 0, 0.5);
 }
 
 .score-label {
@@ -151,28 +151,28 @@
     font-family: 'Press Start 2P', monospace;
     font-size: 1.05rem;
     color: #bfa181;
-    text-shadow: 0 0 5px rgba(191, 161, 129, 0.6);
+    text-shadow: 0 0 5px rgb(191, 161, 129, 0.6);
 }
 
 /* Start Button */
 .arcade-btn {
-    font-family: 'Orbitron', sans-serif;
+    font-family: Orbitron, sans-serif;
     font-weight: 900;
     padding: 0.75rem 2rem;
     font-size: 1.05rem;
     border-radius: 10px;
     background: #ff5e3a;
-    color: #ffffff;
+    color: #fff;
     border: 3px solid #ff5e3a;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 0 15px rgba(255, 94, 58, 0.3);
+    box-shadow: 0 0 15px rgb(255, 94, 58, 0.3);
     letter-spacing: 1px;
 }
 
 .arcade-btn:hover {
     transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 0 25px rgba(255, 94, 58, 0.6);
+    box-shadow: 0 0 25px rgb(255, 94, 58, 0.6);
 }
 
 .arcade-btn:active {
@@ -192,12 +192,12 @@
     max-width: 400px;
     line-height: 1.5;
     margin: 0.5rem 0 0;
-    border-top: 1px dashed rgba(143, 160, 181, 0.25);
+    border-top: 1px dashed rgb(143, 160, 181, 0.25);
     padding-top: 0.75rem;
 }
 
 .arcade-instructions strong {
-    color: #ffffff;
+    color: #fff;
 }
 
 /* Cabinet Base / Coin Door */
@@ -218,7 +218,7 @@
     display: flex;
     justify-content: space-around;
     padding: 5px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
+    box-shadow: inset 0 0 10px rgb(0, 0, 0, 0.9);
 }
 
 .coin-slot {
@@ -231,13 +231,13 @@
     align-items: center;
     padding: 4px 0;
     background: #080808;
-    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.9);
+    box-shadow: inset 0 0 4px rgb(0, 0, 0, 0.9);
 }
 
 .coin-insert {
     font-size: 4px;
     color: #ff5e3a;
-    text-shadow: 0 0 2px rgba(255, 94, 58, 0.8);
+    text-shadow: 0 0 2px rgb(255, 94, 58, 0.8);
     font-weight: 900;
 }
 
@@ -246,13 +246,13 @@
     height: 12px;
     background: #e12727;
     border-radius: 2px;
-    color: #ffffff;
+    color: #fff;
     font-size: 5px;
     font-weight: 900;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 4px rgba(225, 39, 39, 0.6);
+    box-shadow: 0 0 4px rgb(225, 39, 39, 0.6);
 }
 
 /* Responsive Scaling */

@@ -29,7 +29,7 @@
     margin: auto;
 }
 
-@keyframes logoWiggle {
+@keyframes logo-wiggle {
     0% { transform: scale(1); }
     20% { transform: scale(1.2) rotate(-8deg); }
     40% { transform: scale(1.2) rotate(8deg); }
@@ -39,7 +39,7 @@
 }
 
 .logo.clicked-hint {
-    animation: logoWiggle 0.4s ease-in-out;
+    animation: logo-wiggle 0.4s ease-in-out;
 }
 
 .icons-left ul,
