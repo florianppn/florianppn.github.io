@@ -1,0 +1,209 @@
+/* Accessibility widget - Base Structure & Layout */
+.a11y-widget {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 10001;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.a11y-widget-label-btn {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    background: var(--theme-card-bg);
+    border: 2px solid var(--theme-accent);
+    color: var(--theme-accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    box-shadow: 0 4px 16px rgb(0, 0, 0, 0.25);
+}
+
+.a11y-widget-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid var(--theme-accent);
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 20px rgb(23, 133, 130, 0.4);
+}
+
+.a11y-widget-btn:hover {
+    background: #1a9d99;
+    border-color: #1a9d99;
+    color: var(--theme-text-on-accent);
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgb(23, 133, 130, 0.5);
+}
+
+.a11y-widget-btn:focus-visible {
+    outline: 2px solid var(--theme-text-on-accent);
+    outline-offset: 3px;
+}
+
+.a11y-widget-panel {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 0.5rem;
+    width: 220px;
+    padding: 1rem;
+    background: var(--theme-card-bg);
+    border: 1px solid rgb(23, 133, 130, 0.4);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgb(0, 0, 0, 0.4);
+    display: none;
+}
+
+.a11y-widget-panel.a11y-panel-open {
+    display: block;
+}
+
+.a11y-widget-title {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--theme-accent);
+}
+
+.a11y-widget-group {
+    margin-bottom: 1rem;
+}
+
+.a11y-widget-group:last-child {
+    margin-bottom: 0;
+}
+
+.a11y-widget-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--theme-text);
+    margin-bottom: 0.4rem;
+}
+
+.a11y-widget-btns {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.a11y-size-btn,
+.a11y-contrast-btn,
+.a11y-dyslexia-btn,
+.a11y-theme-btn {
+    padding: 0.4rem 0.7rem;
+    border: 1px solid rgb(23, 133, 130, 0.4);
+    border-radius: 6px;
+    background: rgb(23, 133, 130, 0.15);
+    color: #178582;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.a11y-size-btn:hover,
+.a11y-contrast-btn:hover,
+.a11y-dyslexia-btn:hover,
+.a11y-theme-btn:hover {
+    background: rgb(23, 133, 130, 0.3);
+}
+
+.a11y-theme-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid rgb(23, 133, 130, 0.4);
+    background: rgb(23, 133, 130, 0.15);
+    color: var(--theme-accent);
+    transition: all 0.2s ease;
+}
+
+.a11y-theme-btn[aria-pressed="true"] {
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    border-color: var(--theme-accent);
+}
+
+.a11y-theme-btn:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+.a11y-theme-btn:disabled,
+.a11y-theme-btn[aria-disabled="true"] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.a11y-size-btn[aria-pressed="true"],
+.a11y-contrast-btn[aria-pressed="true"],
+.a11y-dyslexia-btn[aria-pressed="true"] {
+    background: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    border-color: var(--theme-accent);
+}
+
+.a11y-size-btn:focus-visible,
+.a11y-contrast-btn:focus-visible,
+.a11y-dyslexia-btn:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+/* Responsive Scaling of the Widget */
+@media (max-width: 1024px) {
+    .a11y-widget {
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        right: max(1rem, env(safe-area-inset-right));
+        visibility: visible;
+    }
+
+    .a11y-widget-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+
+    .a11y-widget-panel {
+        width: 200px;
+        right: 0;
+        left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .a11y-widget {
+        bottom: max(0.75rem, env(safe-area-inset-bottom));
+        right: max(0.75rem, env(safe-area-inset-right));
+    }
+
+    .a11y-widget-label-btn {
+        display: none;
+    }
+
+    .a11y-widget-btn {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        min-height: 52px;
+    }
+
+    .a11y-widget-panel {
+        width: min(260px, calc(100vw - 2rem));
+        max-width: 100vw;
+        padding: 0.85rem;
+    }
+}

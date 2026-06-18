@@ -1,0 +1,240 @@
+/* A+ = zoom modéré (~115 %) – bien distinct du texte normal */
+body.a11y-text-large {
+    font-size: 115%;
+}
+
+body.a11y-text-large .profil {
+    font-size: 1.73em;
+}
+
+body.a11y-text-large .works-subtitle {
+    font-size: 1.21rem;
+}
+
+body.a11y-text-large .works-card-content h3 {
+    font-size: 1.44rem;
+}
+
+body.a11y-text-large .works-card-desc {
+    font-size: 1.04rem;
+}
+
+body.a11y-text-large .works-tag {
+    font-size: 0.81rem;
+}
+
+body.a11y-text-large .works-card-locked {
+    font-size: 0.98rem;
+}
+
+body.a11y-text-large .works-card-locked i {
+    font-size: 1.04rem;
+}
+
+/* A++ = zoom fort (~150 %) – très lisible, cards encore renforcées */
+body.a11y-text-xlarge {
+    font-size: 150%;
+}
+
+body.a11y-text-xlarge .profil {
+    font-size: 2.25em;
+}
+
+body.a11y-text-xlarge .works-subtitle {
+    font-size: 1.58rem;
+}
+
+/* Cards : taille renforcée en A++ pour une lecture confortable */
+body.a11y-text-xlarge .works-card-content {
+    padding: 1.75rem 1.5rem;
+}
+
+body.a11y-text-xlarge .works-card-content h3 {
+    font-size: 1.95rem;
+}
+
+body.a11y-text-xlarge .works-card-desc {
+    font-size: 1.44rem;
+    line-height: 1.5;
+}
+
+body.a11y-text-xlarge .works-tag {
+    font-size: 1.05rem;
+}
+
+body.a11y-text-xlarge .works-card-locked {
+    font-size: 1.28rem;
+}
+
+body.a11y-text-xlarge .works-card-locked i {
+    font-size: 1.35rem;
+}
+
+/* Zoom RGAA – Exploration */
+body.a11y-text-large .exploration-item i {
+    font-size: 2.58rem;
+}
+
+body.a11y-text-xlarge .exploration-item i {
+    font-size: 3.38rem;
+}
+
+body.a11y-text-large .exploration-name {
+    font-size: 1.15rem;
+}
+
+body.a11y-text-xlarge .exploration-name {
+    font-size: 1.5rem;
+}
+
+/* Zoom RGAA – Documents */
+body.a11y-text-large .document-item i.fa-file-pdf {
+    font-size: 3.45rem;
+}
+
+body.a11y-text-large .document-download-btn {
+    font-size: 1.15rem;
+}
+
+body.a11y-text-large .document-download-btn i {
+    font-size: 1.27rem;
+}
+
+body.a11y-text-large .arcade-title {
+    font-size: 1.85rem;
+}
+
+body.a11y-text-large .score-label {
+    font-size: 0.8rem;
+}
+
+body.a11y-text-large .score-value {
+    font-size: 1.2rem;
+}
+
+body.a11y-text-large .arcade-btn {
+    font-size: 1.2rem;
+}
+
+body.a11y-text-large .arcade-instructions {
+    font-size: 0.85rem;
+}
+
+body.a11y-text-large .arcade-exit-btn {
+    font-size: 1.05rem;
+}
+
+body.a11y-text-xlarge .document-item i.fa-file-pdf {
+    font-size: 4.5rem;
+}
+
+body.a11y-text-xlarge .document-download-btn {
+    font-size: 1.5rem;
+}
+
+body.a11y-text-xlarge .document-download-btn i {
+    font-size: 1.65rem;
+}
+
+body.a11y-text-xlarge .arcade-title {
+    font-size: 2.1rem;
+}
+
+body.a11y-text-xlarge .score-label {
+    font-size: 0.95rem;
+}
+
+body.a11y-text-xlarge .score-value {
+    font-size: 1.35rem;
+}
+
+body.a11y-text-xlarge .arcade-btn {
+    font-size: 1.35rem;
+}
+
+body.a11y-text-xlarge .arcade-instructions {
+    font-size: 1rem;
+}
+
+body.a11y-text-xlarge .arcade-exit-btn {
+    font-size: 1.2rem;
+}
+
+/* Zoom RGAA – Skills (icônes et titres) */
+body.a11y-text-large .skill-item i {
+    font-size: 4.31rem;
+}
+
+body.a11y-text-large .skill-item-featured .skill-icon i {
+    font-size: 5.03rem;
+}
+
+body.a11y-text-large .skill-item h3 {
+    font-size: 1.15rem;
+}
+
+body.a11y-text-xlarge .skill-item i {
+    font-size: 5.63rem;
+}
+
+body.a11y-text-xlarge .skill-item-featured .skill-icon i {
+    font-size: 6.56rem;
+}
+
+body.a11y-text-xlarge .skill-item h3 {
+    font-size: 1.88rem;
+}
+
+/* Zoom RGAA – Titres de section (h2, .title) et navigation */
+body.a11y-text-large h1,
+body.a11y-text-large h2,
+body.a11y-text-large .title {
+    font-size: 1.15em;
+}
+
+body.a11y-text-large .menu-container i,
+body.a11y-text-large .menu-toggle-icon i {
+    font-size: 1.8rem;
+}
+
+body.a11y-text-xlarge h1,
+body.a11y-text-xlarge h2,
+body.a11y-text-xlarge .title {
+    font-size: 1.5em;
+}
+
+body.a11y-text-xlarge .menu-container i,
+body.a11y-text-xlarge .menu-toggle-icon i {
+    font-size: 2.34rem;
+}
+
+/* Zoom RGAA – Boutons carousel works (texte) */
+body.a11y-text-large .works-carousel-btn {
+    font-size: 1.38rem;
+}
+
+body.a11y-text-xlarge .works-carousel-btn {
+    font-size: 1.8rem;
+}
+
+/* Zoom RGAA – Lightbox (fermeture) */
+body.a11y-text-large .lightbox-close {
+    font-size: 1.73rem;
+}
+
+body.a11y-text-xlarge .lightbox-close {
+    font-size: 2.25rem;
+}
+
+/* Zoom RGAA – Back to Top Button */
+body.a11y-text-large .back-to-top {
+    width: 52px;
+    height: 52px;
+    font-size: 1.35rem;
+}
+
+body.a11y-text-xlarge .back-to-top {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+}

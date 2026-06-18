@@ -1,0 +1,42 @@
+/* Mode dyslexie : police OpenDyslexic + espacements qui aident à la lecture */
+body.a11y-dyslexia {
+    font-family: OpenDyslexic, sans-serif !important;
+    letter-spacing: 0.08em;
+    word-spacing: 0.2em;
+    line-height: 1.6;
+}
+
+body.a11y-dyslexia .works-card-desc,
+body.a11y-dyslexia .form-group textarea,
+body.a11y-dyslexia .skill-list {
+    line-height: 1.7;
+}
+
+/* Boutons et champs de formulaire : forcer la police (ils n’héritent pas toujours) */
+body.a11y-dyslexia .contact-submit,
+body.a11y-dyslexia .form-group input,
+body.a11y-dyslexia .form-group textarea,
+body.a11y-dyslexia .form-group label,
+body.a11y-dyslexia .document-download-btn,
+body.a11y-dyslexia .arcade-body,
+body.a11y-dyslexia .arcade-btn,
+body.a11y-dyslexia .arcade-exit-btn,
+body.a11y-dyslexia .arcade-instructions {
+    font-family: OpenDyslexic, sans-serif !important;
+    letter-spacing: 0.08em;
+    word-spacing: 0.2em;
+}
+
+/* Panneau accessibilité : appliquer aussi le mode dyslexie */
+body.a11y-dyslexia .a11y-widget-label-btn,
+body.a11y-dyslexia .a11y-widget-title,
+body.a11y-dyslexia .a11y-widget-label,
+body.a11y-dyslexia .a11y-size-btn,
+body.a11y-dyslexia .a11y-contrast-btn,
+body.a11y-dyslexia .a11y-dyslexia-btn,
+body.a11y-dyslexia .a11y-theme-btn,
+body.a11y-dyslexia .a11y-theme-label {
+    font-family: OpenDyslexic, sans-serif !important;
+    letter-spacing: 0.08em;
+    word-spacing: 0.2em;
+}

@@ -1,0 +1,191 @@
+/* High contrast */
+body.a11y-contrast {
+    --a11y-bg: #0a0f14;
+    --a11y-text: #e8e0d5;
+    --a11y-accent: #3dd4cf;
+}
+
+body.a11y-contrast,
+body.a11y-contrast .skill-item,
+body.a11y-contrast .exploration-item,
+body.a11y-contrast .works-card,
+body.a11y-contrast .document-item,
+body.a11y-contrast .back-to-top,
+body.a11y-contrast .game-modal-content,
+body.a11y-contrast.arcade-body,
+body.a11y-contrast .arcade-cabinet,
+body.a11y-contrast .arcade-header,
+body.a11y-contrast .arcade-control-panel,
+body.a11y-contrast .arcade-score-box,
+body.a11y-contrast .arcade-screen-bezel {
+    background: #0a0f14 !important;
+}
+
+body.a11y-contrast .profil,
+body.a11y-contrast .works-subtitle,
+body.a11y-contrast .exploration-name,
+body.a11y-contrast .works-card-desc,
+body.a11y-contrast .works-card-locked {
+    color: #e8e0d5 !important;
+}
+
+body.a11y-contrast h1,
+body.a11y-contrast h2,
+body.a11y-contrast h3,
+body.a11y-contrast .skill-item i,
+body.a11y-contrast .exploration-icon i,
+body.a11y-contrast a,
+body.a11y-contrast .works-tag,
+body.a11y-contrast .works-card-content h3,
+body.a11y-contrast .back-to-top,
+body.a11y-contrast .arcade-title,
+body.a11y-contrast .score-label,
+body.a11y-contrast .score-value,
+body.a11y-contrast .arcade-instructions strong {
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .back-to-top,
+body.a11y-contrast .game-modal-content h2,
+body.a11y-contrast .game-modal-content p {
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .works-card,
+body.a11y-contrast .skill-item,
+body.a11y-contrast .exploration-item,
+body.a11y-contrast .document-item,
+body.a11y-contrast .back-to-top,
+body.a11y-contrast .game-modal-content,
+body.a11y-contrast .arcade-cabinet,
+body.a11y-contrast .arcade-header,
+body.a11y-contrast .arcade-control-panel,
+body.a11y-contrast .arcade-score-box,
+body.a11y-contrast .arcade-screen-bezel,
+body.a11y-contrast .arcade-screen {
+    border-color: rgb(61, 212, 207, 0.5) !important;
+}
+
+body.a11y-contrast .back-to-top:hover {
+    background-color: #3dd4cf !important;
+    color: #0a0f14 !important;
+}
+
+body.a11y-contrast .menu-container {
+    background: #0a0f14 !important;
+    border-bottom: 2px solid #3dd4cf !important;
+}
+
+body.a11y-contrast .categories ul,
+body.a11y-contrast .icons-left ul {
+    background: #0a0f14 !important;
+    border: 2px solid #3dd4cf !important;
+}
+
+body.a11y-contrast .menu-toggle-icon,
+body.a11y-contrast .menu-toggle-icon i {
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .works-carousel-btn,
+body.a11y-contrast .works-carousel-dot,
+body.a11y-contrast .lightbox-close {
+    border: 2px solid #3dd4cf !important;
+    background: #0a0f14 !important;
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .works-carousel-btn:hover,
+body.a11y-contrast .works-carousel-dot:hover,
+body.a11y-contrast .lightbox-close:hover {
+    background: #3dd4cf !important;
+    color: #0a0f14 !important;
+}
+
+body.a11y-contrast *:focus-visible {
+    outline-color: #3dd4cf !important;
+}
+
+/* Contraste renforcé – menu accessibilité (panneau + bouton principal) */
+body.a11y-contrast .a11y-widget-label-btn {
+    background: #0a0f14 !important;
+    border-color: #3dd4cf !important;
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .a11y-widget-btn {
+    background: #3dd4cf !important;
+    border-color: #3dd4cf !important;
+    color: #0a0f14 !important;
+}
+
+body.a11y-contrast .a11y-widget-btn:hover {
+    background: #4dddd8 !important;
+    border-color: #4dddd8 !important;
+    color: #0a0f14 !important;
+}
+
+body.a11y-contrast .a11y-widget-panel {
+    background: #0a0f14 !important;
+    border-color: rgb(61, 212, 207, 0.6) !important;
+}
+
+body.a11y-contrast .a11y-widget-title {
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .a11y-widget-label {
+    color: #e8e0d5 !important;
+}
+
+body.a11y-contrast .a11y-size-btn,
+body.a11y-contrast .a11y-contrast-btn,
+body.a11y-contrast .a11y-dyslexia-btn,
+body.a11y-contrast .a11y-theme-btn {
+    background: rgb(61, 212, 207, 0.15) !important;
+    border-color: rgb(61, 212, 207, 0.6) !important;
+    color: #3dd4cf !important;
+}
+
+body.a11y-contrast .a11y-size-btn:hover,
+body.a11y-contrast .a11y-contrast-btn:hover,
+body.a11y-contrast .a11y-dyslexia-btn:hover,
+body.a11y-contrast .a11y-theme-btn:hover {
+    background: rgb(61, 212, 207, 0.3) !important;
+    color: #e8e0d5 !important;
+}
+
+body.a11y-contrast .a11y-size-btn[aria-pressed="true"],
+body.a11y-contrast .a11y-contrast-btn[aria-pressed="true"],
+body.a11y-contrast .a11y-dyslexia-btn[aria-pressed="true"],
+body.a11y-contrast .a11y-theme-btn[aria-pressed="true"] {
+    background: #3dd4cf !important;
+    color: #0a0f14 !important;
+    border-color: #3dd4cf !important;
+}
+
+/* High Contrast overrides for Game */
+body.a11y-contrast .game-btn,
+body.a11y-contrast .arcade-btn,
+body.a11y-contrast .arcade-exit-btn {
+    background: rgb(61, 212, 207, 0.2) !important;
+    color: #3dd4cf !important;
+    border: 2px solid #3dd4cf !important;
+    box-shadow: none !important;
+}
+
+body.a11y-contrast .game-btn:hover,
+body.a11y-contrast .arcade-btn:hover,
+body.a11y-contrast .arcade-exit-btn:hover {
+    background: #3dd4cf !important;
+    color: #0a0f14 !important;
+}
+
+body.a11y-contrast #game-canvas {
+    border-color: #3dd4cf !important;
+    box-shadow: none !important;
+}
+
+body.a11y-contrast .arcade-instructions {
+    color: #e8e0d5 !important;
+}
