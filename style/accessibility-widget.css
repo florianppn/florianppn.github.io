@@ -182,7 +182,11 @@ body.a11y-dyslexia .contact-submit,
 body.a11y-dyslexia .form-group input,
 body.a11y-dyslexia .form-group textarea,
 body.a11y-dyslexia .form-group label,
-body.a11y-dyslexia .document-download-btn {
+body.a11y-dyslexia .document-download-btn,
+body.a11y-dyslexia .arcade-body,
+body.a11y-dyslexia .arcade-btn,
+body.a11y-dyslexia .arcade-exit-btn,
+body.a11y-dyslexia .arcade-instructions {
     font-family: OpenDyslexic, sans-serif !important;
     letter-spacing: 0.08em;
     word-spacing: 0.2em;
@@ -304,6 +308,30 @@ body.a11y-text-large .document-download-btn i {
     font-size: 1.27rem;
 }
 
+body.a11y-text-large .arcade-title {
+    font-size: 1.85rem;
+}
+
+body.a11y-text-large .score-label {
+    font-size: 0.8rem;
+}
+
+body.a11y-text-large .score-value {
+    font-size: 1.2rem;
+}
+
+body.a11y-text-large .arcade-btn {
+    font-size: 1.2rem;
+}
+
+body.a11y-text-large .arcade-instructions {
+    font-size: 0.85rem;
+}
+
+body.a11y-text-large .arcade-exit-btn {
+    font-size: 1.05rem;
+}
+
 body.a11y-text-xlarge .document-item i.fa-file-pdf {
     font-size: 4.5rem;
 }
@@ -314,6 +342,30 @@ body.a11y-text-xlarge .document-download-btn {
 
 body.a11y-text-xlarge .document-download-btn i {
     font-size: 1.65rem;
+}
+
+body.a11y-text-xlarge .arcade-title {
+    font-size: 2.1rem;
+}
+
+body.a11y-text-xlarge .score-label {
+    font-size: 0.95rem;
+}
+
+body.a11y-text-xlarge .score-value {
+    font-size: 1.35rem;
+}
+
+body.a11y-text-xlarge .arcade-btn {
+    font-size: 1.35rem;
+}
+
+body.a11y-text-xlarge .arcade-instructions {
+    font-size: 1rem;
+}
+
+body.a11y-text-xlarge .arcade-exit-btn {
+    font-size: 1.2rem;
 }
 
 /* Zoom RGAA – Skills (icônes et titres) */
@@ -408,7 +460,13 @@ body.a11y-contrast .exploration-item,
 body.a11y-contrast .works-card,
 body.a11y-contrast .document-item,
 body.a11y-contrast .back-to-top,
-body.a11y-contrast .game-modal-content {
+body.a11y-contrast .game-modal-content,
+body.a11y-contrast.arcade-body,
+body.a11y-contrast .arcade-cabinet,
+body.a11y-contrast .arcade-header,
+body.a11y-contrast .arcade-control-panel,
+body.a11y-contrast .arcade-score-box,
+body.a11y-contrast .arcade-screen-bezel {
     background: #0a0f14 !important;
 }
 
@@ -428,7 +486,11 @@ body.a11y-contrast .exploration-icon i,
 body.a11y-contrast a,
 body.a11y-contrast .works-tag,
 body.a11y-contrast .works-card-content h3,
-body.a11y-contrast .back-to-top {
+body.a11y-contrast .back-to-top,
+body.a11y-contrast .arcade-title,
+body.a11y-contrast .score-label,
+body.a11y-contrast .score-value,
+body.a11y-contrast .arcade-instructions strong {
     color: #3dd4cf !important;
 }
 
@@ -443,7 +505,13 @@ body.a11y-contrast .skill-item,
 body.a11y-contrast .exploration-item,
 body.a11y-contrast .document-item,
 body.a11y-contrast .back-to-top,
-body.a11y-contrast .game-modal-content {
+body.a11y-contrast .game-modal-content,
+body.a11y-contrast .arcade-cabinet,
+body.a11y-contrast .arcade-header,
+body.a11y-contrast .arcade-control-panel,
+body.a11y-contrast .arcade-score-box,
+body.a11y-contrast .arcade-screen-bezel,
+body.a11y-contrast .arcade-screen {
     border-color: rgb(61, 212, 207, 0.5) !important;
 }
 
@@ -561,14 +629,18 @@ body.a11y-contrast .a11y-theme-btn[aria-pressed="true"] {
 }
 
 /* High Contrast overrides for Game */
-body.a11y-contrast .game-btn {
+body.a11y-contrast .game-btn,
+body.a11y-contrast .arcade-btn,
+body.a11y-contrast .arcade-exit-btn {
     background: rgb(61, 212, 207, 0.2) !important;
     color: #3dd4cf !important;
     border: 2px solid #3dd4cf !important;
     box-shadow: none !important;
 }
 
-body.a11y-contrast .game-btn:hover {
+body.a11y-contrast .game-btn:hover,
+body.a11y-contrast .arcade-btn:hover,
+body.a11y-contrast .arcade-exit-btn:hover {
     background: #3dd4cf !important;
     color: #0a0f14 !important;
 }
@@ -576,4 +648,8 @@ body.a11y-contrast .game-btn:hover {
 body.a11y-contrast #game-canvas {
     border-color: #3dd4cf !important;
     box-shadow: none !important;
+}
+
+body.a11y-contrast .arcade-instructions {
+    color: #e8e0d5 !important;
 }

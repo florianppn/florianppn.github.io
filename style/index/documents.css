@@ -61,3 +61,10 @@
 .document-download-btn i {
     font-size: 1.1rem;
 }
+
+.document-download-btn:hover {
+    text-decoration: none;
+    color: var(--theme-accent) !important;
+    background: rgb(23, 133, 130, 0.3);
+    border-color: rgb(23, 133, 130, 0.6);
+}
