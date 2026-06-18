@@ -63,7 +63,7 @@
 
 .works-carousel-viewport::before,
 .works-carousel-viewport::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     bottom: 0;
@@ -124,7 +124,7 @@
 }
 
 .works-card-featured::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;

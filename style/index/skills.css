@@ -21,9 +21,9 @@
     transition: var(--transition-smooth);
     display: grid;
     grid-template-areas:
-        "icon"
-        "title"
-        "list";
+        'icon'
+        'title'
+        'list';
     grid-template-rows: auto auto 1fr;
     place-items: start center;
     text-align: center;
@@ -31,7 +31,7 @@
 
 /* Subtle top-left glow blob on hover */
 .skill-item::before {
-    content: "";
+    content: '';
     position: absolute;
     top: -30px;
     left: -30px;

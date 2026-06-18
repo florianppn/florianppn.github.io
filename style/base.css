@@ -1,5 +1,4 @@
 /* Base & variables */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 @font-face {
     font-family: Karla;
@@ -9,21 +8,21 @@
 }
 
 :root {
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: Outfit, sans-serif;
+    --font-body: Inter, sans-serif;
 
     font-family: var(--font-body);
 
-    --theme-bg: #0A1826;
-    --theme-text: #BFA181;
+    --theme-bg: #0a1826;
+    --theme-text: #bfa181;
     --theme-text-muted: #9e8469;
     --theme-accent: #178582;
     --theme-accent-glow: rgba(23, 133, 130, 0.25);
     --theme-card-bg: rgba(19, 31, 43, 0.75);
     --theme-border: rgba(23, 133, 130, 0.15);
     --theme-border-hover: rgba(23, 133, 130, 0.4);
-    --theme-text-on-accent: #0A1826;
-    
+    --theme-text-on-accent: #0a1826;
+
     /* Glassmorphism settings */
     --glass-blur: blur(12px);
     --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
@@ -77,7 +76,7 @@ h1, h2, h3 {
 }
 
 .title::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -8px;
     left: 10%;

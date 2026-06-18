@@ -41,6 +41,17 @@
     width: fit-content;
 }
 
+.profil-badge i {
+    font-size: 0.55rem;
+    color: #3ecf6c;
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.3); }
+}
+
 .profil-title {
     font-family: var(--font-heading);
     font-size: clamp(2.5rem, 5vw, 4rem);
