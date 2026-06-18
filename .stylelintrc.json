@@ -3,6 +3,10 @@
   "rules": {
     "selector-class-pattern": null,
     "import-notation": "string",
-    "no-descending-specificity": null
+    "no-descending-specificity": null,
+    "color-function-notation": "legacy",
+    "alpha-value-notation": "number",
+    "media-feature-range-notation": "prefix",
+    "property-no-vendor-prefix": null
   }
 }

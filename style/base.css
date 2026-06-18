@@ -1,13 +1,14 @@
 /* Base & variables */
 @font-face {
-    font-family: 'Karla';
+    font-family: Karla;
     src: url('fonts/Karla-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 :root {
-    font: 'Karla';
+    font-family: Karla, sans-serif;
+
     --theme-bg: #0A1826;
     --theme-text: #BFA181;
     --theme-accent: #178582;

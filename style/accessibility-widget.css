@@ -20,7 +20,7 @@
     font-size: 0.9rem;
     font-weight: 600;
     line-height: 1.2;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 16px rgb(0, 0, 0, 0.25);
 }
 
 .a11y-widget-btn {
@@ -36,7 +36,7 @@
     justify-content: center;
     font-size: 1.35rem;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 20px rgba(23, 133, 130, 0.4);
+    box-shadow: 0 4px 20px rgb(23, 133, 130, 0.4);
 }
 
 .a11y-widget-btn:hover {
@@ -44,7 +44,7 @@
     border-color: #1a9d99;
     color: var(--theme-text-on-accent);
     transform: scale(1.05);
-    box-shadow: 0 6px 24px rgba(23, 133, 130, 0.5);
+    box-shadow: 0 6px 24px rgb(23, 133, 130, 0.5);
 }
 
 .a11y-widget-btn:focus-visible {
@@ -60,12 +60,9 @@
     width: 220px;
     padding: 1rem;
     background: var(--theme-card-bg);
-    border: 1px solid rgba(23, 133, 130, 0.4);
+    border: 1px solid rgb(23, 133, 130, 0.4);
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.a11y-widget-panel {
+    box-shadow: 0 8px 24px rgb(0, 0, 0, 0.4);
     display: none;
 }
 
@@ -74,7 +71,7 @@
 }
 
 .a11y-widget-title {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
     font-size: 1rem;
     color: var(--theme-accent);
 }
@@ -104,9 +101,9 @@
 .a11y-dyslexia-btn,
 .a11y-theme-btn {
     padding: 0.4rem 0.7rem;
-    border: 1px solid rgba(23, 133, 130, 0.4);
+    border: 1px solid rgb(23, 133, 130, 0.4);
     border-radius: 6px;
-    background: rgba(23, 133, 130, 0.15);
+    background: rgb(23, 133, 130, 0.15);
     color: #178582;
     font-size: 0.9rem;
     cursor: pointer;
@@ -117,7 +114,7 @@
 .a11y-contrast-btn:hover,
 .a11y-dyslexia-btn:hover,
 .a11y-theme-btn:hover {
-    background: rgba(23, 133, 130, 0.3);
+    background: rgb(23, 133, 130, 0.3);
 }
 
 .a11y-theme-btn {
@@ -127,8 +124,8 @@
     cursor: pointer;
     font-size: 0.9rem;
     border-radius: 6px;
-    border: 1px solid rgba(23, 133, 130, 0.4);
-    background: rgba(23, 133, 130, 0.15);
+    border: 1px solid rgb(23, 133, 130, 0.4);
+    background: rgb(23, 133, 130, 0.15);
     color: var(--theme-accent);
     transition: all 0.2s ease;
 }
@@ -168,7 +165,7 @@
 
 /* Mode dyslexie : police OpenDyslexic + espacements qui aident à la lecture */
 body.a11y-dyslexia {
-    font-family: "OpenDyslexic", sans-serif !important;
+    font-family: OpenDyslexic, sans-serif !important;
     letter-spacing: 0.08em;
     word-spacing: 0.2em;
     line-height: 1.6;
@@ -186,7 +183,7 @@ body.a11y-dyslexia .form-group input,
 body.a11y-dyslexia .form-group textarea,
 body.a11y-dyslexia .form-group label,
 body.a11y-dyslexia .document-download-btn {
-    font-family: "OpenDyslexic", sans-serif !important;
+    font-family: OpenDyslexic, sans-serif !important;
     letter-spacing: 0.08em;
     word-spacing: 0.2em;
 }
@@ -200,7 +197,7 @@ body.a11y-dyslexia .a11y-contrast-btn,
 body.a11y-dyslexia .a11y-dyslexia-btn,
 body.a11y-dyslexia .a11y-theme-btn,
 body.a11y-dyslexia .a11y-theme-label {
-    font-family: "OpenDyslexic", sans-serif !important;
+    font-family: OpenDyslexic, sans-serif !important;
     letter-spacing: 0.08em;
     word-spacing: 0.2em;
 }
@@ -436,7 +433,7 @@ body.a11y-contrast .skill-item,
 body.a11y-contrast .exploration-item,
 body.a11y-contrast .document-item,
 body.a11y-contrast .back-to-top {
-    border-color: rgba(61, 212, 207, 0.5) !important;
+    border-color: rgb(61, 212, 207, 0.5) !important;
 }
 
 body.a11y-contrast .back-to-top:hover {
@@ -471,7 +468,7 @@ body.a11y-contrast .a11y-widget-btn:hover {
 
 body.a11y-contrast .a11y-widget-panel {
     background: #0a0f14 !important;
-    border-color: rgba(61, 212, 207, 0.6) !important;
+    border-color: rgb(61, 212, 207, 0.6) !important;
 }
 
 body.a11y-contrast .a11y-widget-title {
@@ -486,8 +483,8 @@ body.a11y-contrast .a11y-size-btn,
 body.a11y-contrast .a11y-contrast-btn,
 body.a11y-contrast .a11y-dyslexia-btn,
 body.a11y-contrast .a11y-theme-btn {
-    background: rgba(61, 212, 207, 0.15) !important;
-    border-color: rgba(61, 212, 207, 0.6) !important;
+    background: rgb(61, 212, 207, 0.15) !important;
+    border-color: rgb(61, 212, 207, 0.6) !important;
     color: #3dd4cf !important;
 }
 
@@ -495,7 +492,7 @@ body.a11y-contrast .a11y-size-btn:hover,
 body.a11y-contrast .a11y-contrast-btn:hover,
 body.a11y-contrast .a11y-dyslexia-btn:hover,
 body.a11y-contrast .a11y-theme-btn:hover {
-    background: rgba(61, 212, 207, 0.3) !important;
+    background: rgb(61, 212, 207, 0.3) !important;
     color: #e8e0d5 !important;
 }
 

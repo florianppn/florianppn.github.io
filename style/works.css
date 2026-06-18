@@ -28,8 +28,8 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid rgba(23, 133, 130, 0.5);
-    background: rgba(10, 24, 38, 0.9);
+    border: 2px solid rgb(23, 133, 130, 0.5);
+    background: rgb(10, 24, 38, 0.9);
     color: var(--theme-accent);
     cursor: pointer;
     display: flex;
@@ -77,12 +77,12 @@
 
 .works-carousel-viewport::before {
     left: 0;
-    background: linear-gradient(to right, rgba(10, 24, 38, 0.9), transparent);
+    background: linear-gradient(to right, rgb(10, 24, 38, 0.9), transparent);
 }
 
 .works-carousel-viewport::after {
     right: 0;
-    background: linear-gradient(to left, rgba(10, 24, 38, 0.9), transparent);
+    background: linear-gradient(to left, rgb(10, 24, 38, 0.9), transparent);
 }
 
 .works-container {
@@ -108,20 +108,20 @@
     border-radius: 16px;
     overflow: hidden;
     background: linear-gradient(145deg, var(--theme-card-bg) 0%, #0f1922 100%);
-    border: 1px solid rgba(23, 133, 130, 0.15);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(23, 133, 130, 0.15);
+    box-shadow: 0 4px 24px rgb(0, 0, 0, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works-card:hover,
 .works-card:focus-within {
     transform: translateY(-8px);
-    border-color: rgba(23, 133, 130, 0.4);
-    box-shadow: 0 12px 40px rgba(23, 133, 130, 0.15);
+    border-color: rgb(23, 133, 130, 0.4);
+    box-shadow: 0 12px 40px rgb(23, 133, 130, 0.15);
 }
 
 .works-card-featured {
-    border-color: rgba(23, 133, 130, 0.3);
+    border-color: rgb(23, 133, 130, 0.3);
 }
 
 .works-card-featured::before {
@@ -176,14 +176,14 @@
 }
 
 .works-card-content h3 {
-    margin: 0 0 0.4rem 0;
+    margin: 0 0 0.4rem;
     font-size: 1.25rem;
     color: var(--theme-accent);
     font-weight: 600;
 }
 
 .works-card-desc {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
     font-size: 0.9rem;
     color: var(--theme-text);
     opacity: 0.9;
@@ -200,7 +200,7 @@
 .works-tag {
     font-size: 0.7rem;
     padding: 0.3rem 0.65rem;
-    background: rgba(23, 133, 130, 0.15);
+    background: rgb(23, 133, 130, 0.15);
     color: var(--theme-accent);
     border-radius: 6px;
     font-weight: 500;
@@ -219,9 +219,9 @@
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background: rgba(23, 133, 130, 0.2);
+    background: rgb(23, 133, 130, 0.2);
     color: var(--theme-accent);
-    border: 1px solid rgba(23, 133, 130, 0.3);
+    border: 1px solid rgb(23, 133, 130, 0.3);
     transition: all 0.25s ease;
     text-decoration: none;
 }
@@ -257,14 +257,14 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 2px solid rgba(23, 133, 130, 0.5);
+    border: 2px solid rgb(23, 133, 130, 0.5);
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .works-carousel-dot:hover {
-    background: rgba(23, 133, 130, 0.3);
+    background: rgb(23, 133, 130, 0.3);
 }
 
 .works-carousel-dot.active {
@@ -294,7 +294,7 @@
 .lightbox-backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(10, 24, 38, 0.92);
+    background: rgb(10, 24, 38, 0.92);
     cursor: zoom-out;
 }
 
@@ -312,7 +312,7 @@
     height: auto;
     object-fit: contain;
     border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgb(0, 0, 0, 0.5);
 }
 
 .lightbox-close {
@@ -323,8 +323,8 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 2px solid rgba(23, 133, 130, 0.5);
-    background: rgba(10, 24, 38, 0.9);
+    border: 2px solid rgb(23, 133, 130, 0.5);
+    background: rgb(10, 24, 38, 0.9);
     color: var(--theme-accent);
     cursor: pointer;
     display: flex;

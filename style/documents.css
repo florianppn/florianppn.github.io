@@ -14,16 +14,16 @@
     padding: 2rem;
     border-radius: 16px;
     text-align: center;
-    border: 1px solid rgba(23, 133, 130, 0.15);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgb(23, 133, 130, 0.15);
+    box-shadow: 0 4px 24px rgb(0, 0, 0, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .document-item:hover,
 .document-item:focus-within {
     transform: translateY(-8px);
-    border-color: rgba(23, 133, 130, 0.4);
-    box-shadow: 0 12px 40px rgba(23, 133, 130, 0.15);
+    border-color: rgb(23, 133, 130, 0.4);
+    box-shadow: 0 12px 40px rgb(23, 133, 130, 0.15);
 }
 
 @media (hover: hover) {
@@ -40,7 +40,7 @@
 }
 
 .document-item h3 {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem;
 }
 
 .download-file {
@@ -53,8 +53,8 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.6rem 1.2rem;
-    background: rgba(23, 133, 130, 0.2);
-    border: 1px solid rgba(23, 133, 130, 0.4);
+    background: rgb(23, 133, 130, 0.2);
+    border: 1px solid rgb(23, 133, 130, 0.4);
     border-radius: 10px;
     color: var(--theme-accent);
     font-size: 1rem;
