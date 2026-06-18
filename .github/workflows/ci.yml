@@ -1,0 +1,33 @@
+name: CI Quality Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    name: Run Linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install linting dependencies
+        run: npm install eslint @eslint/js globals stylelint stylelint-config-standard htmlhint
+
+      - name: Run HTMLHint
+        run: npx htmlhint "index.html" --config .htmlhintrc
+
+      - name: Run Stylelint
+        run: npx stylelint "style/**/*.css" --config .stylelintrc.json
+
+      - name: Run ESLint
+        run: npx eslint "script/**/*.js"
