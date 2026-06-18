@@ -199,6 +199,7 @@
     white-space: pre;
     opacity: 0;
     animation: terminal-appear 0.1s ease forwards;
+    min-height: 1.7em;
 }
 
 .terminal-line:nth-child(1)  { animation-delay: 0.2s; }
