@@ -1,7 +1,7 @@
 /* Base & variables */
 @font-face {
     font-family: Karla;
-    src: url('fonts/Karla-VariableFont_wght.ttf') format('truetype');
+    src: url('../font/Karla/Karla-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
