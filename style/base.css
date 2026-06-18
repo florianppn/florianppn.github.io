@@ -1,4 +1,6 @@
 /* Base & variables */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
 @font-face {
     font-family: Karla;
     src: url('../font/Karla/Karla-VariableFont_wght.ttf') format('truetype');
@@ -7,29 +9,43 @@
 }
 
 :root {
-    font-family: Karla, sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    font-family: var(--font-body);
 
     --theme-bg: #0A1826;
     --theme-text: #BFA181;
+    --theme-text-muted: #9e8469;
     --theme-accent: #178582;
-    --theme-card-bg: #131f2b;
-    --theme-border: #242a30;
+    --theme-accent-glow: rgba(23, 133, 130, 0.25);
+    --theme-card-bg: rgba(19, 31, 43, 0.75);
+    --theme-border: rgba(23, 133, 130, 0.15);
+    --theme-border-hover: rgba(23, 133, 130, 0.4);
     --theme-text-on-accent: #0A1826;
+    
+    /* Glassmorphism settings */
+    --glass-blur: blur(12px);
+    --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+    --hover-shadow: 0 12px 40px 0 rgba(23, 133, 130, 0.18);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
     margin: 0;
     background-color: var(--theme-bg);
     color: var(--theme-text);
+    line-height: 1.6;
 }
 
 a {
     text-decoration: none;
     color: var(--theme-accent);
+    transition: var(--transition-smooth);
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--theme-text);
 }
 
@@ -38,14 +54,35 @@ ul {
 }
 
 section {
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin-top: 6em;
+    margin-bottom: 6em;
+    scroll-margin-top: 100px;
 }
 
 h1, h2, h3 {
+    font-family: var(--font-heading);
     color: var(--theme-accent);
+    font-weight: 700;
 }
 
 .title {
     text-align: center;
+    font-size: 2.25rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--theme-accent), transparent);
+}
+

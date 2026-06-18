@@ -2,69 +2,100 @@
 .documents-container {
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin: 0 auto;
 }
 
 .document-item {
-    width: 280px;
+    width: 300px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(145deg, var(--theme-card-bg) 0%, #0f1922 100%);
-    padding: 2rem;
+    background: var(--theme-card-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    padding: 2.5rem 2rem;
     border-radius: 16px;
     text-align: center;
-    border: 1px solid rgb(23, 133, 130, 0.15);
-    box-shadow: 0 4px 24px rgb(0, 0, 0, 0.3);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--theme-border);
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Top accent line */
+.document-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--theme-accent), transparent);
 }
 
 .document-item:hover,
 .document-item:focus-within {
-    transform: translateY(-8px);
-    border-color: rgb(23, 133, 130, 0.4);
-    box-shadow: 0 12px 40px rgb(23, 133, 130, 0.15);
+    transform: translateY(-6px);
+    border-color: var(--theme-border-hover);
+    box-shadow: var(--hover-shadow);
 }
 
-
-
 .document-item i.fa-file-pdf {
-    font-size: 48px;
+    font-size: 3.5rem;
     color: var(--theme-accent);
+    filter: drop-shadow(0 0 14px var(--theme-accent-glow));
     display: block;
-    margin-bottom: 0.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.document-item:hover i.fa-file-pdf {
+    transform: scale(1.1);
 }
 
 .document-item h3 {
-    margin: 0 0 1rem;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
     color: var(--theme-text);
+    letter-spacing: -0.01em;
 }
 
 .download-file {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .document-download-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background: rgb(23, 133, 130, 0.2);
-    border: 1px solid rgb(23, 133, 130, 0.4);
+    padding: 0.7rem 1.4rem;
+    background: var(--theme-accent-glow);
+    border: 1px solid rgba(23, 133, 130, 0.4);
     border-radius: 10px;
     color: var(--theme-accent);
-    font-size: 1rem;
-    transition: all 0.25s ease;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    text-decoration: none;
 }
 
 .document-download-btn i {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .document-download-btn:hover {
+    background: var(--theme-accent);
+    border-color: var(--theme-accent);
+    color: var(--theme-text-on-accent) !important;
     text-decoration: none;
-    color: var(--theme-accent) !important;
-    background: rgb(23, 133, 130, 0.3);
-    border-color: rgb(23, 133, 130, 0.6);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px var(--theme-accent-glow);
 }

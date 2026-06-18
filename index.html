@@ -45,15 +45,47 @@
 
   <section id="profil">
     <div class="profil">
-      <h1 class="title">Hello World !</h1>
-      <span>Je m'appelle Florian Pépin et je suis étudiant en <strong>Master Informatique - Génie de l'Informatique
-          Logicielle</strong>.</span>
-      <br>
-      <span>Je suis passionné par le développement logiciel, et je me spécialise notamment sur <strong>Java / Spring
-          Boot</strong> et <strong>Angular</strong>.</span>
-      <br>
-      <span>J'aime concevoir des applications web robustes et modernes, de la base de données à l'interface
-        utilisateur.</span>
+      <div class="profil-intro">
+        <span class="profil-badge"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Master GIL &mdash; Génie de l'Informatique Logicielle</span>
+        <h1 class="profil-title">Florian Pépin</h1>
+        <p class="profil-role">Développeur Full Stack <span class="profil-role-accent">Java / Spring Boot · Angular</span></p>
+        <p class="profil-desc">Passionné par la conception d'applications web robustes et modernes, de la base de données à l'interface utilisateur.</p>
+        <div class="profil-cta">
+          <a href="#works" class="profil-btn profil-btn-primary">
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            Mes projets
+          </a>
+          <a href="./asset/document/CV-florian-pepin.pdf" download="CV-florian-pepin.pdf" class="profil-btn profil-btn-secondary">
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+            Télécharger le CV
+          </a>
+        </div>
+      </div>
+      <div class="profil-visual" aria-hidden="true">
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot dot-red"></span>
+            <span class="terminal-dot dot-yellow"></span>
+            <span class="terminal-dot dot-green"></span>
+            <span class="terminal-title">FloPortfolio.java</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line"><span class="t-kw">@RestController</span></div>
+            <div class="terminal-line"><span class="t-kw">@RequestMapping</span><span class="t-punc">(</span><span class="t-str">"/api"</span><span class="t-punc">)</span></div>
+            <div class="terminal-line"><span class="t-kw">public class</span> <span class="t-cls">Portfolio</span> <span class="t-punc">{</span></div>
+            <div class="terminal-line">&nbsp;</div>
+            <div class="terminal-line">&nbsp;&nbsp;<span class="t-kw">@GetMapping</span><span class="t-punc">(</span><span class="t-str">"/developer"</span><span class="t-punc">)</span></div>
+            <div class="terminal-line">&nbsp;&nbsp;<span class="t-kw">public</span> <span class="t-cls">Developer</span> <span class="t-fn">getMe</span><span class="t-punc">() {</span></div>
+            <div class="terminal-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-kw">return</span> <span class="t-cls">Developer</span><span class="t-punc">.</span><span class="t-fn">builder</span><span class="t-punc">()</span></div>
+            <div class="terminal-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-punc">.</span><span class="t-fn">name</span><span class="t-punc">(</span><span class="t-str">"Florian Pépin"</span><span class="t-punc">)</span></div>
+            <div class="terminal-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-punc">.</span><span class="t-fn">stack</span><span class="t-punc">(</span><span class="t-cls">List</span><span class="t-punc">.</span><span class="t-fn">of</span><span class="t-punc">(</span><span class="t-str">"Java"</span><span class="t-punc">,</span> <span class="t-str">"Angular"</span><span class="t-punc">))</span></div>
+            <div class="terminal-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t-punc">.</span><span class="t-fn">build</span><span class="t-punc">();</span></div>
+            <div class="terminal-line">&nbsp;&nbsp;<span class="t-punc">}</span></div>
+            <div class="terminal-line"><span class="t-punc">}</span></div>
+            <div class="terminal-line terminal-cursor-line"><span class="terminal-cursor"></span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -65,42 +97,42 @@
         <div class="skill-title">
           <h3>Backend Java</h3>
         </div>
-        <div class="skill-list">
-          <span>✑ Java</span>
-          <span>✑ Spring Boot</span>
-        </div>
+        <ul class="skill-list">
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Java</li>
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Spring Boot</li>
+        </ul>
       </div>
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-brands fa-angular" aria-hidden="true"></i></div>
         <div class="skill-title">
           <h3>Front-end</h3>
         </div>
-        <div class="skill-list">
-          <span>✑ Angular</span>
-          <span>✑ HTML / CSS</span>
-        </div>
+        <ul class="skill-list">
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Angular</li>
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> HTML / CSS</li>
+        </ul>
       </div>
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
         <div class="skill-title">
           <h3>Bases de données</h3>
         </div>
-        <div class="skill-list">
-          <span>✑ PostgreSQL</span>
-          <span>✑ MongoDB</span>
-        </div>
+        <ul class="skill-list">
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> PostgreSQL</li>
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> MongoDB</li>
+        </ul>
       </div>
       <div class="skill-item">
         <div class="skill-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></div>
         <div class="skill-title">
-          <h3>Environnements & Outils</h3>
+          <h3>Environnements &amp; Outils</h3>
         </div>
-        <div class="skill-list">
-          <span>✑ Docker</span>
-          <span>✑ Git</span>
-          <span>✑ Linux</span>
-          <span>✑ Windows</span>
-        </div>
+        <ul class="skill-list">
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Docker</li>
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Git</li>
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Linux</li>
+          <li><i class="fa-solid fa-chevron-right" aria-hidden="true"></i> Windows</li>
+        </ul>
       </div>
     </div>
   </section>

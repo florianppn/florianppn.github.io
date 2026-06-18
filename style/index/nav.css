@@ -4,18 +4,20 @@
     position: sticky;
     top: 0;
     margin: 0 auto;
-    background-color: rgb(10, 24, 38, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(10, 24, 38, 0.7);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border-bottom: 1px solid rgba(23, 133, 130, 0.12);
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     text-align: center;
     place-items: center center;
-    padding: 1em;
+    padding: 0.75em 1.5em;
+    transition: box-shadow 0.3s ease;
 }
 
 .menu-container i {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .logo-container-sticky {
@@ -25,17 +27,22 @@
 
 .logo {
     display: block;
-    height: 35px;
+    height: 32px;
     margin: auto;
     cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 @keyframes logo-wiggle {
-    0% { transform: scale(1); }
-    20% { transform: scale(1.2) rotate(-8deg); }
-    40% { transform: scale(1.2) rotate(8deg); }
-    60% { transform: scale(1.2) rotate(-5deg); }
-    80% { transform: scale(1.2) rotate(5deg); }
+    0%   { transform: scale(1); }
+    20%  { transform: scale(1.2) rotate(-8deg); }
+    40%  { transform: scale(1.2) rotate(8deg); }
+    60%  { transform: scale(1.2) rotate(-5deg); }
+    80%  { transform: scale(1.2) rotate(5deg); }
     100% { transform: scale(1) rotate(0deg); }
 }
 
@@ -51,14 +58,15 @@
     width: 100%;
     display: flex;
     padding: 0;
+    margin: 0;
 }
 
 .icons-left ul {
-    gap: 30px;
+    gap: 24px;
 }
 
 .categories ul {
-    gap: 60px;
+    gap: 40px;
 }
 
 .icons-left,
@@ -79,26 +87,50 @@
 }
 
 .menu-toggle-icon i {
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .menu-container a {
     text-decoration: none;
-    color: var(--theme-accent);
+    color: var(--theme-text-muted);
     line-height: 1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+}
+
+.menu-container a:hover {
+    color: var(--theme-accent);
+}
+
+/* Icons in contact menu */
+.icons-left ul a {
+    font-size: 1.15rem;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--theme-text-muted);
+}
+
+.icons-left ul a:hover {
+    color: var(--theme-accent);
 }
 
 .copied-message {
     display: none;
     position: absolute;
-    background-color: var(--theme-bg);
+    background-color: var(--theme-card-bg);
     border: 1px solid var(--theme-accent);
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 0.75rem;
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 101;
+    white-space: nowrap;
+    color: var(--theme-accent);
 }
 
 .alert-copy {
@@ -111,21 +143,23 @@
     bottom: 2rem;
     left: 2rem;
     z-index: 999;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    border: 2px solid var(--theme-accent);
-    background-color: var(--theme-card-bg);
+    border: 1px solid var(--theme-border-hover);
+    background-color: rgba(10, 24, 38, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: var(--theme-accent);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 16px rgb(0, 0, 0, 0.25);
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .back-to-top.visible {
@@ -136,16 +170,17 @@
 .back-to-top:hover {
     background-color: var(--theme-accent);
     color: var(--theme-text-on-accent);
+    border-color: var(--theme-accent);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgb(23, 133, 130, 0.4);
+    box-shadow: 0 8px 24px var(--theme-accent-glow);
 }
 
 @media (max-width: 576px) {
     .back-to-top {
         bottom: 1.5rem;
         left: 1.5rem;
-        width: 44px;
-        height: 44px;
-        font-size: 1.1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
     }
 }
