@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Kickman - Borne Arcade</title>
+  <link rel="icon" type="image/x-icon" href="./asset/logo/kickman.ico">
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./style/base.css">
+  <link rel="stylesheet" href="./style/theme.css">
+  <link rel="stylesheet" href="./style/game/game.css">
+  <!-- Game Launch Script -->
+  <script type="module">
+    import { runSpaceGame } from "./script/game.js";
+    document.addEventListener("DOMContentLoaded", () => {
+      runSpaceGame();
+    });
+  </script>
+</head>
+<body class="arcade-body">
+  <div class="arcade-wrapper">
+    <!-- Close / Exit Button -->
+    <a href="./index.html" class="arcade-exit-btn" aria-label="Retour au portfolio">
+      <i class="fa-solid fa-arrow-left"></i> Retour au Portfolio
+    </a>
+
+    <div class="arcade-cabinet">
+      <!-- Cabinet Top Header -->
+      <div class="arcade-header">
+        <h1 class="arcade-title">SPACE KICKMAN</h1>
+        <div class="arcade-marquee-light"></div>
+      </div>
+
+      <!-- Main Game Console -->
+      <div class="arcade-screen-bezel">
+        <div class="arcade-screen">
+          <canvas id="game-canvas" width="400" height="400"></canvas>
+        </div>
+      </div>
+
+      <!-- Controls Panel / Instructions & Scores -->
+      <div class="arcade-control-panel">
+        <div class="arcade-scores">
+          <div class="arcade-score-box">
+            <span class="score-label">SCORE</span>
+            <strong id="game-score" class="score-value">0</strong>
+          </div>
+          <div class="arcade-score-box">
+            <span class="score-label">RECORD</span>
+            <strong id="game-highscore" class="score-value">0</strong>
+          </div>
+        </div>
+
+        <button type="button" id="start-game-btn" class="arcade-btn">Lancer la partie</button>
+
+        <p class="arcade-instructions">
+          <i class="fa-solid fa-gamepad"></i> <strong>Contrôles :</strong> Glissez la souris ou le doigt pour diriger le vaisseau. Cliquez ou pressez <strong>[Espace]</strong> pour tirer. Clavier AZERTY : <strong>[Z / S]</strong> pour monter/descendre.
+        </p>
+      </div>
+
+      <!-- Arcade Cabinet Bottom Decorative Details -->
+      <div class="arcade-cabinet-bottom">
+        <div class="coin-door">
+          <div class="coin-slot">
+            <div class="coin-insert">INSERT COIN</div>
+            <div class="coin-return">25¢</div>
+          </div>
+          <div class="coin-slot">
+            <div class="coin-insert">INSERT COIN</div>
+            <div class="coin-return">25¢</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

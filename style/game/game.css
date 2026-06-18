@@ -1,0 +1,280 @@
+/* Space Kickman - Retro Arcade Cabinet Styles */
+
+.arcade-body {
+    background-color: #050b14;
+    background-image: radial-gradient(circle at center, #0e1e33 0%, #03080f 100%);
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.arcade-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 480px;
+    padding: 1.5rem;
+}
+
+/* Exit Button */
+.arcade-exit-btn {
+    align-self: flex-start;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: #178582;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 2px solid #178582;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    background: rgba(23, 133, 130, 0.05);
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(23, 133, 130, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.arcade-exit-btn:hover {
+    background: #178582;
+    color: #050b14;
+    box-shadow: 0 0 20px rgba(23, 133, 130, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Cabinet Shell */
+.arcade-cabinet {
+    width: 100%;
+    background: #0d1a29;
+    border: 4px solid #1f3b5c;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(23, 133, 130, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabinet Top Marquee */
+.arcade-header {
+    background: #08111c;
+    padding: 1.25rem;
+    border-bottom: 4px solid #1f3b5c;
+    text-align: center;
+    position: relative;
+    box-shadow: inset 0 0 20px rgba(255, 94, 58, 0.1);
+}
+
+.arcade-title {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: #ff5e3a;
+    text-shadow: 0 0 10px rgba(255, 94, 58, 0.6), 0 0 20px rgba(255, 94, 58, 0.2);
+    letter-spacing: 2px;
+}
+
+/* CRT Screen Bezel */
+.arcade-screen-bezel {
+    background: #111;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #1f3b5c;
+    box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.95);
+}
+
+.arcade-screen {
+    background: #02060c;
+    border: 4px solid #1c3144;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(23, 133, 130, 0.2);
+    overflow: hidden;
+    max-width: 100%;
+}
+
+#game-canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    background-color: #0a1826;
+    cursor: crosshair;
+}
+
+/* Control Panel */
+.arcade-control-panel {
+    background: #08111c;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.arcade-scores {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.arcade-score-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #03080e;
+    border: 2px solid #1f3b5c;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    min-width: 110px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.score-label {
+    font-size: 0.65rem;
+    color: #ff5e3a;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.35rem;
+}
+
+.score-value {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.05rem;
+    color: #bfa181;
+    text-shadow: 0 0 5px rgba(191, 161, 129, 0.6);
+}
+
+/* Start Button */
+.arcade-btn {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    padding: 0.75rem 2rem;
+    font-size: 1.05rem;
+    border-radius: 10px;
+    background: #ff5e3a;
+    color: #ffffff;
+    border: 3px solid #ff5e3a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 15px rgba(255, 94, 58, 0.3);
+    letter-spacing: 1px;
+}
+
+.arcade-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 25px rgba(255, 94, 58, 0.6);
+}
+
+.arcade-btn:active {
+    transform: scale(0.98) translateY(0);
+}
+
+.arcade-btn:focus-visible {
+    outline: 2px solid #5eb8b5;
+    outline-offset: 2px;
+}
+
+/* Instructions */
+.arcade-instructions {
+    font-size: 0.72rem;
+    color: #8fa0b5;
+    text-align: center;
+    max-width: 400px;
+    line-height: 1.5;
+    margin: 0.5rem 0 0;
+    border-top: 1px dashed rgba(143, 160, 181, 0.25);
+    padding-top: 0.75rem;
+}
+
+.arcade-instructions strong {
+    color: #ffffff;
+}
+
+/* Cabinet Base / Coin Door */
+.arcade-cabinet-bottom {
+    background: #050b12;
+    padding: 1rem 1.25rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    border-top: 4px solid #1f3b5c;
+}
+
+.coin-door {
+    width: 140px;
+    height: 70px;
+    border: 3px solid #2d2d2d;
+    background: #141414;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.coin-slot {
+    width: 44px;
+    border: 2px solid #1f1f1f;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    background: #080808;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.9);
+}
+
+.coin-insert {
+    font-size: 4px;
+    color: #ff5e3a;
+    text-shadow: 0 0 2px rgba(255, 94, 58, 0.8);
+    font-weight: 900;
+}
+
+.coin-return {
+    width: 12px;
+    height: 12px;
+    background: #e12727;
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 5px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px rgba(225, 39, 39, 0.6);
+}
+
+/* Responsive Scaling */
+@media (max-width: 480px) {
+    .arcade-wrapper {
+        padding: 1rem;
+    }
+    
+    .arcade-title {
+        font-size: 1.35rem;
+    }
+    
+    .arcade-screen-bezel {
+        padding: 1rem 0.75rem;
+    }
+    
+    .arcade-score-box {
+        min-width: 90px;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .score-value {
+        font-size: 0.9rem;
+    }
+}
