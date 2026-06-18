@@ -11,6 +11,10 @@ export function initTypewriter() {
     const terminalBody = document.querySelector('.terminal-body');
     if (!terminal || !terminalBody) return;
 
+    // Fixer la hauteur minimale pour éviter que la fenêtre ne change de taille pendant l'écriture
+    const initialHeight = terminalBody.getBoundingClientRect().height;
+    terminalBody.style.minHeight = `${initialHeight}px`;
+
     // Ajouter la classe pour indiquer que le mode machine à écrire JS est actif
     terminal.classList.add('js-typewriter');
 
@@ -64,6 +68,8 @@ export function initTypewriter() {
             if (finalCursorLine) {
                 finalCursorLine.style.opacity = '1';
             }
+            // Réinitialiser la hauteur minimale après l'effet pour conserver la réactivité responsive
+            terminalBody.style.minHeight = '';
             return;
         }
 
@@ -82,7 +88,7 @@ export function initTypewriter() {
             setTimeout(() => {
                 currentLineIndex++;
                 typeNextChar();
-            }, 100);
+            }, 200);
             return;
         }
 
@@ -92,7 +98,7 @@ export function initTypewriter() {
             currentLineIndex++;
             currentTextNodeIndex = 0;
             currentCharIndex = 0;
-            setTimeout(typeNextChar, 180);
+            setTimeout(typeNextChar, 300);
             return;
         }
 
@@ -109,9 +115,9 @@ export function initTypewriter() {
             // et un léger délai aléatoire pour le reste des caractères.
             let delay;
             if (char === ' ' || char === '\u00A0') {
-                delay = 10;
+                delay = 25;
             } else {
-                delay = 15 + Math.random() * 20; // Entre 15ms et 35ms
+                delay = 30 + Math.random() * 25; // Entre 30ms et 55ms
             }
 
             setTimeout(typeNextChar, delay);
