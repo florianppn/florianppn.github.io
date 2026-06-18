@@ -6,7 +6,7 @@ Portfolio personnel présentant mon parcours et mes projets en développement lo
 
 ## À propos
 
-Étudiant en **Master Informatique (GIL) — Génie Informatique Logiciel**, je me spécialise sur le développement full stack avec **Symfony**.
+Étudiant en **Master Informatique (GIL) — Génie Informatique Logiciel**, je me spécialise sur le développement full stack avec **Java / Spring Boot** et **Angular**.
 
 ## Projets présentés
 

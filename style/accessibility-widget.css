@@ -277,24 +277,20 @@ body.a11y-text-xlarge .works-card-locked i {
     font-size: 1.35rem;
 }
 
-/* Zoom RGAA – Contact */
-body.a11y-text-large .contact-subtitle {
-    font-size: 1.21rem;
+/* Zoom RGAA – Exploration */
+body.a11y-text-large .exploration-item i {
+    font-size: 2.58rem;
 }
 
-body.a11y-text-large .form-group input,
-body.a11y-text-large .form-group textarea,
-body.a11y-text-large .contact-submit {
+body.a11y-text-xlarge .exploration-item i {
+    font-size: 3.38rem;
+}
+
+body.a11y-text-large .exploration-name {
     font-size: 1.15rem;
 }
 
-body.a11y-text-xlarge .contact-subtitle {
-    font-size: 1.58rem;
-}
-
-body.a11y-text-xlarge .form-group input,
-body.a11y-text-xlarge .form-group textarea,
-body.a11y-text-xlarge .contact-submit {
+body.a11y-text-xlarge .exploration-name {
     font-size: 1.5rem;
 }
 
@@ -396,15 +392,15 @@ body.a11y-contrast {
 
 body.a11y-contrast,
 body.a11y-contrast .skill-item,
+body.a11y-contrast .exploration-item,
 body.a11y-contrast .works-card,
-body.a11y-contrast .document-item,
-body.a11y-contrast .contact-form {
+body.a11y-contrast .document-item {
     background: #0a0f14 !important;
 }
 
 body.a11y-contrast .profil,
 body.a11y-contrast .works-subtitle,
-body.a11y-contrast .contact-subtitle,
+body.a11y-contrast .exploration-name,
 body.a11y-contrast .works-card-desc,
 body.a11y-contrast .works-card-locked {
     color: #e8e0d5 !important;
@@ -413,6 +409,7 @@ body.a11y-contrast .works-card-locked {
 body.a11y-contrast h2,
 body.a11y-contrast h3,
 body.a11y-contrast .skill-item i,
+body.a11y-contrast .exploration-icon i,
 body.a11y-contrast a,
 body.a11y-contrast .works-tag,
 body.a11y-contrast .works-card-content h3 {
@@ -421,48 +418,12 @@ body.a11y-contrast .works-card-content h3 {
 
 body.a11y-contrast .works-card,
 body.a11y-contrast .skill-item,
-body.a11y-contrast .document-item,
-body.a11y-contrast .contact-form {
+body.a11y-contrast .exploration-item,
+body.a11y-contrast .document-item {
     border-color: rgba(61, 212, 207, 0.5) !important;
 }
 
-body.a11y-contrast .contact-form {
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45) !important;
-}
 
-/* Contraste forcé – formulaire contact */
-body.a11y-contrast .form-group input,
-body.a11y-contrast .form-group textarea {
-    background: #0a0f14 !important;
-    color: #e8e0d5 !important;
-    border: 2px solid rgba(61, 212, 207, 0.6) !important;
-}
-
-body.a11y-contrast .form-group input::placeholder,
-body.a11y-contrast .form-group textarea::placeholder {
-    color: #e8e0d5 !important;
-    opacity: 0.7;
-}
-
-body.a11y-contrast .form-group input:focus,
-body.a11y-contrast .form-group textarea:focus {
-    border-color: #3dd4cf !important;
-}
-
-body.a11y-contrast .form-group label {
-    color: #3dd4cf !important;
-}
-
-body.a11y-contrast .contact-submit {
-    background: rgba(61, 212, 207, 0.2) !important;
-    color: #3dd4cf !important;
-    border: 2px solid #3dd4cf !important;
-}
-
-body.a11y-contrast .contact-submit:hover {
-    background: #3dd4cf !important;
-    color: #0a0f14 !important;
-}
 
 body.a11y-contrast *:focus-visible {
     outline-color: #3dd4cf !important;
