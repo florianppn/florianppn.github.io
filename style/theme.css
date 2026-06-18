@@ -148,6 +148,13 @@ body.theme-light .back-to-top {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+body.theme-light .back-to-top:hover {
+    background-color: var(--theme-accent);
+    color: var(--theme-text-on-accent);
+    border-color: var(--theme-accent);
+}
+
+
 @media (max-width: 1202px) {
     body.theme-light .categories ul {
         background-color: rgba(255, 255, 255, 0.97);
