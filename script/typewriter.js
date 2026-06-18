@@ -27,7 +27,7 @@ export function initTypewriter() {
         const textNodes = [];
         const walk = document.createTreeWalker(line, NodeFilter.SHOW_TEXT, null, false);
         let node;
-        while (node = walk.nextNode()) {
+        while ((node = walk.nextNode())) {
             textNodes.push({
                 node: node,
                 originalText: node.nodeValue
@@ -107,7 +107,7 @@ export function initTypewriter() {
             // Simulation d'une frappe humaine :
             // Un peu plus rapide pour les espaces ou retours à la ligne,
             // et un léger délai aléatoire pour le reste des caractères.
-            let delay = 20;
+            let delay;
             if (char === ' ' || char === '\u00A0') {
                 delay = 10;
             } else {
