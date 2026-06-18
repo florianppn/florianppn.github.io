@@ -38,12 +38,29 @@
 }
 
 @keyframes logo-wiggle {
-    0%   { transform: scale(1); }
-    20%  { transform: scale(1.2) rotate(-8deg); }
-    40%  { transform: scale(1.2) rotate(8deg); }
-    60%  { transform: scale(1.2) rotate(-5deg); }
-    80%  { transform: scale(1.2) rotate(5deg); }
-    100% { transform: scale(1) rotate(0deg); }
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.2) rotate(-8deg);
+    }
+
+    40% {
+        transform: scale(1.2) rotate(8deg);
+    }
+
+    60% {
+        transform: scale(1.2) rotate(-5deg);
+    }
+
+    80% {
+        transform: scale(1.2) rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 .logo.clicked-hint {
