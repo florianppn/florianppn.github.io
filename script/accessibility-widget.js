@@ -65,7 +65,9 @@ export function initAccessibilityWidget() {
         sizeBtns.forEach((b) => b.setAttribute("aria-pressed", b.dataset.size === size ? "true" : "false"));
         try {
             localStorage.setItem(A11Y_STORAGE.size, size);
-        } catch (_) {}
+        } catch {
+            // ignore
+        }
     }
 
     /**
@@ -90,7 +92,9 @@ export function initAccessibilityWidget() {
         }
         try {
             localStorage.setItem(A11Y_STORAGE.contrast, on ? "1" : "0");
-        } catch (_) {}
+        } catch {
+            // ignore
+        }
     }
 
     /**
@@ -113,7 +117,9 @@ export function initAccessibilityWidget() {
         }
         try {
             localStorage.setItem(A11Y_STORAGE.theme, light ? "1" : "0");
-        } catch (_) {}
+        } catch {
+            // ignore
+        }
     }
 
     /**
@@ -129,7 +135,9 @@ export function initAccessibilityWidget() {
         }
         try {
             localStorage.setItem(A11Y_STORAGE.dyslexia, on ? "1" : "0");
-        } catch (_) {}
+        } catch {
+            // ignore
+        }
     }
 
     sizeBtns.forEach((b) => {
@@ -155,5 +163,7 @@ export function initAccessibilityWidget() {
         if (savedTheme === "1" && !document.body.classList.contains("a11y-contrast")) setTheme(true);
         const savedDyslexia = localStorage.getItem(A11Y_STORAGE.dyslexia);
         if (savedDyslexia === "1") setDyslexia(true);
-    } catch (_) {}
+    } catch {
+        // ignore
+    }
 }
