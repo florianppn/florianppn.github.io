@@ -3,11 +3,11 @@
 import { Entity } from "./Entity.js";
 
 /**
- * Class representing a technology asteroid obstacle.
+ * Classe représentant un astéroïde technologique faisant office d'obstacle.
  */
 export class Asteroid extends Entity {
     constructor(x, y, radius, speed, techName, techIcon, offsets) {
-        // Asteroids move leftwards, so velocity is negative
+        // Les astéroïdes se déplacent vers la gauche, donc la vitesse vx est négative
         super(x, y, radius * 2, radius * 2, -speed, 0);
         this.r = radius;
         this.techName = techName;
@@ -18,7 +18,7 @@ export class Asteroid extends Entity {
     }
 
     /**
-     * Updates position and rotates the asteroid.
+     * Met à jour la position et fait tourner l'astéroïde.
      * @returns {void}
      */
     update() {
@@ -27,7 +27,7 @@ export class Asteroid extends Entity {
     }
 
     /**
-     * Checks if the asteroid has completely left the screen to the left.
+     * Vérifie si l'astéroïde est complètement sorti de l'écran par la gauche.
      * @returns {boolean}
      */
     isOutOfBounds() {

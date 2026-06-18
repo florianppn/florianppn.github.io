@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Base class representing any physical entity on the screen.
+ * Classe de base représentant toute entité physique sur l'écran.
  */
 export class Entity {
     constructor(x, y, w, h, vx = 0, vy = 0) {
@@ -14,7 +14,7 @@ export class Entity {
     }
 
     /**
-     * Standard update moving the entity according to its velocity.
+     * Mise à jour standard déplaçant l'entité selon sa vitesse.
      * @returns {void}
      */
     update() {

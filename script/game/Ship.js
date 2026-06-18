@@ -3,7 +3,7 @@
 import { Entity } from "./Entity.js";
 
 /**
- * Class representing the player's spaceship.
+ * Classe représentant le vaisseau spatial du joueur.
  */
 export class Ship extends Entity {
     constructor(x = 45, y = 180, w = 36, h = 36) {
@@ -11,9 +11,9 @@ export class Ship extends Entity {
     }
 
     /**
-     * Smoothly updates vertical position based on mouseY target.
-     * @param {number} targetMouseY - The cursor vertical target position.
-     * @param {number} canvasHeight - Height of the screen.
+     * Met à jour de manière fluide la position verticale en fonction de la cible mouseY.
+     * @param {number} targetMouseY - La position verticale cible du curseur.
+     * @param {number} canvasHeight - La hauteur de l'écran.
      * @returns {void}
      */
     updatePosition(targetMouseY, canvasHeight) {

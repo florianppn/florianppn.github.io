@@ -1,0 +1,29 @@
+name: Update Copyright Year
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *' # S'exécute le 1er janvier de chaque année à 00:00 UTC
+  workflow_dispatch: # Permet de lancer le workflow manuellement depuis GitHub
+
+jobs:
+  update-copyright:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update copyright years in files
+        run: |
+          CURRENT_YEAR=$(date +'%Y')
+          
+          # Met à jour le README (ex: © 2025-2026 -> © 2025-2027)
+          sed -i -E "s/© 2025-[0-9]{4}/© 2025-$CURRENT_YEAR/g" README.md
+          
+          # Met à jour la LICENSE (ex: © 2025-2026 -> © 2025-2027)
+          sed -i -E "s/© 2025-[0-9]{4}/© 2025-$CURRENT_YEAR/g" LICENSE.md
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update copyright year to current year"
+          file_pattern: 'README.md LICENSE.md'

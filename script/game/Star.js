@@ -3,21 +3,21 @@
 import { Entity } from "./Entity.js";
 
 /**
- * Class representing a parallax background star.
+ * Classe représentant une étoile d'arrière-plan avec effet de parallaxe.
  */
 export class Star extends Entity {
     constructor(x, y, vx, size) {
-        // Stars move leftwards, so velocity vx is negative
+        // Les étoiles se déplacent vers la gauche, la vitesse vx est négative
         super(x, y, size, size, -vx, 0);
         this.size = size;
         this.baseVx = vx;
     }
 
     /**
-     * Updates star position with speed factor and handles wrap-around.
-     * @param {number} speedFactor - Factor to slow down or speed up star drift.
-     * @param {number} canvasWidth - Width of screen for wrap-around.
-     * @param {number} canvasHeight - Height of screen for random positioning.
+     * Met à jour la position de l'étoile selon un facteur de vitesse et gère le bouclage en bord d'écran.
+     * @param {number} speedFactor - Facteur pour ralentir ou accélérer la dérive de l'étoile.
+     * @param {number} canvasWidth - Largeur de l'écran pour le bouclage.
+     * @param {number} canvasHeight - Hauteur de l'écran pour le repositionnement aléatoire.
      * @returns {void}
      */
     updateWithSpeed(speedFactor, canvasWidth, canvasHeight) {

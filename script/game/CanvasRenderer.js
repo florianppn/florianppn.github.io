@@ -1,12 +1,12 @@
 "use strict";
 
 /**
- * Class wrapping all drawing operations on the HTML5 canvas.
+ * Classe enveloppant toutes les opérations de dessin sur le canvas HTML5.
  */
 export class CanvasRenderer {
     /**
-     * @param {HTMLCanvasElement} canvas - The drawing canvas element.
-     * @param {HTMLImageElement} playerImg - Image element representing the player ship.
+     * @param {HTMLCanvasElement} canvas - Le canvas de dessin.
+     * @param {HTMLImageElement} playerImg - Image représentant le vaisseau du joueur.
      */
     constructor(canvas, playerImg) {
         this.canvas = canvas;
@@ -15,8 +15,8 @@ export class CanvasRenderer {
     }
 
     /**
-     * Clears the canvas with a background fill.
-     * @param {boolean} isContrast - If high-contrast is active.
+     * Nettoie le canvas avec un fond uni.
+     * @param {boolean} isContrast - Si le mode contraste renforcé est actif.
      * @returns {void}
      */
     clear(isContrast) {
@@ -25,9 +25,9 @@ export class CanvasRenderer {
     }
 
     /**
-     * Helper to load correct font depending on dyslexia mode.
-     * @param {string} baseStyle - The default css font styling string.
-     * @param {boolean} isDyslexia - If dyslexia font mode is active.
+     * Aide pour charger la bonne police selon le mode dyslexie.
+     * @param {string} baseStyle - La chaîne de style de police CSS par défaut.
+     * @param {boolean} isDyslexia - Si la police dyslexie est active.
      * @returns {string}
      */
     getFont(baseStyle, isDyslexia) {
@@ -38,9 +38,9 @@ export class CanvasRenderer {
     }
 
     /**
-     * Draws background stars.
-     * @param {Array<object>} stars - Array of stars to draw.
-     * @param {boolean} isContrast - If high contrast mode is active.
+     * Dessine les étoiles d'arrière-plan.
+     * @param {Array<object>} stars - Tableau d'étoiles à dessiner.
+     * @param {boolean} isContrast - Si le contraste renforcé est actif.
      * @returns {void}
      */
     drawStars(stars, isContrast) {
@@ -51,9 +51,9 @@ export class CanvasRenderer {
     }
 
     /**
-     * Draws player laser projectiles.
-     * @param {Array<object>} lasers - Array of lasers to draw.
-     * @param {boolean} isContrast - If high contrast mode is active.
+     * Dessine les projectiles laser du joueur.
+     * @param {Array<object>} lasers - Tableau de lasers à dessiner.
+     * @param {boolean} isContrast - Si le contraste renforcé est actif.
      * @returns {void}
      */
     drawLasers(lasers, isContrast) {
@@ -67,9 +67,9 @@ export class CanvasRenderer {
     }
 
     /**
-     * Draws obstacle technology asteroids.
-     * @param {Array<object>} asteroids - Array of asteroids to draw.
-     * @param {boolean} isContrast - If high contrast mode is active.
+     * Dessine les astéroïdes technologiques.
+     * @param {Array<object>} asteroids - Tableau d'astéroïdes à dessiner.
+     * @param {boolean} isContrast - Si le contraste renforcé est actif.
      * @returns {void}
      */
     drawAsteroids(asteroids, isContrast) {
@@ -78,7 +78,7 @@ export class CanvasRenderer {
             this.ctx.translate(a.x, a.y);
             this.ctx.rotate(a.angle);
             
-            // Draw irregular polygonal shape
+            // Dessine la forme polygonale irrégulière
             this.ctx.beginPath();
             const numPoints = 8;
             for (let k = 0; k < numPoints; k++) {
@@ -104,7 +104,7 @@ export class CanvasRenderer {
             this.ctx.stroke();
             this.ctx.shadowBlur = 0;
 
-            // Tech icon inside asteroid
+            // Icône de technologie à l'intérieur de l'astéroïde
             this.ctx.fillStyle = isContrast ? "#3dd4cf" : "#BFA181";
             const iconSize = Math.round(a.r * 0.9);
             this.ctx.font = `${iconSize}px 'Font Awesome 6 Brands'`;
@@ -117,8 +117,8 @@ export class CanvasRenderer {
     }
 
     /**
-     * Draws particles (explosion debris & trails).
-     * @param {Array<object>} particles - Array of active particles.
+     * Dessine les particules (débris d'explosion et traînées).
+     * @param {Array<object>} particles - Tableau de particules actives.
      * @returns {void}
      */
     drawParticles(particles) {
@@ -134,17 +134,17 @@ export class CanvasRenderer {
     }
 
     /**
-     * Draws the player ship with smooth tilt angles and optional high contrast filters.
-     * @param {object} ship - The player Ship instance.
-     * @param {number} mouseY - Target mouse position.
-     * @param {boolean} isContrast - If high contrast mode is active.
+     * Dessine le vaisseau du joueur avec une inclinaison fluide et des filtres optionnels pour le contraste élevé.
+     * @param {object} ship - L'instance du vaisseau du joueur.
+     * @param {number} mouseY - Position cible de la souris.
+     * @param {boolean} isContrast - Si le contraste renforcé est actif.
      * @returns {void}
      */
     drawPlayerShip(ship, mouseY, isContrast) {
         this.ctx.save();
         this.ctx.translate(ship.x + ship.w / 2, ship.y + ship.h / 2);
         
-        // Slight tilt depending on vertical distance to target cursor
+        // Légère inclinaison en fonction de la distance verticale avec le curseur cible
         const diffY = (mouseY - ship.h / 2) - ship.y;
         const angle = Math.min(Math.max(diffY * 0.005, -0.25), 0.25);
         this.ctx.rotate(angle);
@@ -157,12 +157,12 @@ export class CanvasRenderer {
     }
 
     /**
-     * Draws the Speed Up wave change overlay alert text.
-     * @param {number} showSpeedUp - The frame countdown of the alert.
-     * @param {number} frame - Current frame number.
-     * @param {number} score - Current game score.
-     * @param {boolean} isContrast - If high contrast mode is active.
-     * @param {boolean} isDyslexia - If dyslexia font mode is active.
+     * Dessine l'alerte textuelle de changement de vague ("Speed Up").
+     * @param {number} showSpeedUp - Le compte à rebours de l'alerte en frames.
+     * @param {number} frame - Numéro de la frame actuelle.
+     * @param {number} score - Score actuel du jeu.
+     * @param {boolean} isContrast - Si le contraste renforcé est actif.
+     * @param {boolean} isDyslexia - Si la police dyslexie est active.
      * @returns {void}
      */
     drawSpeedUpAlert(showSpeedUp, frame, score, isContrast, isDyslexia) {
@@ -175,7 +175,7 @@ export class CanvasRenderer {
             this.ctx.shadowBlur = isContrast ? 0 : 10;
             this.ctx.shadowColor = isContrast ? "transparent" : "#FF5E3A";
             
-            // Flashing blinking text effect
+            // Effet de clignotement du texte
             if (Math.floor(frame / 10) % 2 === 0) {
                 const waveNumber = Math.floor(score / 250) + 1;
                 this.ctx.fillText(`VAGUE ${waveNumber} - ACCÉLÉRATION !`, this.canvas.width / 2, this.canvas.height / 2 - 20);
@@ -185,12 +185,12 @@ export class CanvasRenderer {
     }
 
     /**
-     * Draws the Idle Screen.
-     * @param {Array<object>} stars - Parallax stars.
-     * @param {object} ship - Player Ship instance.
-     * @param {number} frame - Current frame number.
-     * @param {boolean} isContrast - If high contrast mode is active.
-     * @param {boolean} isDyslexia - If dyslexia font mode is active.
+     * Dessine l'écran d'accueil (état d'attente).
+     * @param {Array<object>} stars - Étoiles en arrière-plan.
+     * @param {object} ship - Instance du vaisseau du joueur.
+     * @param {number} frame - Numéro de la frame actuelle.
+     * @param {boolean} isContrast - Si le contraste renforcé est actif.
+     * @param {boolean} isDyslexia - Si la police dyslexie est active.
      * @returns {void}
      */
     drawIdleScreen(stars, ship, frame, isContrast, isDyslexia) {
@@ -202,7 +202,7 @@ export class CanvasRenderer {
         this.ctx.textAlign = "center";
         this.ctx.fillText("SPACE KICKMAN", this.canvas.width / 2, this.canvas.height / 2 - 50);
 
-        // Floating ship render
+        // Rendu du vaisseau flottant
         const floatY = this.canvas.height / 2 - ship.h / 2 + Math.sin(frame * 0.05) * 6;
         this.ctx.save();
         if (isContrast) {
@@ -213,10 +213,10 @@ export class CanvasRenderer {
     }
 
     /**
-     * Draws the Game Over text overlay screen.
-     * @param {number} score - Final score of the session.
-     * @param {boolean} isContrast - If high contrast mode is active.
-     * @param {boolean} isDyslexia - If dyslexia font mode is active.
+     * Dessine l'écran de Game Over en superposition.
+     * @param {number} score - Score final de la partie.
+     * @param {boolean} isContrast - Si le contraste renforcé est actif.
+     * @param {boolean} isDyslexia - Si la police dyslexie est active.
      * @returns {void}
      */
     drawGameOverScreen(score, isContrast, isDyslexia) {

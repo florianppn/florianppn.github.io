@@ -3,7 +3,7 @@
 import { Entity } from "./Entity.js";
 
 /**
- * Class representing a laser projectile fired by the player.
+ * Classe représentant un projectile laser tiré par le joueur.
  */
 export class Laser extends Entity {
     constructor(x, y, w = 12, h = 3, vx = 7) {
@@ -11,8 +11,8 @@ export class Laser extends Entity {
     }
 
     /**
-     * Checks if the laser has left the canvas boundary.
-     * @param {number} canvasWidth - Width limit of the canvas.
+     * Vérifie si le laser a dépassé les limites du canvas.
+     * @param {number} canvasWidth - Largeur limite du canvas.
      * @returns {boolean}
      */
     isOutOfBounds(canvasWidth) {

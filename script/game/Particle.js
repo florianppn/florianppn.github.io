@@ -3,7 +3,7 @@
 import { Entity } from "./Entity.js";
 
 /**
- * Class representing a particle for explosions or ship trails.
+ * Classe représentant une particule pour les explosions ou les traînées du vaisseau.
  */
 export class Particle extends Entity {
     constructor(x, y, vx, vy, r, color, alpha, life, decay) {
@@ -16,7 +16,7 @@ export class Particle extends Entity {
     }
 
     /**
-     * Updates particle position and decays its life.
+     * Met à jour la position de la particule et réduit sa durée de vie.
      * @returns {void}
      */
     update() {
@@ -25,7 +25,7 @@ export class Particle extends Entity {
     }
 
     /**
-     * Checks if the particle has completed its lifespan.
+     * Vérifie si la particule a terminé sa durée de vie.
      * @returns {boolean}
      */
     isDead() {

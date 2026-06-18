@@ -21,17 +21,23 @@ Portfolio personnel présentant mon parcours et mes projets en développement lo
 ## Structure du projet
 
 ```
+├── .github/              # Configuration des workflows GitHub Actions
 ├── asset/
-│   ├── logo/          # Logo du site
-│   ├── work/          # Captures d'écran des projets
-│   └── document/      # CV
+│   ├── logo/             # Logo du site (dont Kickman)
+│   ├── work/             # Captures d'écran des projets
+│   └── document/         # CV
 ├── font/
-│   └── Karla/         # Polices locales (Karla)
-├── script/            # JavaScript
-├── style/             # CSS
+│   └── Karla/            # Polices locales (Karla)
+├── script/               # JavaScript du portfolio
+├── style/                # Feuilles de styles CSS
+├── .gitignore
+├── .htmlhintrc           # Configuration HTMLHint pour la validation HTML
+├── .stylelintrc.json     # Configuration Stylelint pour la validation CSS
+├── eslint.config.js      # Configuration ESLint pour la validation JS
+├── game.html             # Page de la borne d'arcade (Space Kickman)
+├── index.html            # Page d'accueil du portfolio
 ├── LICENSE.md
-├── README.md
-└── index.html
+└── README.md
 ```
 
 ## Accessibilité
@@ -46,7 +52,7 @@ Le portfolio intègre des options d'accessibilité rapides via un widget dédié
 
 ## Licence
 
-© 2026 Florian Pépin. Tous droits réservés.
+© 2025-2026 Florian Pépin. Tous droits réservés.
 
 ## Crédits
 

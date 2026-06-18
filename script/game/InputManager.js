@@ -1,12 +1,12 @@
 "use strict";
 
 /**
- * Class managing keyboard, mouse, and touch inputs.
+ * Classe gérant les entrées clavier, souris et tactiles.
  */
 export class InputManager {
     /**
-     * @param {HTMLCanvasElement} canvas - The drawing canvas.
-     * @param {function(string): void} onAction - Callback for general action triggers ('click', 'up', 'down', 'action').
+     * @param {HTMLCanvasElement} canvas - Le canvas de dessin.
+     * @param {function(string): void} onAction - Callback pour les déclencheurs d'actions généraux ('click', 'up', 'down', 'action').
      */
     constructor(canvas, onAction) {
         this.canvas = canvas;
@@ -20,7 +20,7 @@ export class InputManager {
     }
 
     /**
-     * Attaches all input event listeners.
+     * Attache tous les écouteurs d'événements d'entrée.
      * @returns {void}
      */
     init() {
@@ -31,7 +31,7 @@ export class InputManager {
     }
 
     /**
-     * Removes all input event listeners.
+     * Supprime tous les écouteurs d'événements d'entrée.
      * @returns {void}
      */
     destroy() {
@@ -42,7 +42,7 @@ export class InputManager {
     }
 
     /**
-     * Resets input state coordinates.
+     * Réinitialise les coordonnées de l'état d'entrée.
      * @returns {void}
      */
     reset() {
