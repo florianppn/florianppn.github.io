@@ -193,6 +193,7 @@
 .terminal-body {
     padding: 1.25rem 1.5rem;
     line-height: 1.7;
+    min-height: 23.8em; /* 14 lines * 1.7 line-height */
 }
 
 .terminal-line {
@@ -202,20 +203,20 @@
     min-height: 1.7em;
 }
 
-.terminal-line:nth-child(1)  { animation-delay: 0.2s; }
-.terminal-line:nth-child(2)  { animation-delay: 0.4s; }
-.terminal-line:nth-child(3)  { animation-delay: 0.6s; }
-.terminal-line:nth-child(4)  { animation-delay: 0.8s; }
-.terminal-line:nth-child(5)  { animation-delay: 1.0s; }
-.terminal-line:nth-child(6)  { animation-delay: 1.2s; }
-.terminal-line:nth-child(7)  { animation-delay: 1.4s; }
-.terminal-line:nth-child(8)  { animation-delay: 1.6s; }
-.terminal-line:nth-child(9)  { animation-delay: 1.8s; }
-.terminal-line:nth-child(10) { animation-delay: 2.0s; }
-.terminal-line:nth-child(11) { animation-delay: 2.2s; }
-.terminal-line:nth-child(12) { animation-delay: 2.4s; }
-.terminal-line:nth-child(13) { animation-delay: 2.6s; }
-.terminal-line:nth-child(14) { animation-delay: 2.8s; }
+.terminal-line:nth-child(1)  { animation-delay: 1.5s; }
+.terminal-line:nth-child(2)  { animation-delay: 1.7s; }
+.terminal-line:nth-child(3)  { animation-delay: 1.9s; }
+.terminal-line:nth-child(4)  { animation-delay: 2.1s; }
+.terminal-line:nth-child(5)  { animation-delay: 2.3s; }
+.terminal-line:nth-child(6)  { animation-delay: 2.5s; }
+.terminal-line:nth-child(7)  { animation-delay: 2.7s; }
+.terminal-line:nth-child(8)  { animation-delay: 2.9s; }
+.terminal-line:nth-child(9)  { animation-delay: 3.1s; }
+.terminal-line:nth-child(10) { animation-delay: 3.3s; }
+.terminal-line:nth-child(11) { animation-delay: 3.5s; }
+.terminal-line:nth-child(12) { animation-delay: 3.7s; }
+.terminal-line:nth-child(13) { animation-delay: 3.9s; }
+.terminal-line:nth-child(14) { animation-delay: 4.1s; }
 
 @keyframes terminal-appear {
     from {
@@ -250,7 +251,7 @@
 
 /* Blinking cursor */
 .terminal-cursor-line {
-    animation-delay: 3.0s !important;
+    animation-delay: 4.3s !important;
 }
 
 .terminal-cursor {

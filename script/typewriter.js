@@ -16,11 +16,6 @@ export function initTypewriter() {
     terminal.classList.add('js-typewriter');
 
     const start = () => {
-        // Fixer la hauteur minimale pour éviter que la fenêtre ne change de taille pendant l'écriture
-        // Maintenant que les polices sont chargées, cette hauteur est précise.
-        const initialHeight = terminalBody.getBoundingClientRect().height;
-        terminalBody.style.minHeight = `${initialHeight}px`;
-
         const lines = Array.from(terminalBody.querySelectorAll('.terminal-line:not(.terminal-cursor-line)'));
         const finalCursorLine = terminalBody.querySelector('.terminal-cursor-line');
 
@@ -71,8 +66,6 @@ export function initTypewriter() {
                 if (finalCursorLine) {
                     finalCursorLine.style.opacity = '1';
                 }
-                // Réinitialiser la hauteur minimale après l'effet pour conserver la réactivité responsive
-                terminalBody.style.minHeight = '';
                 return;
             }
 
