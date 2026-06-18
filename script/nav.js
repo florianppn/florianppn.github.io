@@ -1,6 +1,6 @@
 "use strict";
 
-const DISCORD_USERNAME = "requindelanight";
+const DISCORD_USERNAME = "thesupercarotte";
 const BREAKPOINT_COPY_MESSAGE = 768;
 const COPY_MESSAGE_DURATION_MS = 1000;
 
@@ -14,7 +14,7 @@ export function initNav() {
     const discordCopiedMessage = document.getElementById('discordCopiedMessage');
 
     if (discordLink && discordCopiedMessage) {
-        discordLink.addEventListener('click', function(event) {
+        discordLink.addEventListener('click', function (event) {
             event.preventDefault();
             navigator.clipboard.writeText(DISCORD_USERNAME)
                 .then(() => {
@@ -50,34 +50,34 @@ export function initNav() {
             }
         }
 
-        contactToggle.addEventListener('click', function() {
+        contactToggle.addEventListener('click', function () {
             toggleMenu(contactMenu, contactToggle);
             if (categoriesMenu.classList.contains('active')) {
                 toggleMenu(categoriesMenu, categoriesToggle);
             }
         });
 
-        categoriesToggle.addEventListener('click', function() {
+        categoriesToggle.addEventListener('click', function () {
             toggleMenu(categoriesMenu, categoriesToggle);
             if (contactMenu.classList.contains('active')) {
                 toggleMenu(contactMenu, contactToggle);
             }
         });
 
-        contactToggle.addEventListener('keydown', function(e) {
+        contactToggle.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 contactToggle.click();
             }
         });
-        categoriesToggle.addEventListener('keydown', function(e) {
+        categoriesToggle.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 categoriesToggle.click();
             }
         });
 
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!contactToggle.contains(e.target) && !categoriesToggle.contains(e.target) &&
                 !contactMenu.contains(e.target) && !categoriesMenu.contains(e.target)) {
                 contactMenu.classList.remove('active');
