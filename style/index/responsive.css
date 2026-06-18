@@ -318,14 +318,20 @@
 
     .profil-cta {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         width: 100%;
+        max-width: 340px;
+        margin: 0.5rem auto 0;
+        gap: 0.75rem;
+        box-sizing: border-box;
     }
 
     .profil-btn {
         width: 100%;
         justify-content: center;
-        padding: 0.8rem 1rem;
+        padding: 0.75rem 1rem;
+        box-sizing: border-box;
+        font-size: 0.9rem;
     }
 
     .terminal {
@@ -483,6 +489,11 @@
 
     .profil-title {
         font-size: clamp(1.75rem, 8vw, 2.5rem);
+    }
+
+    .profil-btn {
+        font-size: 0.82rem;
+        padding: 0.65rem 0.85rem;
     }
 
     .title,
