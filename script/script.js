@@ -10,6 +10,7 @@ import { initCarousel } from './carousel.js';
 import { initLightbox } from './lightbox.js';
 import { initAccessibilityWidget } from './accessibility-widget.js';
 import { initGameTrigger } from './game.js';
+import { initTypewriter } from './typewriter.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     try { initNav(); } catch (e) { console.error('initNav', e); }
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try { initLightbox(); } catch (e) { console.error('initLightbox', e); }
     try { initAccessibilityWidget(); } catch (e) { console.error('initAccessibilityWidget', e); }
     try { initGameTrigger(); } catch (e) { console.error('initGameTrigger', e); }
+    try { initTypewriter(); } catch (e) { console.error('initTypewriter', e); }
 
     const yearEl = document.getElementById('copyright-year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();

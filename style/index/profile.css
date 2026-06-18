@@ -228,6 +228,17 @@
     }
 }
 
+/* Override animations for JS typewriter mode */
+.terminal.js-typewriter .terminal-line {
+    opacity: 0;
+    animation: none;
+    transform: none;
+}
+.terminal.js-typewriter .terminal-cursor-line {
+    opacity: 0;
+    animation: none;
+}
+
 /* Syntax highlighting */
 .t-kw   { color: #c678dd; }
 .t-cls  { color: #e5c07b; }
