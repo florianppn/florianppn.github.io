@@ -96,4 +96,26 @@ export function initNav() {
             });
         });
     }
+
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+                backToTopBtn.removeAttribute('aria-hidden');
+                backToTopBtn.removeAttribute('tabindex');
+            } else {
+                backToTopBtn.classList.remove('visible');
+                backToTopBtn.setAttribute('aria-hidden', 'true');
+                backToTopBtn.setAttribute('tabindex', '-1');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 }

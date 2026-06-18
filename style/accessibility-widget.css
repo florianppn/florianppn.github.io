@@ -383,6 +383,19 @@ body.a11y-text-xlarge .lightbox-close {
     font-size: 2.25rem;
 }
 
+/* Zoom RGAA – Back to Top Button */
+body.a11y-text-large .back-to-top {
+    width: 52px;
+    height: 52px;
+    font-size: 1.35rem;
+}
+
+body.a11y-text-xlarge .back-to-top {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+}
+
 /* High contrast */
 body.a11y-contrast {
     --a11y-bg: #0a0f14;
@@ -394,7 +407,8 @@ body.a11y-contrast,
 body.a11y-contrast .skill-item,
 body.a11y-contrast .exploration-item,
 body.a11y-contrast .works-card,
-body.a11y-contrast .document-item {
+body.a11y-contrast .document-item,
+body.a11y-contrast .back-to-top {
     background: #0a0f14 !important;
 }
 
@@ -412,15 +426,22 @@ body.a11y-contrast .skill-item i,
 body.a11y-contrast .exploration-icon i,
 body.a11y-contrast a,
 body.a11y-contrast .works-tag,
-body.a11y-contrast .works-card-content h3 {
+body.a11y-contrast .works-card-content h3,
+body.a11y-contrast .back-to-top {
     color: #3dd4cf !important;
 }
 
 body.a11y-contrast .works-card,
 body.a11y-contrast .skill-item,
 body.a11y-contrast .exploration-item,
-body.a11y-contrast .document-item {
+body.a11y-contrast .document-item,
+body.a11y-contrast .back-to-top {
     border-color: rgba(61, 212, 207, 0.5) !important;
+}
+
+body.a11y-contrast .back-to-top:hover {
+    background-color: #3dd4cf !important;
+    color: #0a0f14 !important;
 }
 
 

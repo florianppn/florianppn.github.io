@@ -15,7 +15,7 @@ html:has(body.theme-light) {
 }
 
 body.theme-light .menu-container {
-    background-color: var(--theme-bg);
+    background-color: rgba(248, 246, 243, 0.8);
     border-bottom: 1px solid var(--theme-border);
 }
 
