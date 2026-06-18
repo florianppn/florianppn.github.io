@@ -234,6 +234,7 @@
     animation: none;
     transform: none;
 }
+
 .terminal.js-typewriter .terminal-cursor-line {
     opacity: 0;
     animation: none;

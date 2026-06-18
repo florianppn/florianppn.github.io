@@ -46,7 +46,7 @@ export class ScoreManager {
             this.highscoreEl.textContent = this.highscore.toString();
             try {
                 localStorage.setItem(HIGHSCORE_KEY, this.highscore.toString());
-            } catch (e) {
+            } catch {
                 // Ignore storage errors
             }
         }
