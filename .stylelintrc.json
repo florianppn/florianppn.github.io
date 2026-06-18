@@ -6,7 +6,9 @@
     "no-descending-specificity": null,
     "color-function-notation": "legacy",
     "alpha-value-notation": "number",
+    "color-function-alias-notation": null,
     "media-feature-range-notation": "prefix",
     "property-no-vendor-prefix": null
   }
 }
+
