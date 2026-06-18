@@ -26,11 +26,7 @@
     box-shadow: 0 12px 40px rgb(23, 133, 130, 0.15);
 }
 
-@media (hover: hover) {
-    .document-download-btn:hover {
-        color: var(--theme-text);
-    }
-}
+
 
 .document-item i.fa-file-pdf {
     font-size: 48px;
@@ -40,7 +36,8 @@
 }
 
 .document-item h3 {
-    margin: 0 0 1rem;
+    margin: 0 0 1rem 0;
+    color: var(--theme-text);
 }
 
 .download-file {

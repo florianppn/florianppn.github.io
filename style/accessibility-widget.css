@@ -342,6 +342,7 @@ body.a11y-text-xlarge .skill-item h3 {
 }
 
 /* Zoom RGAA – Titres de section (h2, .title) et navigation */
+body.a11y-text-large h1,
 body.a11y-text-large h2,
 body.a11y-text-large .title {
     font-size: 1.15em;
@@ -352,6 +353,7 @@ body.a11y-text-large .menu-toggle-icon i {
     font-size: 1.8rem;
 }
 
+body.a11y-text-xlarge h1,
 body.a11y-text-xlarge h2,
 body.a11y-text-xlarge .title {
     font-size: 1.5em;
@@ -417,6 +419,7 @@ body.a11y-contrast .works-card-locked {
     color: #e8e0d5 !important;
 }
 
+body.a11y-contrast h1,
 body.a11y-contrast h2,
 body.a11y-contrast h3,
 body.a11y-contrast .skill-item i,

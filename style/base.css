@@ -42,7 +42,7 @@ section {
     margin-bottom: 5em;
 }
 
-h2, h3 {
+h1, h2, h3 {
     color: var(--theme-accent);
 }
 
