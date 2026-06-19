@@ -1,0 +1,129 @@
+/* =========================================
+   Responsive — Works / Carousel / Lightbox
+   ========================================= */
+@media (max-width: 1024px) {
+    .works-carousel {
+        padding: 0 2.75rem;
+    }
+
+    .works-card {
+        flex: 0 0 290px;
+        min-width: 290px;
+        max-width: 290px;
+    }
+}
+
+@media (max-width: 990px) {
+    .works-carousel {
+        padding: 0 2.5rem;
+    }
+
+    .works-carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .works-card {
+        flex: 0 0 270px;
+        min-width: 270px;
+        max-width: 270px;
+    }
+
+    .works-container {
+        gap: 1.25rem;
+    }
+
+    .works-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #works {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .works-carousel {
+        width: 100%;
+        padding: 0 0.75rem;
+        box-sizing: border-box;
+    }
+
+    .works-carousel-btn {
+        display: none;
+    }
+
+    .works-carousel-viewport::before,
+    .works-carousel-viewport::after {
+        width: 15px;
+    }
+
+    .works-card {
+        flex: 0 0 250px;
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    .works-container {
+        gap: 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .works-card-content {
+        padding: 1rem 1.1rem 1.25rem;
+    }
+
+    .works-card-content h3 {
+        font-size: 1rem;
+    }
+
+    .works-card-desc {
+        font-size: 0.8rem;
+    }
+
+    .works-subtitle {
+        font-size: 0.875rem;
+        margin-bottom: 1.5rem;
+        padding: 0 0.25rem;
+    }
+
+    .works-carousel-dots {
+        margin-top: 0.75rem;
+        gap: 0.4rem;
+    }
+
+    .works-carousel-dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .lightbox {
+        padding: 0.75rem;
+    }
+
+    .lightbox-close {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        min-width: 40px;
+        min-height: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .works-carousel {
+        padding: 0 0.5rem;
+    }
+
+    .works-card {
+        flex: 0 0 230px;
+        min-width: 230px;
+        max-width: 230px;
+    }
+}

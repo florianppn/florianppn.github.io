@@ -85,3 +85,43 @@ h1, h2, h3 {
     background: linear-gradient(90deg, transparent, var(--theme-accent), transparent);
 }
 
+/* =========================================
+   Responsive — Global Base / Section Layouts
+   ========================================= */
+@media (max-width: 1024px) {
+    section {
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        margin-top: 2.5em;
+        margin-bottom: 2.5em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
+
+    .title,
+    h2.title {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin-bottom: 0.75em;
+        overflow-wrap: break-word;
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .title,
+    h2.title {
+        font-size: 1.4rem;
+    }
+}
+

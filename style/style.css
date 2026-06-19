@@ -2,11 +2,13 @@
 @import 'accessibility.css';
 @import 'accessibility-widget.css';
 @import 'index/nav.css';
+@import 'index/nav-responsive.css';
 @import 'index/profile.css';
+@import 'index/profile-responsive.css';
 @import 'index/skills.css';
 @import 'index/works.css';
+@import 'index/works-responsive.css';
 @import 'index/exploration.css';
 @import 'index/documents.css';
 @import 'index/footer.css';
 @import 'theme.css';
-@import 'index/responsive.css';

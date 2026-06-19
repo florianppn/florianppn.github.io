@@ -160,6 +160,7 @@
     overflow: hidden;
     font-family: Consolas, Monaco, 'Fira Code', monospace;
     font-size: 0.88rem;
+    text-align: left;
 }
 
 .terminal-header {
@@ -194,6 +195,7 @@
     padding: 1.25rem 1.5rem;
     line-height: 1.7;
     min-height: 23.8em; /* 14 lines * 1.7 line-height */
+    overflow-x: auto;
 }
 
 .terminal-line {
@@ -269,3 +271,5 @@
         opacity: 0;
     }
 }
+
+

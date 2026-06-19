@@ -10,3 +10,13 @@ footer {
     letter-spacing: 0.04em;
     opacity: 0.75;
 }
+
+/* =========================================
+   Responsive — Footer
+   ========================================= */
+@media (max-width: 576px) {
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.78rem;
+    }
+}

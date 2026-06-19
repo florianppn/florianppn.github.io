@@ -99,3 +99,30 @@
     transform: translateY(-1px);
     box-shadow: 0 6px 20px var(--theme-accent-glow);
 }
+
+/* =========================================
+   Responsive — Documents
+   ========================================= */
+@media (max-width: 990px) {
+    .documents-container {
+        padding: 0 1rem;
+    }
+
+    .document-item {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 576px) {
+    .documents-container {
+        padding: 0 0.25rem;
+    }
+
+    .document-item {
+        width: 100%;
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+        box-sizing: border-box;
+    }
+}
