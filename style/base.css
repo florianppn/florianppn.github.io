@@ -125,3 +125,16 @@ h1, h2, h3 {
     }
 }
 
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--theme-accent), var(--theme-text));
+    z-index: 10002;
+    width: 0%;
+    transition: width 0.1s ease-out;
+    pointer-events: none;
+}
+

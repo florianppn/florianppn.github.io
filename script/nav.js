@@ -18,12 +18,10 @@ export function initNav() {
             event.preventDefault();
             navigator.clipboard.writeText(DISCORD_USERNAME)
                 .then(() => {
-                    if (window.innerWidth >= BREAKPOINT_COPY_MESSAGE) {
-                        discordCopiedMessage.style.display = 'block';
-                        setTimeout(() => {
-                            discordCopiedMessage.style.display = 'none';
-                        }, COPY_MESSAGE_DURATION_MS);
-                    }
+                    discordCopiedMessage.style.display = 'block';
+                    setTimeout(() => {
+                        discordCopiedMessage.style.display = 'none';
+                    }, COPY_MESSAGE_DURATION_MS);
                 })
                 .catch(err => {
                     console.error('Impossible de copier le lien Discord : ', err);
